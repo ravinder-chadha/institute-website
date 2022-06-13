@@ -16,9 +16,25 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <script src="app.js"></script>
     <style>
       body {
         font-family: "Roboto", sans-serif;
+        height: 350vh;
+        scrollbar-color: #fff #fff;
+      }
+      ::-webkit-scrollbar{
+        width: 10px;
+      }
+      ::-webkit-scrollbar-thumb{
+        background-color: rgba(30, 58, 138, 1);
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover{
+        background-color: gray;
+      }
+      ::-webkit-resizer{
+        background-color: #ffffff;
       }
       .material-symbols-outlined {
         font-variation-settings:
@@ -30,19 +46,12 @@
       .searching {
         font-weight: 700;
       }
-
-      .bg-blue-900 {
-        background-color: #2167a7;
-      }
-
       .bg-color {
         background-color: #d0e1f16e;
       }
-
       .logo-img {
         height: 156px;
       }
-
       .logo-container-1 {
         position: absolute;
         left: 50%;
@@ -83,18 +92,14 @@
         display: none;
       }
 
-      .english-name {
-        font-size: 18px;
-        letter-spacing: -0.8px;
-      }
     </style>
   </head>
 
   <body>
     <!-- HEADER PRT 1 -->
-    <header>
+    <header class="sticky top-0">
       <!-- TOP NAV BAR -->
-      <div
+      <div id="top_bar"
         class="flex flex-row py-0.5 bg-blue-900 text-white font-bold px-12 text-xs h-7"
       >
         <div class="basis-1/2">
@@ -143,26 +148,41 @@
       </div>
 
       <!-- INSTITUTE LOGO & NAME -->
-      <div
-        class="flex flex-row justify-between bg-color align-center py-2.5 px-16"
-      >
-        <div
-          class="basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-lg"
-        >
-          <p>Dr B R Ambedkar National Institute of Technology Jalandhar</p>
-        </div>
-        <div
-          class="basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg px-16"
-        >
-          <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
-        </div>
+    <div class="mySlides">
+      <div class="flex flex-row bg-color justify-between align-center py-2.5 px-16">
+          <div class="institute_name basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-lg">
+              <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
+          </div>
+          <div class="institute_name basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg px-16">
+              <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
+          </div>
       </div>
-
+  </div>
+  <div class="mySlides">
+      <div class="flex flex-row bg-color justify-between align-center py-2.5 px-16">
+          <div class="institute_name basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg px-16 ">
+              <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
+          </div>
+          <div class="institute_name basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg px-8">
+              <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
+          </div>
+      </div>
+  </div>
+  <div class="mySlides">
+      <div class="flex flex-row bg-color justify-between align-center py-2.5 px-16">
+          <div class="institute_name basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg px-8">
+              <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
+          </div>
+          <div class="institute_name basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-lg">
+              <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
+          </div>
+      </div>
+  </div>
       <!-- IMAGE CONTAINER -->
       <div class="mx-auto absolute -translate-x-1/2 z-10 left-1/2" style="width:230px">
         <img src="img/curve.png" alt="" />
       </div>
-      <div class="absolute -translate-x-1/2 z-10 left-1/2 top-8" style="width:120px;height:120px">
+      <div id="logo_250" class="absolute -translate-x-1/2 z-10 left-1/2 top-8" style="width:120px;height:120px">
         <img src="img/logo_250.png" alt="" />
       </div>
 
@@ -175,99 +195,101 @@
             <div class="group-hover:bg-blue-900 p-1">Administration</div>
             <div
               id="drop-down"
-              class="absolute gap-5 bg-blue-900 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm"
+              class="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm"
             >
-              <div id="col" class="flex flex-col gap-5">
+              <div id="col" class="flex flex-col gap-5 hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     ABOUT US
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Vision, Mission & Quality Policy</li>
-                    <li>Virtual tour</li>
-                    <li>Institute History</li>
-                    <li>Explore NITJ</li>
-                    <li>NITJ Rankings & Awards</li>
-                    <li>Institute Prospectus Location</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Vision, Mission & Quality Policy</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Virtual tour</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Institute History</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Explore NITJ</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">NITJ Rankings & Awards</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Institute Prospectus Location</li>
                   </ul>
                 </div>
               </div>
-              <div id="col" class="flex flex-col gap-5">
+              <div id="col" class="flex flex-col gap-5 hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     LEADERSHIP
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Organisational Chart</li>
-                    <li>Chariperson</li>
-                    <li>Director</li>
-                    <li>Registrar</li>
-                    <li>Academic administration</li>
-                    <li>Student Welfare</li>
-                    <li>Faculty Welfare</li>
-                    <li>Planning and Development</li>
-                    <li>Research and Consultancy</li>
-                    <li>International Affairs</li>
-                    <li>Hostel administration</li>
-                  </ul>
-                </div>
-                <div id="block">
-                  <div
-                    id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
-                  >
-                    GOVERNING BODIES
-                  </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>NIT council</li>
-                    <li>Board of Governors</li>
-                    <li>Senate</li>
-                    <li>Standing committee of the senate</li>
-                    <li>Finance committee</li>
-                    <li>Building and works committee</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Organisational Chart</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Chariperson</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Director</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Registrar</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Academic administration</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Student Welfare</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Faculty Welfare</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Planning and Development</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Research and Consultancy</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">International Affairs</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Hostel administration</li>
                   </ul>
                 </div>
               </div>
-              <div id="col" class="flex flex-col gap-5">
+              <div id="col" class="flex flex-col gap-5 hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
+                  >
+                    GOVERNING BODIES
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">NIT council</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Board of Governors</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Senate</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Standing committee of the senate</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Finance committee</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Building and works committee</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="col" class="flex flex-col gap-5 hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     CELLS
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>E-Cell</li>
-                    <li>Equal opportunities and</li>
-                    <li>SC/ST/OBC/PWD cell</li>
-                    <li>Rajbhasha cell</li>
-                    <li>RTI Cell</li>
-                    <li>Student grievences cell</li>
-                    <li>Faculty grievences cell</li>
-                    <li>Staff grievences cell</li>
-                    <li>Public grievences</li>
-                    <li>Women cell</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">E-Cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Equal opportunities and</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">SC/ST/OBC/PWD cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Rajbhasha cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">RTI Cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Student grievences cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Faculty grievences cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Staff grievences cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Public grievences</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Women cell</li>
                   </ul>
                 </div>
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     COMMITTEES
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Institute Development Committee</li>
-                    <li>Internal complaint committee</li>
-                    <li>Print, Digital Media and Newsletter</li>
-                    <li>Social Media</li>
-                    <li>Website Development and Management</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Institute Development Committee</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Internal complaint committee</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Print, Digital Media and Newsletter</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Social Media</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Website Development and Management</li>
                   </ul>
                 </div>
               </div>
@@ -277,148 +299,146 @@
             <div class="group-hover:bg-blue-900 p-1">Academics</div>
             <div
               id="drop-down"
-              class="absolute gap-5 bg-blue-900 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/4 "
+              class="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/4 "
             >
-              <div id="col" class="flex flex-col gap-5 min-w-max">
+              <div id="col" class="flex flex-col gap-5 min-w-max hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     DEPARTMENTS
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Biotechnology</li>
-                    <li>Chemistry</li>
-                    <li>Chemical Engineering</li>
-                    <li>Civil Engineering</li>
-                    <li>Computer Science and Engineering</li>
-                    <li>Electronics and Communication Engineering</li>
-                    <li>Electrical Engineering</li>
-                    <li>Humanities and Management</li>
-                    <li>Industrial and Production Engineering</li>
-                    <li>Information Technology</li>
-                    <li>Instrumentation and Control Engineering</li>
-                    <li>Mathematics</li>
-                    <li>Mechanical Engineering</li>
-                    <li>Physics</li>
-                    <li>Textile Technology</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Biotechnology</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Chemistry</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Chemical Engineering</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Civil Engineering</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Computer Science and Engineering</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Electronics and Communication Engineering</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Electrical Engineering</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Humanities and Management</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Industrial and Production Engineering</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Information Technology</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Instrumentation and Control Engineering</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Mathematics</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Mechanical Engineering</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Physics</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Textile Technology</li>
                   </ul>
                 </div>
               </div>
-                <div id="col" class="flex flex-col gap-5 min-w-max">
+                <div id="col" class="flex flex-col gap-5 min-w-max hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     CENTERS
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Center for Energy and Environment</li>
-                    <li>Center for Artificial Intelligence</li>
-                    <li>Center for Continuing Education</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Center for Energy and Environment</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Center for Artificial Intelligence</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Center for Continuing Education</li>
                   </ul>
                 </div>
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     ACADEMIC SYSTEM
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Academic circulars & Notices</li>
-                    <li>Academic calender</li>
-                    <li>Academic regulations</li>
-                    <li>Curriculum</li>
-                    <li>Fee structure</li>
-                    <li>System of Evaluation and Grant of divsion</li>
-                    <li>Standard Operationg Procedures (SOP)</li>
-                    <li>UMC rules</li>
-                    <li>General FAQs</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Academic circulars & Notices</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Academic calender</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Academic regulations</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Curriculum</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Fee structure</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">System of Evaluation and Grant of divsion</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Standard Operationg Procedures (SOP)</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">UMC rules</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">General FAQs</li>
                   </ul>
                 </div>
                 </div>
-                <div id="col" class="flex flex-col gap-5 min-w-max">
+                <div id="col" class="flex flex-col gap-5 min-w-max hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     ACADEMIC SERVICES
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Student Portal LOGIN</li>
-                    <li>Grade sheets</li>
-                    <li>Timetable</li>
-                    <li>Upcoming examination schedules</li>
-                    <li>Results</li>
-                    <li>Online application for Transcripts and certificates</li>
-                    <li>Online application for Verification of Degree</li>
-                    <li>CGPA Criteria and Medium of Education</li>
-                    <li>Other Proformas</li>
-                    <li>Contact details</li>
-                  </ul>
-                </div>
-              </div>
-              <div id="col" class="flex flex-col gap-5 min-w-max">
-                <div id="block">
-                  <div
-                    id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
-                  >
-                    PROGRAMMERS OF STUDY
-                  </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Bachelor of Technology</li>
-                    <li>Master of Technology</li>
-                    <li>Master of Business Administration</li>
-                    <li>Master of Science</li>
-                    <li>Post Graduate Diploma</li>
-                    <li>Doctor of Philosophy</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Student Portal LOGIN</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Grade sheets</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Timetable</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Upcoming examination schedules</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Results</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Online application for Transcripts and certificates</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Online application for Verification of Degree</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">CGPA Criteria and Medium of Education</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Other Proformas</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Contact details</li>
                   </ul>
                 </div>
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     ACADEMIC FACILITIES
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Central Library</li>
-                    <li>Computer Center</li>
-                    <li>Central Workshop</li>
-                    <li>Institute Instrumentation center</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Central Library</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Computer Center</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Central Workshop</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Institute Instrumentation center</li>
                   </ul>
                 </div>
-                </div>
-                <div id="col" class="flex flex-col gap-5 min-w-max">
+              </div>
+              <div id="col" class="flex flex-col gap-5 min-w-max hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
+                  >
+                    PROGRAMMERS OF STUDY
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Bachelor of Technology</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Master of Technology</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Master of Business Administration</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Master of Science</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Post Graduate Diploma</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Doctor of Philosophy</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     CONVOCATION
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Convocation 2022</li>
-                    <li>Past convocations</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Convocation 2022</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Past convocations</li>
                   </ul>
                 </div>
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     OTHER LINKS
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>UGC Act- Rules and Regulations</li>
-                    <li>NIT Act and Statutes</li>
-                    <li>Ministry of Education Notifications</li>
-                    <li>National Education Policy 2020</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">UGC Act- Rules and Regulations</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">NIT Act and Statutes</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Ministry of Education Notifications</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">National Education Policy 2020</li>
                   </ul>
                 </div>
               </div>
@@ -428,99 +448,101 @@
             <div class="group-hover:bg-blue-900 p-1">Life at NITJ</div>
             <div
               id="drop-down"
-              class="absolute gap-5 bg-blue-900 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/2"
+              class="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/2"
             >
-              <div id="col" class="flex flex-col gap-5 min-w-max">
+              <div id="col" class="flex flex-col gap-5 min-w-max hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     ABOUT US
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Vision, Mission & Quality Policy</li>
-                    <li>Virtual tour</li>
-                    <li>Institute History</li>
-                    <li>Explore NITJ</li>
-                    <li>NITJ Rankings & Awards</li>
-                    <li>Institute Prospectus Location</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Vision, Mission & Quality Policy</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Virtual tour</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Institute History</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Explore NITJ</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">NITJ Rankings & Awards</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Institute Prospectus Location</li>
                   </ul>
                 </div>
               </div>
-              <div id="col" class="flex flex-col gap-5 min-w-max">
+              <div id="col" class="flex flex-col gap-5 min-w-max hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     LEADERSHIP
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Organisational Chart</li>
-                    <li>Chariperson</li>
-                    <li>Director</li>
-                    <li>Registrar</li>
-                    <li>Academic administration</li>
-                    <li>Student Welfare</li>
-                    <li>Faculty Welfare</li>
-                    <li>Planning and Development</li>
-                    <li>Research and Consultancy</li>
-                    <li>International Affairs</li>
-                    <li>Hostel administration</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Organisational Chart</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Chariperson</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Director</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Registrar</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Academic administration</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Student Welfare</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Faculty Welfare</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Planning and Development</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Research and Consultancy</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">International Affairs</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Hostel administration</li>
                   </ul>
                 </div>
+                </div>
+                <div id="col" class="flex flex-col gap-5 min-w-max hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     GOVERNING BODIES
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>NIT council</li>
-                    <li>Board of Governors</li>
-                    <li>Senate</li>
-                    <li>Standing committee of the senate</li>
-                    <li>Finance committee</li>
-                    <li>Building and works committee</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">NIT council</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Board of Governors</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Senate</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Standing committee of the senate</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Finance committee</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Building and works committee</li>
                   </ul>
                 </div>
               </div>
-              <div id="col" class="flex flex-col gap-5 min-w-max">
+              <div id="col" class="flex flex-col gap-5 min-w-max hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     CELLS
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>E-Cell</li>
-                    <li>Equal opportunities and</li>
-                    <li>SC/ST/OBC/PWD cell</li>
-                    <li>Rajbhasha cell</li>
-                    <li>RTI Cell</li>
-                    <li>Student grievences cell</li>
-                    <li>Faculty grievences cell</li>
-                    <li>Staff grievences cell</li>
-                    <li>Public grievences</li>
-                    <li>Women cell</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">E-Cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Equal opportunities and</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">SC/ST/OBC/PWD cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Rajbhasha cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">RTI Cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Student grievences cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Faculty grievences cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Staff grievences cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Public grievences</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Women cell</li>
                   </ul>
                 </div>
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     COMMITTEES
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Institute Development Committee</li>
-                    <li>Internal complaint committee</li>
-                    <li>Print, Digital Media and Newsletter</li>
-                    <li>Social Media</li>
-                    <li>Website Development and Management</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Institute Development Committee</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Internal complaint committee</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Print, Digital Media and Newsletter</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Social Media</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Website Development and Management</li>
                   </ul>
                 </div>
               </div>
@@ -531,97 +553,97 @@
           style="padding-left: 4rem"
           class="basis-1/2 flex flex-row justify-between items-center max-w-xl"
         >
-          <div class="group cursor-default">
+          <div class="group cursor-default relative">
             <div class="group-hover:bg-blue-900 p-1">Research</div>
             <div
               id="drop-down"
-              class="absolute gap-5 bg-blue-900 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm"
+              class="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/2"
             >
-              <div id="col" class="flex flex-col gap-5">
+              <div id="col" class="flex flex-col gap-5 min-w-max hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     RESEARCH @ NITJ
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>VIDWAN (IRINS Instance)</li>
-                    <li>Research Publications</li>
-                    <li>Research Jobs</li>
-                    <li>Internships</li>
-                    <li>Sponsored Research Projects</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">VIDWAN (IRINS Instance)</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Research Publications</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Research Jobs</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Internships</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Sponsored Research Projects</li>
                   </ul>
                 </div>
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     INCUBATION @ NITJ
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>STI Hub</li>
-                    <li>E-Cell</li>
-                    <li>Innovation club</li>
-                    <li>Institute Innovation council</li>
-                    <li>Technology Business Incubator</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">STI Hub</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">E-Cell</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Innovation club</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Institute Innovation council</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Technology Business Incubator</li>
                   </ul>
                 </div>
               </div>
-              <div id="col" class="flex flex-col gap-5">
+              <div id="col" class="flex flex-col gap-5 min-w-max hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     CONSULTANCY @ NITJ
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Consultancy works</li>
-                    <li>MoUs</li>
-                    <li>IPRs</li>
-                    <li>Find an expert</li>
-                    <li>Central Research facilities</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Consultancy works</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">MoUs</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">IPRs</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Find an expert</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Central Research facilities</li>
                   </ul>
                 </div>
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     UPCOMING EVENTS
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Conferences</li>
-                    <li>Seminars</li>
-                    <li>STC/ FDP</li>
-                    <li>Workshops</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Conferences</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Seminars</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">STC/ FDP</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Workshops</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="group cursor-default">
+          <div class="group cursor-default relative">
             <div class="group-hover:bg-blue-900 p-1">Alumni</div>
             <div
               id="drop-down"
-              class="absolute gap-5 bg-blue-900 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm"
+              class="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/2"
             >
-              <div id="col" class="flex flex-col gap-5">
+              <div id="col" class="flex flex-col gap-5 min-w-max hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Alumni portal</li>
-                    <li>Alumni Registration</li>
-                    <li>Chapters</li>
-                    <li>Donation statistics and reports</li>
-                    <li>GIve back</li>
-                    <li>Impact</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2 py-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Alumni portal</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Alumni Registration</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Chapters</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Donation statistics and reports</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">GIve back</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Impact</li>
                   </ul>
                 </div>
                 <div id="block">
-                  <ul class="font-normal flex gap-1 flex-col md:font-bold">
-                    <li>Alumni affairs contact details</li>
+                  <ul class="font-normal flex gap-1 flex-col md:font-bold text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Alumni affairs contact details</li>
                   </ul>
                 </div>
               </div>
@@ -631,25 +653,25 @@
             <div class="group-hover:bg-blue-900 p-1">Admissions</div>
             <div
               id="drop-down"
-              class="absolute gap-5 bg-blue-900 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm right-0"
+              class="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm right-0"
             >
-              <div id="col" class="flex flex-col gap-5 min-w-max">
+              <div id="col" class="flex flex-col gap-5 min-w-max hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     PROSPECTIVE STUDENTS
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li class="hover:text-lg" >Why NITJ?</li>
-                    <li class="hover:text-lg" >Explore NITJ</li>
-                    <li class="hover:text-lg" >Discover Student Life</li>
-                    <li class="hover:text-lg" >Courses Offered</li>
-                    <li class="hover:text-lg" >How to Apply</li>
-                    <li class="hover:text-lg" >Admissions Process</li>
-                    <li class="hover:text-lg" >Virtual tour</li>
-                    <li class="hover:text-lg" >International Students</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">Why NITJ?</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Explore NITJ</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Discover Student Life</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Courses Offered</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">How to Apply</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Admissions Process</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Virtual tour</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">International Students</li>
                   </ul>
                 </div>
                 <div id="block">
@@ -660,46 +682,46 @@
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     ANTI RAGGING
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>Anti ragging act</li>
-                    <li>Anti ragging affadvit</li>
-                    <li>Institute Anti-ragging rules</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold" >Anti ragging act</li>
+                    <li class="hover:text-blue-900 hover:font-semibold" >Anti ragging affadvit</li>
+                    <li class="hover:text-blue-900 hover:font-semibold" >Institute Anti-ragging rules</li>
                   </ul>
                 </div>
               </div>
-              <div id="col" class="flex flex-col gap-5 min-w-max">
+              <div id="col" class="flex flex-col gap-5 min-w-max hover:border-blue-900 hover:border-2 hover:rounded-b-xl">
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
                     JOIN NITJ
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>B.Tech Admission</li>
-                    <li>M.Tech Admission</li>
-                    <li>Msc Admission</li>
-                    <li>MBA Admission</li>
-                    <li>Ph.D Admission</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">B.Tech Admission</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">M.Tech Admission</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Msc Admission</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">MBA Admission</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Ph.D Admission</li>
                   </ul>
                 </div>
                 <div id="block">
                   <div
                     id="head"
-                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                    class="bg-slate-700 hover:bg-blue-900 py-2 mb-3 capitalize text-center"
                   >
-                    INSTITUTE PROSPECTUS
+                  &ThinSpace; INSTITUTE PROSPECTUS &ThinSpace;
                   </div>
-                  <ul class="font-normal flex gap-1 flex-col">
-                    <li>B.Tech</li>
-                    <li>M.Tech</li>
-                    <li>Msc</li>
-                    <li>MBA</li>
-                    <li>Ph.D</li>
+                  <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                    <li class="hover:text-blue-900 hover:font-semibold">B.Tech</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">M.Tech</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Msc</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">MBA</li>
+                    <li class="hover:text-blue-900 hover:font-semibold">Ph.D</li>
                   </ul>
                 </div>
               </div>
@@ -709,74 +731,6 @@
         </div>
       </div>
     </header>
-
-    <!-- HEADER PRT 2 -->
-    <!--    <header class="header2">
-        
-        <div class="mySlides">
-            <div class="flex flex-row bg-color justify-between align-center py-2.5">
-                <div class="basis-1/2 flex justify-center uppercase font-bold text-md text-center max-w-xl english-name">
-                    <p>Dr B R Ambedkar National Institute of Technology Jalandhar</p>
-                </div>
-                <div class="basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-xl">
-                    <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
-                </div>
-            </div>
-        </div>
-        <div class="mySlides">
-            <div class="flex flex-row bg-color justify-between align-center py-2.5">
-                <div class="basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-xl">
-                    <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
-                </div>
-                <div class="basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-xl">
-                    <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
-                </div>
-            </div>
-        </div>
-        <div class="mySlides">
-            <div class="flex flex-row bg-color justify-between align-center py-2.5">
-                <div class="basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-xl">
-                    <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
-                </div>
-                <div class="basis-1/2 flex justify-center uppercase font-bold text-base text-center max-w-xl english-name">
-                    <p>Dr B R Ambedkar National Institute of Technology Jalandhar</p>
-                </div>
-            </div>
-        </div>
-    -->
-
-    <!-- IMAGE CONTAINER -->
-    <!-- <div class="mx-auto logo-container-1">
-        <img src="img/curve.png" alt="">
-    </div>
-    <div class="mx-auto logo-container-logo-1">
-        <img class="logo-img-1" src="img/logo_250.png" alt="">
-    </div> -->
-
-    <!-- NAV BAR -->
-    <!-- <div
-        class="flex flex-row bg-blue-900 text-white font-bold text-xl px-20 justify-between items-center h-10 drop-shadow-lg">
-        <div class="basis-1/2 flex flex-row justify-between max-w-xl pr-16">
-            <div>Administration</div>
-            <div>Academics</div>
-            <div>Admissions</div>
-        </div>
-        <div style="padding-left: 4rem" class="basis-1/2 flex flex-row justify-between items-center max-w-xl">
-            <div>Research</div>
-            <div>Life at NITJ</div>
-            <div>Alumni</div>
-            <span class="material-symbols-outlined searching">
-                search
-            </span>
-        </div>
-    </div>
-    </header> -->
-
-    <!-- SLIDER -->
-    <!-- removing the bg image to finalize color -->
-    <!-- <div class="mx-auto">
-      <img src="img/nitj3.jpg" alt="" />
-    </div> -->
 
     <script>
       var slideIndex = 0;
@@ -793,8 +747,9 @@
           slideIndex = 1;
         }
         x[slideIndex - 1].style.display = "block";
-        setTimeout(carousel, 3500);
+        setTimeout(carousel, 2500);
       }
     </script>
   </body>
 </html>
+
