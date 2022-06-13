@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 48;
+      }
+
+      .material-symbols-outlined {
+        color: #fff;
+      }
+
+      .searching {
+        font-weight: 700;
+      }
+
+      .bg-2167a7 {
+        background-color: #2167a7;
+      }
+
+      .bg-color {
+        background-color: #d0e1f16e;
+      }
+
+      .logo-img {
+        height: 156px;
+      }
+
+      .logo-container-1 {
+        position: absolute;
+        left: 50%;
+        top: 348px;
+        transform: translateX(-50%);
+        z-index: 9;
+      }
+
+      .logo-container-logo-1 {
+        position: absolute;
+        left: 50%;
+        top: 309px;
+        transform: translateX(-50%);
+        z-index: 9;
+      }
+
+      .logo-img-1 {
+        height: 130px;
+      }
+
+      .header2 {
+        margin-top: 150px;
+      }
+
+      .reveal {
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: 1s all ease;
+      }
+
+      .reveal.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .mySlides {
+        display: none;
+      }
+
+      .english-name {
+        font-size: 18px;
+        letter-spacing: -0.8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER PRT 1 -->
+    <header>
+      <!-- TOP NAV BAR -->
+      <div
+        class="flex flex-row py-1 bg-2167a7 text-white font-bold text-sm px-12"
+      >
+        <div class="basis-1/2">
+          <div class="flex flex-row justify-center">
+            <div class="items-center flex pr-8" href="">
+              <span class="material-symbols-outlined"> engineering </span>
+              <a href="" class="pl-1.5">Jobs</a>
+            </div>
+            <div class="items-center flex pr-8" href="">
+              <span class="material-symbols-outlined"> add_business </span>
+              <a href="" class="pl-1.5">Tenders</a>
+            </div>
+            <div class="items-center flex pr-8" href="">
+              <span class="material-symbols-outlined"> badge </span>
+              <a href="" class="pl-1.5">Placements</a>
+            </div>
+            <div class="items-center flex pr-8" href="">
+              <span class="material-symbols-outlined"> event_note </span>
+              <a href="" class="pl-1.5">Resources</a>
+            </div>
+            <div class="items-center flex" href="">
+              <span class="material-symbols-outlined"> psychology_alt </span>
+              <a href="" class="pl-1.5">Help</a>
+            </div>
+          </div>
+        </div>
+        <div class="basis-1/2 pl-8">
+          <div class="flex flex-row justify-center">
+            <div class="basis-1/3 items-center">
+              <span class="material-symbols-outlined"> public </span>
+              <span class="material-symbols-outlined"> public </span>
+              <span class="material-symbols-outlined"> public </span>
+            </div>
+            <div class="basis-1/3 flex items-center">
+              <span class="material-symbols-outlined"> g_translate </span>
+              <a href="" class="pl-1"
+                >हिन्दी / <span class="text-lg">A</span>+A-</a
+              >
+            </div>
+            <div class="basis-1/3 flex items-center">
+              <span class="material-symbols-outlined"> contacts </span>
+              <a href="" class="pl-1.5">ERP</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INSTITUTE LOGO & NAME -->
+      <div
+        class="flex flex-row justify-between bg-color align-center py-2.5 px-16"
+      >
+        <div
+          class="basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg"
+        >
+          <p>Dr B R Ambedkar National Institute of Technology Jalandhar</p>
+        </div>
+        <div
+          class="basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg px-16"
+        >
+          <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
+        </div>
+      </div>
+
+      <!-- IMAGE CONTAINER -->
+      <div class="mx-auto absolute -translate-x-1/2 z-10 left-1/2 top-28">
+        <img src="img/curve.png" alt="" />
+      </div>
+      <div class="mx-auto absolute -translate-x-1/2 z-10 left-1/2 top-10">
+        <img class="logo-img" src="img/logo_250.png" alt="" />
+      </div>
+
+      <!-- NAV BAR -->
+      <div
+        class="flex flex-row bg-2167a7 text-white font-bold text-xl px-20 justify-between items-center h-10 drop-shadow-lg"
+      >
+        <div class="basis-1/2 flex flex-row justify-between max-w-xl pr-16">
+          <div class="group cursor-default">
+            <div class="group-hover:bg-blue-900 p-1">Administration</div>
+            <div
+              id="drop-down"
+              class="absolute gap-5 bg-2167a7 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm"
+            >
+              <div id="col" class="flex flex-col gap-5">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    ABOUT US
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Vision, Mission & Quality Policy</li>
+                    <li>Virtual tour</li>
+                    <li>Institute History</li>
+                    <li>Explore NITJ</li>
+                    <li>NITJ Rankings & Awards</li>
+                    <li>Institute Prospectus Location</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="col" class="flex flex-col gap-5">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    LEADERSHIP
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Organisational Chart</li>
+                    <li>Chariperson</li>
+                    <li>Director</li>
+                    <li>Registrar</li>
+                    <li>Academic administration</li>
+                    <li>Student Welfare</li>
+                    <li>Faculty Welfare</li>
+                    <li>Planning and Development</li>
+                    <li>Research and Consultancy</li>
+                    <li>International Affairs</li>
+                    <li>Hostel administration</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    GOVERNING BODIES
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>NIT council</li>
+                    <li>Board of Governors</li>
+                    <li>Senate</li>
+                    <li>Standing committee of the senate</li>
+                    <li>Finance committee</li>
+                    <li>Building and works committee</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="col" class="flex flex-col gap-5">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    CELLS
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>E-Cell</li>
+                    <li>Equal opportunities and</li>
+                    <li>SC/ST/OBC/PWD cell</li>
+                    <li>Rajbhasha cell</li>
+                    <li>RTI Cell</li>
+                    <li>Student grievences cell</li>
+                    <li>Faculty grievences cell</li>
+                    <li>Staff grievences cell</li>
+                    <li>Public grievences</li>
+                    <li>Women cell</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    COMMITTEES
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Institute Development Committee</li>
+                    <li>Internal complaint committee</li>
+                    <li>Print, Digital Media and Newsletter</li>
+                    <li>Social Media</li>
+                    <li>Website Development and Management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group cursor-default relative">
+            <div class="group-hover:bg-blue-900 p-1">Academics</div>
+            <div
+              id="drop-down"
+              class="absolute gap-5 bg-2167a7 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/4 "
+            >
+              <div id="col" class="flex flex-col gap-5 min-w-max">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    DEPARTMENTS
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Biotechnology</li>
+                    <li>Chemistry</li>
+                    <li>Chemical Engineering</li>
+                    <li>Civil Engineering</li>
+                    <li>Computer Science and Engineering</li>
+                    <li>Electronics and Communication Engineering</li>
+                    <li>Electrical Engineering</li>
+                    <li>Humanities and Management</li>
+                    <li>Industrial and Production Engineering</li>
+                    <li>Information Technology</li>
+                    <li>Instrumentation and Control Engineering</li>
+                    <li>Mathematics</li>
+                    <li>Mechanical Engineering</li>
+                    <li>Physics</li>
+                    <li>Textile Technology</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    CENTERS
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Center for Energy and Environment</li>
+                    <li>Center for Artificial Intelligence</li>
+                    <li>Center for Continuing Education</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="col" class="flex flex-col gap-5 min-w-max">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    ACADEMIC SYSTEM
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Academic circulars & Notices</li>
+                    <li>Academic calender</li>
+                    <li>Academic regulations</li>
+                    <li>Curriculum</li>
+                    <li>Fee structure</li>
+                    <li>System of Evaluation and Grant of divsion</li>
+                    <li>Standard Operationg Procedures (SOP)</li>
+                    <li>UMC rules</li>
+                    <li>General FAQs</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    ACADEMIC SERVICES
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Student Portal LOGIN</li>
+                    <li>Grade sheets</li>
+                    <li>Timetable</li>
+                    <li>Upcoming examination schedules</li>
+                    <li>Results</li>
+                    <li>Online application for Transcripts and certificates</li>
+                    <li>Online application for Verification of Degree</li>
+                    <li>CGPA Criteria and Medium of Education</li>
+                    <li>Other Proformas</li>
+                    <li>Contact details</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="col" class="flex flex-col gap-5 min-w-max">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    PROGRAMMERS OF STUDY
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Bachelor of Technology</li>
+                    <li>Master of Technology</li>
+                    <li>Master of Business Administration</li>
+                    <li>Master of Science</li>
+                    <li>Post Graduate Diploma</li>
+                    <li>Doctor of Philosophy</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    ACADEMIC FACILITIES
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Central Library</li>
+                    <li>Computer Center</li>
+                    <li>Central Workshop</li>
+                    <li>Institute Instrumentation center</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    CONVOCATION
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Convocation 2022</li>
+                    <li>Past convocations</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    OTHER LINKS
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>UGC Act- Rules and Regulations</li>
+                    <li>NIT Act and Statutes</li>
+                    <li>Ministry of Education Notifications</li>
+                    <li>National Education Policy 2020</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group cursor-default relative">
+            <div class="group-hover:bg-blue-900 p-1">Life at NITJ</div>
+            <div
+              id="drop-down"
+              class="absolute gap-5 bg-2167a7 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/2"
+            >
+              <div id="col" class="flex flex-col gap-5 min-w-max">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    ABOUT US
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Vision, Mission & Quality Policy</li>
+                    <li>Virtual tour</li>
+                    <li>Institute History</li>
+                    <li>Explore NITJ</li>
+                    <li>NITJ Rankings & Awards</li>
+                    <li>Institute Prospectus Location</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="col" class="flex flex-col gap-5 min-w-max">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    LEADERSHIP
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Organisational Chart</li>
+                    <li>Chariperson</li>
+                    <li>Director</li>
+                    <li>Registrar</li>
+                    <li>Academic administration</li>
+                    <li>Student Welfare</li>
+                    <li>Faculty Welfare</li>
+                    <li>Planning and Development</li>
+                    <li>Research and Consultancy</li>
+                    <li>International Affairs</li>
+                    <li>Hostel administration</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    GOVERNING BODIES
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>NIT council</li>
+                    <li>Board of Governors</li>
+                    <li>Senate</li>
+                    <li>Standing committee of the senate</li>
+                    <li>Finance committee</li>
+                    <li>Building and works committee</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="col" class="flex flex-col gap-5 min-w-max">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    CELLS
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>E-Cell</li>
+                    <li>Equal opportunities and</li>
+                    <li>SC/ST/OBC/PWD cell</li>
+                    <li>Rajbhasha cell</li>
+                    <li>RTI Cell</li>
+                    <li>Student grievences cell</li>
+                    <li>Faculty grievences cell</li>
+                    <li>Staff grievences cell</li>
+                    <li>Public grievences</li>
+                    <li>Women cell</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    COMMITTEES
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Institute Development Committee</li>
+                    <li>Internal complaint committee</li>
+                    <li>Print, Digital Media and Newsletter</li>
+                    <li>Social Media</li>
+                    <li>Website Development and Management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="padding-left: 4rem"
+          class="basis-1/2 flex flex-row justify-between items-center max-w-xl"
+        >
+          <div class="group cursor-default">
+            <div class="group-hover:bg-blue-900 p-1">Research</div>
+            <div
+              id="drop-down"
+              class="absolute gap-5 bg-2167a7 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm"
+            >
+              <div id="col" class="flex flex-col gap-5">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    RESEARCH @ NITJ
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>VIDWAN (IRINS Instance)</li>
+                    <li>Research Publications</li>
+                    <li>Research Jobs</li>
+                    <li>Internships</li>
+                    <li>Sponsored Research Projects</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    INCUBATION @ NITJ
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>STI Hub</li>
+                    <li>E-Cell</li>
+                    <li>Innovation club</li>
+                    <li>Institute Innovation council</li>
+                    <li>Technology Business Incubator</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="col" class="flex flex-col gap-5">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    CONSULTANCY @ NITJ
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Consultancy works</li>
+                    <li>MoUs</li>
+                    <li>IPRs</li>
+                    <li>Find an expert</li>
+                    <li>Central Research facilities</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    UPCOMING EVENTS
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Conferences</li>
+                    <li>Seminars</li>
+                    <li>STC/ FDP</li>
+                    <li>Workshops</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group cursor-default">
+            <div class="group-hover:bg-blue-900 p-1">Alumni</div>
+            <div
+              id="drop-down"
+              class="absolute gap-5 bg-2167a7 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm"
+            >
+              <div id="col" class="flex flex-col gap-5">
+                <div id="block">
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Alumni portal</li>
+                    <li>Alumni Registration</li>
+                    <li>Chapters</li>
+                    <li>Donation statistics and reports</li>
+                    <li>GIve back</li>
+                    <li>Impact</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <ul class="font-normal flex gap-1 flex-col md:font-bold">
+                    <li>Alumni affairs contact details</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group cursor-default relative">
+            <div class="group-hover:bg-blue-900 p-1">Admissions</div>
+            <div
+              id="drop-down"
+              class="absolute gap-5 bg-2167a7 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm right-0"
+            >
+              <div id="col" class="flex flex-col gap-5 min-w-max">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    PROSPECTIVE STUDENTS
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li class="hover:text-lg" >Why NITJ?</li>
+                    <li class="hover:text-lg" >Explore NITJ</li>
+                    <li class="hover:text-lg" >Discover Student Life</li>
+                    <li class="hover:text-lg" >Courses Offered</li>
+                    <li class="hover:text-lg" >How to Apply</li>
+                    <li class="hover:text-lg" >Admissions Process</li>
+                    <li class="hover:text-lg" >Virtual tour</li>
+                    <li class="hover:text-lg" >International Students</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <ul class="font-normal flex gap-1 flex-col md:font-bold">
+                    <li>Contact details for admission</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    ANTI RAGGING
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>Anti ragging act</li>
+                    <li>Anti ragging affadvit</li>
+                    <li>Institute Anti-ragging rules</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="col" class="flex flex-col gap-5 min-w-max">
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    JOIN NITJ
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>B.Tech Admission</li>
+                    <li>M.Tech Admission</li>
+                    <li>Msc Admission</li>
+                    <li>MBA Admission</li>
+                    <li>Ph.D Admission</li>
+                  </ul>
+                </div>
+                <div id="block">
+                  <div
+                    id="head"
+                    class="bg-slate-700 py-2 mb-3 capitalize text-center"
+                  >
+                    INSTITUTE PROSPECTUS
+                  </div>
+                  <ul class="font-normal flex gap-1 flex-col">
+                    <li>B.Tech</li>
+                    <li>M.Tech</li>
+                    <li>Msc</li>
+                    <li>MBA</li>
+                    <li>Ph.D</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="material-symbols-outlined searching"> search </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- HEADER PRT 2 -->
+    <!--    <header class="header2">
+        
+        <div class="mySlides">
+            <div class="flex flex-row bg-color justify-between align-center py-2.5">
+                <div class="basis-1/2 flex justify-center uppercase font-bold text-md text-center max-w-xl english-name">
+                    <p>Dr B R Ambedkar National Institute of Technology Jalandhar</p>
+                </div>
+                <div class="basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-xl">
+                    <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
+                </div>
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="flex flex-row bg-color justify-between align-center py-2.5">
+                <div class="basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-xl">
+                    <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
+                </div>
+                <div class="basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-xl">
+                    <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
+                </div>
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="flex flex-row bg-color justify-between align-center py-2.5">
+                <div class="basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-xl">
+                    <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
+                </div>
+                <div class="basis-1/2 flex justify-center uppercase font-bold text-base text-center max-w-xl english-name">
+                    <p>Dr B R Ambedkar National Institute of Technology Jalandhar</p>
+                </div>
+            </div>
+        </div>
+    -->
+
+    <!-- IMAGE CONTAINER -->
+    <!-- <div class="mx-auto logo-container-1">
+        <img src="img/curve.png" alt="">
+    </div>
+    <div class="mx-auto logo-container-logo-1">
+        <img class="logo-img-1" src="img/logo_250.png" alt="">
+    </div> -->
+
+    <!-- NAV BAR -->
+    <!-- <div
+        class="flex flex-row bg-2167a7 text-white font-bold text-xl px-20 justify-between items-center h-10 drop-shadow-lg">
+        <div class="basis-1/2 flex flex-row justify-between max-w-xl pr-16">
+            <div>Administration</div>
+            <div>Academics</div>
+            <div>Admissions</div>
+        </div>
+        <div style="padding-left: 4rem" class="basis-1/2 flex flex-row justify-between items-center max-w-xl">
+            <div>Research</div>
+            <div>Life at NITJ</div>
+            <div>Alumni</div>
+            <span class="material-symbols-outlined searching">
+                search
+            </span>
+        </div>
+    </div>
+    </header> -->
+
+    <!-- SLIDER -->
+    <div class="mx-auto">
+      <img src="img/nitj3.jpg" alt="" />
+    </div>
+
+    <script>
+      var slideIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {
+          slideIndex = 1;
+        }
+        x[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 3500);
+      }
+    </script>
+  </body>
+</html>
