@@ -20,20 +20,18 @@
       body {
         font-family: "Roboto", sans-serif;
       }
-
       .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 48;
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 20
       }
-
-      .material-symbols-outlined {
-        color: #fff;
-      }
-
       .searching {
         font-weight: 700;
       }
 
-      .bg-2167a7 {
+      .bg-blue-900 {
         background-color: #2167a7;
       }
 
@@ -97,7 +95,7 @@
     <header>
       <!-- TOP NAV BAR -->
       <div
-        class="flex flex-row py-1 bg-2167a7 text-white font-bold text-sm px-12"
+        class="flex flex-row py-0.5 bg-blue-900 text-white font-bold px-12 text-xs h-7"
       >
         <div class="basis-1/2">
           <div class="flex flex-row justify-center">
@@ -149,7 +147,7 @@
         class="flex flex-row justify-between bg-color align-center py-2.5 px-16"
       >
         <div
-          class="basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg"
+          class="basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-lg"
         >
           <p>Dr B R Ambedkar National Institute of Technology Jalandhar</p>
         </div>
@@ -161,23 +159,23 @@
       </div>
 
       <!-- IMAGE CONTAINER -->
-      <div class="mx-auto absolute -translate-x-1/2 z-10 left-1/2 top-28">
+      <div class="mx-auto absolute -translate-x-1/2 z-10 left-1/2" style="width:230px">
         <img src="img/curve.png" alt="" />
       </div>
-      <div class="mx-auto absolute -translate-x-1/2 z-10 left-1/2 top-10">
-        <img class="logo-img" src="img/logo_250.png" alt="" />
+      <div class="absolute -translate-x-1/2 z-10 left-1/2 top-8" style="width:120px;height:120px">
+        <img src="img/logo_250.png" alt="" />
       </div>
 
       <!-- NAV BAR -->
       <div
-        class="flex flex-row bg-2167a7 text-white font-bold text-xl px-20 justify-between items-center h-10 drop-shadow-lg"
+        class="flex flex-row bg-blue-900 z-20 text-white font-bold text-xl px-20 justify-between items-center h-10 drop-shadow-lg"
       >
         <div class="basis-1/2 flex flex-row justify-between max-w-xl pr-16">
           <div class="group cursor-default">
             <div class="group-hover:bg-blue-900 p-1">Administration</div>
             <div
               id="drop-down"
-              class="absolute gap-5 bg-2167a7 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm"
+              class="absolute gap-5 bg-blue-900 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm"
             >
               <div id="col" class="flex flex-col gap-5">
                 <div id="block">
@@ -279,7 +277,7 @@
             <div class="group-hover:bg-blue-900 p-1">Academics</div>
             <div
               id="drop-down"
-              class="absolute gap-5 bg-2167a7 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/4 "
+              class="absolute gap-5 bg-blue-900 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/4 "
             >
               <div id="col" class="flex flex-col gap-5 min-w-max">
                 <div id="block">
@@ -307,6 +305,8 @@
                     <li>Textile Technology</li>
                   </ul>
                 </div>
+              </div>
+                <div id="col" class="flex flex-col gap-5 min-w-max">
                 <div id="block">
                   <div
                     id="head"
@@ -320,8 +320,6 @@
                     <li>Center for Continuing Education</li>
                   </ul>
                 </div>
-              </div>
-              <div id="col" class="flex flex-col gap-5 min-w-max">
                 <div id="block">
                   <div
                     id="head"
@@ -341,6 +339,8 @@
                     <li>General FAQs</li>
                   </ul>
                 </div>
+                </div>
+                <div id="col" class="flex flex-col gap-5 min-w-max">
                 <div id="block">
                   <div
                     id="head"
@@ -393,6 +393,8 @@
                     <li>Institute Instrumentation center</li>
                   </ul>
                 </div>
+                </div>
+                <div id="col" class="flex flex-col gap-5 min-w-max">
                 <div id="block">
                   <div
                     id="head"
@@ -426,7 +428,7 @@
             <div class="group-hover:bg-blue-900 p-1">Life at NITJ</div>
             <div
               id="drop-down"
-              class="absolute gap-5 bg-2167a7 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/2"
+              class="absolute gap-5 bg-blue-900 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/2"
             >
               <div id="col" class="flex flex-col gap-5 min-w-max">
                 <div id="block">
@@ -533,7 +535,7 @@
             <div class="group-hover:bg-blue-900 p-1">Research</div>
             <div
               id="drop-down"
-              class="absolute gap-5 bg-2167a7 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm"
+              class="absolute gap-5 bg-blue-900 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm"
             >
               <div id="col" class="flex flex-col gap-5">
                 <div id="block">
@@ -604,7 +606,7 @@
             <div class="group-hover:bg-blue-900 p-1">Alumni</div>
             <div
               id="drop-down"
-              class="absolute gap-5 bg-2167a7 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm"
+              class="absolute gap-5 bg-blue-900 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm"
             >
               <div id="col" class="flex flex-col gap-5">
                 <div id="block">
@@ -629,7 +631,7 @@
             <div class="group-hover:bg-blue-900 p-1">Admissions</div>
             <div
               id="drop-down"
-              class="absolute gap-5 bg-2167a7 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm right-0"
+              class="absolute gap-5 bg-blue-900 hidden mt-1 p-5 shadow-sm group-hover:flex text-sm right-0"
             >
               <div id="col" class="flex flex-col gap-5 min-w-max">
                 <div id="block">
@@ -753,7 +755,7 @@
 
     <!-- NAV BAR -->
     <!-- <div
-        class="flex flex-row bg-2167a7 text-white font-bold text-xl px-20 justify-between items-center h-10 drop-shadow-lg">
+        class="flex flex-row bg-blue-900 text-white font-bold text-xl px-20 justify-between items-center h-10 drop-shadow-lg">
         <div class="basis-1/2 flex flex-row justify-between max-w-xl pr-16">
             <div>Administration</div>
             <div>Academics</div>
@@ -771,9 +773,10 @@
     </header> -->
 
     <!-- SLIDER -->
-    <div class="mx-auto">
+    <!-- removing the bg image to finalize color -->
+    <!-- <div class="mx-auto">
       <img src="img/nitj3.jpg" alt="" />
-    </div>
+    </div> -->
 
     <script>
       var slideIndex = 0;

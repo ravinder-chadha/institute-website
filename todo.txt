@@ -1,0 +1,6 @@
+# institute name should come in one line
+# drop down increase the number of columns
+# show the font size for best ux
+# javascript for the scrolling effect
+# blue and white
+# name change automatically
