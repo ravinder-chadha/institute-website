@@ -1,0 +1,14 @@
+# responsive - tailwind
+# search bar -JS - done
+# hover menu must not move - increase in padding - tailwind
+# line visible near curved shape - merge images or reduce top margin of the curve, figma/tailwind
+
+# alt text - icon change - research, maybe tailwind
+# hover effect - navbar color change to show hovering tailwind 
+# font size of toolbar - increase size of font only, tailwind
+# image blur - logo better quality figma
+
+# college name font color - try blue color, tailwind
+# white color bg behind logo - tailwind
+# Keep admission in second place and push remaining things to the left - html structure
+# life at nitj rectify - typing

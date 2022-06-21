@@ -18,13 +18,6 @@ window.onscroll = function() {
     institute_name[i].classList.remove("text-lg");
     institute_name[i].classList.add("text-sm");
     }
-
-    // if(institute_name[i].classList.contains("px-16") || institute_name[i].classList.contains("px-8")){
-    // }
-    // else{
-    //   institute_name[i].classList.add("text-base");
-    //   institute_name[i].classList.add("text-sm");
-    // }
   }
   
 }
@@ -44,11 +37,31 @@ else{
     institute_name[i].classList.remove("text-sm");
     institute_name[i].classList.add("text-lg");
     }
-
-    // if(institute_name[i].classList.contains("text-sm")){
-    //   institute_name[i].classList.remove("text-sm");
-    //   institute_name[i].classList.remove("text-lg");
-    // }
   }
+  }
+}
+ 
+function openDropdown() {
+  var dropdown = document.getElementById("dropdown");
+    if(dropdown.classList.contains("hidden")){
+      dropdown.classList.remove("hidden");
+    }
+    else{
+      dropdown.classList.add("hidden");
+    }
+}
+
+function showSearchPage(event){
+  if(event.target.id=="search_form"){
+    return;
+  }
+  var search_page = document.getElementById("search_page");
+  if(search_page.classList.contains("hidden")){
+    search_page.classList.remove("hidden");
+    search_page.classList.add("grid");
+  }
+  else{
+    search_page.classList.remove("grid");
+    search_page.classList.add("hidden");
   }
 }
