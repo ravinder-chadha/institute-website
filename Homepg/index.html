@@ -16,17 +16,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <script src="app.js"></script>
     <style>
       body {
         font-family: "Roboto", sans-serif;
+        height: 350vh;
         scrollbar-color: #fff #fff;
       }
       ::-webkit-scrollbar {
@@ -45,162 +39,92 @@
       .material-symbols-outlined {
         font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 20;
       }
-      ::-webkit-scrollbar {
-        width: 4px;
+      .bg-color {
+        background-color: #d0e1f16e;
       }
-
-      /* Track */
-      ::-webkit-scrollbar-track {
-        border-radius: 10px;
+      .logo-img {
+        height: 156px;
       }
-
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: gray;
-        border-radius: 10px;
-      }
-
-      /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        background: #212121;
-      }
-
-      .box {
-        flex: 1;
-        overflow: hidden;
-        transition: 0.5s;
-        line-height: 0;
-      }
-
-      .box > img {
-        width: 100%;
-        height: 100%;
-        border: 0.2rem solid white;
-        border-radius: 8px;
-        -o-object-fit: cover;
-        object-fit: cover;
-        transition: ease 0.75s;
-      }
-
-      .box:hover {
-        flex: 1 1 30%;
-        height: 150%;
-        /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
-        z-index: 1;
-        cursor: pointer;
-      }
-
-      .box:hover > img {
-        opacity: 1;
-        width: 100%;
-        height: 100%;
-      }
-
-      .base-image {
-        margin-top: 80px;
-        background-image: url("img/nitj3.jpg"),
-          linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
-        background-color: #cccccc;
-        height: 400px;
-        background-position: 0% 28%;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      .base-image-2 {
-        margin-top: 80px;
-        background-image: url("img/nitj3.jpg"),
-          linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
-        background-color: #cccccc;
-        height: 300px;
-        background-position: 58% 28%;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      .main-shadow {
-        text-shadow: rgb(0 0 0) 6px -1px 5px;
-      }
-
-      .carousel-open:checked + .carousel-item {
-        position: static;
-        opacity: 100;
-      }
-
-      .carousel-item {
-        -webkit-transition: opacity 0.9s ease-in-out;
-        transition: opacity 1s ease-in-out 0.2s;
-      }
-
-      #carousel-1:checked ~ .control-1,
-      #carousel-2:checked ~ .control-2,
-      #carousel-3:checked ~ .control-3,
-      #carousel-4:checked ~ .control-4 {
-        display: block;
-      }
-
-      .carousel-indicators {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+      .logo-container-1 {
         position: absolute;
-        bottom: 2%;
-        left: 0;
-        right: 0;
-        text-align: center;
-        z-index: 10;
+        left: 50%;
+        top: 348px;
+        transform: translateX(-50%);
+        z-index: 9;
+      }
+
+      .logo-container-logo-1 {
+        position: absolute;
+        left: 50%;
+        top: 309px;
+        transform: translateX(-50%);
+        z-index: 9;
+      }
+
+      .logo-img-1 {
+        height: 130px;
+      }
+
+      .header2 {
+        margin-top: 150px;
+      }
+
+      .reveal {
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: 1s all ease;
+      }
+
+      .reveal.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .mySlides {
+        display: none;
       }
     </style>
   </head>
+
   <body>
-    <header class="sticky top-0 z-50">
-      <!-- TOP NAV BAR stats -->
+    <!-- HEADER PRT 1 -->
+    <header class="sticky top-0">
+      <!-- TOP NAV BAR -->
       <div
         id="top_bar"
-        class="z-50 flex flex-row py-0.5 bg-[#2a78c1] text-white font-bold px-12 text-xs h-7"
+        class="flex flex-row py-0.5 bg-blue-900 text-white font-bold px-12 text-xs h-7"
       >
         <div class="basis-1/2">
           <div class="flex flex-row justify-center">
             <div class="items-center flex pr-8" href="">
               <span class="material-symbols-outlined"> engineering </span>
-              <a href="" class="pl-1.5 text-sm">Jobs</a>
+              <a href="https://www.nitj.ac.in" class="pl-1.5">Jobs</a>
             </div>
             <div class="items-center flex pr-8" href="">
               <span class="material-symbols-outlined"> add_business </span>
-              <a href="" class="pl-1.5 text-sm">Tenders</a>
+              <a href="" class="pl-1.5">Tenders</a>
             </div>
             <div class="items-center flex pr-8" href="">
               <span class="material-symbols-outlined"> badge </span>
-              <a href="" class="pl-1.5 text-sm">Placements</a>
+              <a href="" class="pl-1.5">Placements</a>
             </div>
             <div class="items-center flex pr-8" href="">
               <span class="material-symbols-outlined"> event_note </span>
-              <a href="" class="pl-1.5 text-sm">Resources</a>
+              <a href="" class="pl-1.5">Resources</a>
             </div>
             <div class="items-center flex" href="">
               <span class="material-symbols-outlined"> psychology_alt </span>
-              <a href="" class="pl-1.5 text-sm">Help</a>
+              <a href="" class="pl-1.5">Help</a>
             </div>
           </div>
         </div>
         <div class="basis-1/2 pl-8">
-          <div class="flex flex-row justify-between">
-            <div class="basis-1/6 flex flex-row items-center">
-              <img
-                src="img\facebook-icon.svg"
-                class="px-1 h-5"
-                style="height: 20px"
-              />
-              <img
-                src="img\facebook-icon.svg"
-                class="px-1 h-5"
-                style="height: 20px"
-              />
-              <img
-                src="img\facebook-icon.svg"
-                class="px-1 h-5"
-                style="height: 20px"
-              />
+          <div class="flex flex-row justify-center">
+            <div class="basis-1/3 items-center">
+              <span class="material-symbols-outlined"> public </span>
+              <span class="material-symbols-outlined"> public </span>
+              <span class="material-symbols-outlined"> public </span>
             </div>
             <div class="basis-1/3 flex items-center">
               <span class="material-symbols-outlined"> g_translate </span>
@@ -210,16 +134,16 @@
             </div>
             <div class="basis-1/3 flex items-center">
               <span class="material-symbols-outlined"> contacts </span>
-              <a href="" class="pl-1.5 text-sm">ERP</a>
+              <a href="" class="pl-1.5">ERP</a>
             </div>
           </div>
         </div>
       </div>
-      <!-- top nav bar ends -->
-      <!-- INSTITUTE LOGO & NAME starts -->
-      <div class="z-50 mySlides">
+
+      <!-- INSTITUTE LOGO & NAME -->
+      <div class="mySlides">
         <div
-          class="flex flex-row bg-white justify-between align-center py-2.5 px-16"
+          class="flex flex-row bg-color justify-between align-center py-2.5 px-16"
         >
           <div
             class="institute_name basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-lg"
@@ -233,9 +157,9 @@
           </div>
         </div>
       </div>
-      <div class="z-50 mySlides">
+      <div class="mySlides">
         <div
-          class="flex flex-row bg-white justify-between align-center py-2.5 px-16"
+          class="flex flex-row bg-color justify-between align-center py-2.5 px-16"
         >
           <div
             class="institute_name basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg px-16"
@@ -249,9 +173,9 @@
           </div>
         </div>
       </div>
-      <div class="z-50 mySlides">
+      <div class="mySlides">
         <div
-          class="flex flex-row bg-white justify-between align-center py-2.5 px-16"
+          class="flex flex-row bg-color justify-between align-center py-2.5 px-16"
         >
           <div
             class="institute_name basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg px-8"
@@ -265,33 +189,32 @@
           </div>
         </div>
       </div>
-      <!-- INSTITUTE LOGO & NAME ends -->
-      <!-- Logo CONTAINER starts -->
+      <!-- IMAGE CONTAINER -->
       <div
-        class="mx-auto absolute -translate-x-1/2 z-50 left-1/2"
+        class="mx-auto absolute -translate-x-1/2 z-10 left-1/2"
         style="width: 230px"
       >
-        <img src="img/Rectangle 47 (1).png" alt="" />
+        <img src="img/curve.png" alt="" />
       </div>
       <div
         id="logo_250"
-        class="absolute z-50 -translate-x-1/2 left-1/2 top-8"
-        style="width: 110px; height: 120px"
+        class="absolute -translate-x-1/2 z-10 left-1/2 top-8"
+        style="width: 120px; height: 120px"
       >
         <img src="img/logo_250.png" alt="" />
       </div>
-      <!-- Logo CONTAINER ends -->
-      <!-- NAV BAR starts-->
+
+      <!-- NAV BAR -->
       <div
-        class="z-50 flex flex-row max-w-full bg-[#2a78c1] text-white font-bold text-xl justify-between h-10 drop-shadow-lg"
+        class="flex flex-row max-w-full bg-blue-900 z-20 text-white font-bold text-xl justify-between h-10 drop-shadow-lg"
       >
         <div class="basis-2/5">
           <div class="flex flex-row justify-between w-full px-10">
-            <div class="group cursor-default hover:bg-blue-800">
-              <div class="p-1.5">Administration</div>
+            <div class="group cursor-default">
+              <div class="group-hover:bg-blue-900 p-1">Administration</div>
               <div
                 id="drop-down"
-                class="absolute gap-5 rounded-b-xl bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm"
+                class="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm"
               >
                 <div
                   id="col"
@@ -300,32 +223,30 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] rounded-b-2xl hover:bg-orange-500 capitalize"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
-                      <div class="p-2 text-center">ABOUT US</div>
-                      <ul
-                        class="font-normal bg-white rounded-b-xl flex gap-1 flex-col text-black px-2"
-                      >
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Vision, Mission & Quality Policy
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Virtual tour
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Institute History
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Explore NITJ
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          NITJ Rankings & Awards
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Institute Prospectus Location
-                        </li>
-                      </ul>
+                      ABOUT US
                     </div>
+                    <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Vision, Mission & Quality Policy
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Virtual tour
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Institute History
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Explore NITJ
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        NITJ Rankings & Awards
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Institute Prospectus Location
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <div
@@ -335,47 +256,45 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] rounded-b-2xl hover:bg-orange-500 capitalize"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
-                      <div class="p-2 text-center">LEADERSHIP</div>
-                      <ul
-                        class="font-normal bg-white rounded-b-xl flex gap-1 flex-col text-black px-2"
-                      >
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Organisational Chart
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Chariperson
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Director
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Registrar
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Academic administration
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Student Welfare
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Faculty Welfare
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Planning and Development
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Research and Consultancy
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          International Affairs
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Hostel administration
-                        </li>
-                      </ul>
+                      LEADERSHIP
                     </div>
+                    <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Organisational Chart
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Chariperson
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Director
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Registrar
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Academic administration
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Student Welfare
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Faculty Welfare
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Planning and Development
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Research and Consultancy
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        International Affairs
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Hostel administration
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <div
@@ -385,32 +304,30 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] rounded-b-2xl hover:bg-orange-500 capitalize"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
-                      <div class="p-2 text-center">GOVERNING BODIES</div>
-                      <ul
-                        class="font-normal bg-white rounded-b-xl flex gap-1 flex-col text-black px-2"
-                      >
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          NIT council
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Board of Governors
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Senate
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Standing committee of the senate
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Finance committee
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Building and works committee
-                        </li>
-                      </ul>
+                      GOVERNING BODIES
                     </div>
+                    <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        NIT council
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Board of Governors
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Senate
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Standing committee of the senate
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Finance committee
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Building and works committee
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <div
@@ -420,85 +337,76 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] rounded-b-2xl hover:bg-orange-500 capitalize"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
-                      <div class="p-2 text-center">CELLS</div>
-                      <ul
-                        class="font-normal bg-white rounded-b-xl flex gap-1 flex-col text-black px-2"
-                      >
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          E-Cell
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Equal opportunities and
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          SC/ST/OBC/PWD cell
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Rajbhasha cell
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          RTI Cell
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Student grievences cell
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Faculty grievences cell
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Staff grievences cell
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Public grievences
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Women cell
-                        </li>
-                      </ul>
+                      CELLS
                     </div>
+                    <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        E-Cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Equal opportunities and
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        SC/ST/OBC/PWD cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Rajbhasha cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        RTI Cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Student grievences cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Faculty grievences cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Staff grievences cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Public grievences
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Women cell
+                      </li>
+                    </ul>
                   </div>
-                </div>
-                <div
-                  id="col"
-                  class="flex flex-col gap-5 hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
-                >
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] rounded-b-2xl hover:bg-orange-500 capitalize"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
-                      <div class="p-2 text-center">COMMITTEES</div>
-                      <ul
-                        class="font-normal bg-white rounded-b-xl flex gap-1 flex-col text-black px-2"
-                      >
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Institute Development Committee
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Internal complaint committee
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Print, Digital Media and Newsletter
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Social Media
-                        </li>
-                        <li class="hover:text-orange-500 hover:font-semibold">
-                          Website Development and Management
-                        </li>
-                      </ul>
+                      COMMITTEES
                     </div>
+                    <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Institute Development Committee
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Internal complaint committee
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Print, Digital Media and Newsletter
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Social Media
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Website Development and Management
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="group cursor-default relative hover:bg-blue-800">
-              <div class="p-1.5">Academics</div>
+            <div class="group cursor-default relative">
+              <div class="group-hover:bg-blue-900 p-1">Academics</div>
               <div
                 id="drop-down"
-                class="absolute gap-5 rounded-b-xl bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/4 -translate-x-60"
+                class="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/4"
               >
                 <div
                   id="col"
@@ -507,13 +415,11 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
-                      <div class="p-2 text-center">DEPARTMENTS</div>
+                      DEPARTMENTS
                     </div>
-                    <ul
-                      class="font-normal bg-white rounded-b-xl flex gap-1 flex-col text-black px-2"
-                    >
+                    <ul class="font-normal flex gap-1 flex-col text-black px-2">
                       <li class="hover:text-orange-500 hover:font-semibold">
                         Biotechnology
                       </li>
@@ -569,7 +475,7 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
                       CENTERS
                     </div>
@@ -588,7 +494,7 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
                       ACADEMIC SYSTEM
                     </div>
@@ -630,7 +536,7 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
                       ACADEMIC SERVICES
                     </div>
@@ -670,7 +576,7 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
                       ACADEMIC FACILITIES
                     </div>
@@ -697,7 +603,7 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
                       PROGRAMMERS OF STUDY
                     </div>
@@ -725,7 +631,7 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
                       CONVOCATION
                     </div>
@@ -741,7 +647,7 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
                       OTHER LINKS
                     </div>
@@ -763,13 +669,11 @@
                 </div>
               </div>
             </div>
-            <div
-              class="group cursor-default relative rounded-b-xl hover:bg-blue-800"
-            >
-              <div class="p-2">Admissions</div>
+            <div class="group cursor-default relative">
+              <div class="group-hover:bg-blue-900 p-1">Life at NITJ</div>
               <div
                 id="drop-down"
-                class="absolute gap-5 rounded-b-xl bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/3"
+                class="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/3"
               >
                 <div
                   id="col"
@@ -778,62 +682,65 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
-                      PROSPECTIVE STUDENTS
+                      CLUB & SOCITITES
                     </div>
                     <ul class="font-normal flex gap-1 flex-col text-black px-2">
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        Why NITJ?
+                        Vision, Mission & Quality Policy
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        Explore NITJ
+                        Heartfulness Mediation club
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        Discover Student Life
+                        Prayaas - A campaign for smile
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        Courses Offered
+                        R-Tist Robotics Club
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        How to Apply
+                        SPIC MACAY
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        Admissions Process
+                        “We Can” Club
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        Virtual tour
+                        Yoga club
                       </li>
-                      <li class="hover:text-orange-500 hover:font-semibold">
-                        International Students
-                      </li>
-                    </ul>
-                  </div>
-                  <div id="block">
-                    <ul
-                      class="font-normal flex gap-1 flex-col md:font-bold text-black px-2"
-                    >
-                      <li class="hover:text-orange-500 hover:font-semibold">
-                        Contact details for admission
+                      <li
+                        class="hover:text-orange-500 hover:font-semibold flex justify-between"
+                      >
+                        Zeal Society
+                        <div>View all</div>
                       </li>
                     </ul>
                   </div>
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
-                      ANTI RAGGING
+                      SCHOLARSHIPS
                     </div>
                     <ul class="font-normal flex gap-1 flex-col text-black px-2">
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        Anti ragging act
+                        Dr. Pratap Singh Memorial Scholarhsip
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        Anti ragging affadvit
+                        MCM Scholarship
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        Institute Anti-ragging rules
+                        Post Matric Scholarship
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Siemens India Scholarship
+                      </li>
+                      <br />
+                      <li
+                        class="hover:text-orange-500 hover:font-bold font-semibold"
+                      >
+                        View all
                       </li>
                     </ul>
                   </div>
@@ -845,50 +752,146 @@
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
-                      JOIN NITJ
+                      LEADERSHIP
                     </div>
                     <ul class="font-normal flex gap-1 flex-col text-black px-2">
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        B.Tech Admission
+                        Organisational Chart
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        M.Tech Admission
+                        Chariperson
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        Msc Admission
+                        Director
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        MBA Admission
+                        Registrar
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        Ph.D Admission
+                        Academic administration
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Student Welfare
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Faculty Welfare
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Planning and Development
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Research and Consultancy
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        International Affairs
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Hostel administration
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  id="col"
+                  class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
+                >
+                  <div id="block">
+                    <div
+                      id="head"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                    >
+                      GOVERNING BODIES
+                    </div>
+                    <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        NIT council
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Board of Governors
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Senate
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Standing committee of the senate
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Finance committee
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Building and works committee
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  id="col"
+                  class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
+                >
+                  <div id="block">
+                    <div
+                      id="head"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                    >
+                      CELLS
+                    </div>
+                    <ul class="font-normal flex gap-1 flex-col text-black px-2">
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        E-Cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Equal opportunities and
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        SC/ST/OBC/PWD cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Rajbhasha cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        RTI Cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Student grievences cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Faculty grievences cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Staff grievences cell
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Public grievences
+                      </li>
+                      <li class="hover:text-orange-500 hover:font-semibold">
+                        Women cell
                       </li>
                     </ul>
                   </div>
                   <div id="block">
                     <div
                       id="head"
-                      class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
                     >
-                      &ThinSpace; INSTITUTE PROSPECTUS &ThinSpace;
+                      COMMITTEES
                     </div>
                     <ul class="font-normal flex gap-1 flex-col text-black px-2">
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        B.Tech
+                        Institute Development Committee
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        M.Tech
+                        Internal complaint committee
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        Msc
+                        Print, Digital Media and Newsletter
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        MBA
+                        Social Media
                       </li>
                       <li class="hover:text-orange-500 hover:font-semibold">
-                        Ph.D
+                        Website Development and Management
                       </li>
                     </ul>
                   </div>
@@ -901,422 +904,313 @@
           <div class="flex flex-row justify-between w-full">
             <div class="basis-4/5">
               <div class="flex flex-row justify-between">
+              <div class="group cursor-default relative">
+                <div class="group-hover:bg-blue-900 p-1">Research</div>
                 <div
-                  class="group cursor-default relative rounded-b-xl hover:bg-blue-800"
+                  id="drop-down"
+                  class="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/2"
                 >
-                  <div class="p-2">Research</div>
                   <div
-                    id="drop-down"
-                    class="absolute gap-5 rounded-b-xl bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/2"
+                    id="col"
+                    class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
                   >
-                    <div
-                      id="col"
-                      class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
-                    >
-                      <div id="block">
-                        <div
-                          id="head"
-                          class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
-                        >
-                          RESEARCH @ NITJ
-                        </div>
-                        <ul
-                          class="font-normal flex gap-1 flex-col text-black px-2"
-                        >
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            VIDWAN (IRINS Instance)
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Research Publications
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Research Jobs
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Internships
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Sponsored Research Projects
-                          </li>
-                        </ul>
+                    <div id="block">
+                      <div
+                        id="head"
+                        class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      >
+                        RESEARCH @ NITJ
                       </div>
-                      <div id="block">
-                        <div
-                          id="head"
-                          class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
-                        >
-                          INCUBATION @ NITJ
-                        </div>
-                        <ul
-                          class="font-normal flex gap-1 flex-col text-black px-2"
-                        >
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            STI Hub
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            E-Cell
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Innovation club
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Institute Innovation council
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Technology Business Incubator
-                          </li>
-                        </ul>
-                      </div>
+                      <ul
+                        class="font-normal flex gap-1 flex-col text-black px-2"
+                      >
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          VIDWAN (IRINS Instance)
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Research Publications
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Research Jobs
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Internships
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Sponsored Research Projects
+                        </li>
+                      </ul>
                     </div>
-                    <div
-                      id="col"
-                      class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
-                    >
-                      <div id="block">
-                        <div
-                          id="head"
-                          class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
-                        >
-                          CONSULTANCY @ NITJ
-                        </div>
-                        <ul
-                          class="font-normal flex gap-1 flex-col text-black px-2"
-                        >
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Consultancy works
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            MoUs
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            IPRs
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Find an expert
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Central Research facilities
-                          </li>
-                        </ul>
+                    <div id="block">
+                      <div
+                        id="head"
+                        class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      >
+                        INCUBATION @ NITJ
                       </div>
-                      <div id="block">
-                        <div
-                          id="head"
-                          class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
-                        >
-                          UPCOMING EVENTS
-                        </div>
-                        <ul
-                          class="font-normal flex gap-1 flex-col text-black px-2"
-                        >
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Conferences
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Seminars
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            STC/ FDP
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Workshops
-                          </li>
-                        </ul>
+                      <ul
+                        class="font-normal flex gap-1 flex-col text-black px-2"
+                      >
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          STI Hub
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          E-Cell
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Innovation club
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Institute Innovation council
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Technology Business Incubator
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    id="col"
+                    class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
+                  >
+                    <div id="block">
+                      <div
+                        id="head"
+                        class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      >
+                        CONSULTANCY @ NITJ
                       </div>
+                      <ul
+                        class="font-normal flex gap-1 flex-col text-black px-2"
+                      >
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Consultancy works
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          MoUs
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          IPRs
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Find an expert
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Central Research facilities
+                        </li>
+                      </ul>
+                    </div>
+                    <div id="block">
+                      <div
+                        id="head"
+                        class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      >
+                        UPCOMING EVENTS
+                      </div>
+                      <ul
+                        class="font-normal flex gap-1 flex-col text-black px-2"
+                      >
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Conferences
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Seminars
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          STC/ FDP
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Workshops
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="group cursor-default relative">
+                <div class="group-hover:bg-blue-900 p-1">Alumni</div>
                 <div
-                  class="group cursor-default relative rounded-b-xl hover:bg-blue-800"
+                  id="drop-down"
+                  class="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/2"
                 >
-                  <div class="p-2">Alumni</div>
                   <div
-                    id="drop-down"
-                    class="absolute gap-5 rounded-b-xl bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/2"
+                    id="col"
+                    class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
                   >
-                    <div
-                      id="col"
-                      class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
-                    >
-                      <div id="block">
-                        <ul
-                          class="font-normal flex gap-1 flex-col text-black px-2 py-2"
-                        >
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Alumni portal
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Alumni Registration
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Chapters
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Donation statistics and reports
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            GIve back
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Impact
-                          </li>
-                        </ul>
-                      </div>
-                      <div id="block">
-                        <ul
-                          class="font-normal flex gap-1 flex-col md:font-bold text-black px-2"
-                        >
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Alumni affairs contact details
-                          </li>
-                        </ul>
-                      </div>
+                    <div id="block">
+                      <ul
+                        class="font-normal flex gap-1 flex-col text-black px-2 py-2"
+                      >
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Alumni portal
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Alumni Registration
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Chapters
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Donation statistics and reports
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          GIve back
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Impact
+                        </li>
+                      </ul>
+                    </div>
+                    <div id="block">
+                      <ul
+                        class="font-normal flex gap-1 flex-col md:font-bold text-black px-2"
+                      >
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Alumni affairs contact details
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="group cursor-default relative">
+                <div class="group-hover:bg-blue-900 p-1">Admissions</div>
                 <div
-                  class="group cursor-default relative rounded-b-xl hover:bg-blue-800"
+                  id="drop-down"
+                  class="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm right-0"
                 >
-                  <div class="p-2">Life at NITJ</div>
                   <div
-                    id="drop-down"
-                    class="absolute gap-5 rounded-b-xl bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm right-0"
+                    id="col"
+                    class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
                   >
-                    <div
-                      id="col"
-                      class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
-                    >
-                      <div id="block">
-                        <div
-                          id="head"
-                          class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
-                        >
-                          CLUB & SOCITITES
-                        </div>
-                        <ul
-                          class="font-normal flex gap-1 flex-col text-black px-2"
-                        >
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Vision, Mission & Quality Policy
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Heartfulness Mediation club
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Prayaas - A campaign for smile
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            R-Tist Robotics Club
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            SPIC MACAY
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            “We Can” Club
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Yoga club
-                          </li>
-                          <li
-                            class="hover:text-orange-500 hover:font-semibold flex justify-between"
-                          >
-                            Zeal Society
-                            <div>View all</div>
-                          </li>
-                        </ul>
+                    <div id="block">
+                      <div
+                        id="head"
+                        class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      >
+                        PROSPECTIVE STUDENTS
                       </div>
-                      <div id="block">
-                        <div
-                          id="head"
-                          class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
-                        >
-                          SCHOLARSHIPS
-                        </div>
-                        <ul
-                          class="font-normal flex gap-1 flex-col text-black px-2"
-                        >
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Dr. Pratap Singh Memorial Scholarhsip
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            MCM Scholarship
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Post Matric Scholarship
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Siemens India Scholarship
-                          </li>
-                          <br />
-                          <li
-                            class="hover:text-orange-500 hover:font-bold font-semibold"
-                          >
-                            View all
-                          </li>
-                        </ul>
-                      </div>
+                      <ul
+                        class="font-normal flex gap-1 flex-col text-black px-2"
+                      >
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Why NITJ?
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Explore NITJ
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Discover Student Life
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Courses Offered
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          How to Apply
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Admissions Process
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Virtual tour
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          International Students
+                        </li>
+                      </ul>
                     </div>
-                    <div
-                      id="col"
-                      class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
-                    >
-                      <div id="block">
-                        <div
-                          id="head"
-                          class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
-                        >
-                          LEADERSHIP
-                        </div>
-                        <ul
-                          class="font-normal flex gap-1 flex-col text-black px-2"
-                        >
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Organisational Chart
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Chariperson
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Director
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Registrar
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Academic administration
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Student Welfare
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Faculty Welfare
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Planning and Development
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Research and Consultancy
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            International Affairs
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Hostel administration
-                          </li>
-                        </ul>
-                      </div>
+                    <div id="block">
+                      <ul
+                        class="font-normal flex gap-1 flex-col md:font-bold text-black px-2"
+                      >
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Contact details for admission
+                        </li>
+                      </ul>
                     </div>
-                    <div
-                      id="col"
-                      class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
-                    >
-                      <div id="block">
-                        <div
-                          id="head"
-                          class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
-                        >
-                          GOVERNING BODIES
-                        </div>
-                        <ul
-                          class="font-normal flex gap-1 flex-col text-black px-2"
-                        >
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            NIT council
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Board of Governors
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Senate
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Standing committee of the senate
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Finance committee
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Building and works committee
-                          </li>
-                        </ul>
+                    <div id="block">
+                      <div
+                        id="head"
+                        class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      >
+                        ANTI RAGGING
                       </div>
+                      <ul
+                        class="font-normal flex gap-1 flex-col text-black px-2"
+                      >
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Anti ragging act
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Anti ragging affadvit
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Institute Anti-ragging rules
+                        </li>
+                      </ul>
                     </div>
-                    <div
-                      id="col"
-                      class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
-                    >
-                      <div id="block">
-                        <div
-                          id="head"
-                          class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
-                        >
-                          CELLS
-                        </div>
-                        <ul
-                          class="font-normal flex gap-1 flex-col text-black px-2"
-                        >
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            E-Cell
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Equal opportunities and
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            SC/ST/OBC/PWD cell
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Rajbhasha cell
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            RTI Cell
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Student grievences cell
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Faculty grievences cell
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Staff grievences cell
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Public grievences
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Women cell
-                          </li>
-                        </ul>
+                  </div>
+                  <div
+                    id="col"
+                    class="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl"
+                  >
+                    <div id="block">
+                      <div
+                        id="head"
+                        class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      >
+                        JOIN NITJ
                       </div>
-                      <div id="block">
-                        <div
-                          id="head"
-                          class="bg-[#2a78c1] hover:bg-orange-500 py-2 mb-3 capitalize text-center"
-                        >
-                          COMMITTEES
-                        </div>
-                        <ul
-                          class="font-normal flex gap-1 flex-col text-black px-2"
-                        >
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Institute Development Committee
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Internal complaint committee
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Print, Digital Media and Newsletter
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Social Media
-                          </li>
-                          <li class="hover:text-orange-500 hover:font-semibold">
-                            Website Development and Management
-                          </li>
-                        </ul>
+                      <ul
+                        class="font-normal flex gap-1 flex-col text-black px-2"
+                      >
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          B.Tech Admission
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          M.Tech Admission
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Msc Admission
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          MBA Admission
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Ph.D Admission
+                        </li>
+                      </ul>
+                    </div>
+                    <div id="block">
+                      <div
+                        id="head"
+                        class="bg-blue-900 hover:bg-orange-500 py-2 mb-3 capitalize text-center"
+                      >
+                        &ThinSpace; INSTITUTE PROSPECTUS &ThinSpace;
                       </div>
+                      <ul
+                        class="font-normal flex gap-1 flex-col text-black px-2"
+                      >
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          B.Tech
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          M.Tech
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Msc
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          MBA
+                        </li>
+                        <li class="hover:text-orange-500 hover:font-semibold">
+                          Ph.D
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
             <div class="basis-1/5 flex flex-row justify-center">
@@ -1334,12 +1228,10 @@
           </div>
         </div>
       </div>
-      <!-- NAV BAR ends-->
     </header>
-    <!-- === Search bar starts === -->
     <div
       id="search_page"
-      class="hidden h-full top-0 w-full absolute content-center z-50 bg-transparent backdrop-blur-2xl"
+      class="hidden h-screen top-0 w-screen absolute content-center z-50 bg-transparent backdrop-blur-2xl"
       onclick="showSearchPage(event)"
     >
       <form id="search_form" onclick="showSearchPage(event)">
@@ -1454,756 +1346,6 @@
         </div>
       </form>
     </div>
-    <!-- === Search bar ends === -->
-    <div class="relative">
-      <div>
-        <!-- <div class="mySlides fade">
-            <img src="img/hero-image.jpeg" class="w-screen h-screen opacity-70">
-            <div class="absolute top-1/3 left-1/2 -translate-y-1/2 -translate-x-1/2 w-full text-center">
-              <h1 class="text-7xl m-4 font-bold">NITJ WELCOMES YOU</h1>
-              <h1 class="text-7xl m-4 font-bold">THE PLACE OF TRANSFORMATION</h1>
-            </div>
-          </div> -->
-        <div class="carousel relative shadow-2xl bg-white">
-          <div class="carousel-inner relative overflow-hidden w-full top-0">
-            <!-- Slide 1 -->
-
-            <input
-              class="carousel-open duration-75"
-              type="radio"
-              id="carousel-1"
-              name="carousel"
-              aria-hidden="true"
-              hidden=""
-              checked="checked"
-            />
-            <div class="carousel-item absolute opacity-0" style="height: 100vh">
-              <img src="img/slide1.jpeg" class="w-screen h-screen opacity-70 bg-blend-darken" />
-              <div
-                class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-9/12 text-center drop-shadow-lg rounded-lg"
-              >
-                <h1 class="text-7xl m-5 text-white font-black main-shadow">
-                  NITJ WELCOMES YOU
-                </h1>
-                <h1 class="text-6xl m-5 text-white font-extrabold main-shadow">
-                  THE PLACE OF TRANSFORMATION
-                </h1>
-              </div>
-            </div>
-            <label
-              for="carousel-3"
-              class="prev control-1 w-14 h-14 ml-2 md:ml-10 absolute cursor-pointer hidden text-4xl font-bold hover:text-blue-900 text-[#2167A7] hover:bg-no-repeat hover:bg-[url('img/slide4.jpeg')] hover:bg-cover opacity-75 bg-[#C7CDD0] hover:bg-center leading-tight text-center z-10 inset-y-0 left-0 my-auto"
-              >‹</label
-            >
-            <label
-              for="carousel-2"
-              class="next control-1 w-14 h-14 mr-2 md:mr-10 absolute cursor-pointer hidden text-4xl font-bold hover:text-blue-900 text-[#2167A7] hover:bg-no-repeat hover:bg-[url('img/slide2.jpeg')] hover:bg-cover opacity-75 bg-[#C7CDD0] hover:bg-center leading-tight text-center z-10 inset-y-0 right-0 my-auto"
-              >›</label
-            >
-
-            <!--Slide 2-->
-            <input
-              class="carousel-open duration-75"
-              type="radio"
-              id="carousel-2"
-              name="carousel"
-              aria-hidden="true"
-              hidden=""
-            />
-            <div class="carousel-item absolute opacity-0" style="height: 100vh">
-              <img src="img/slide2.jpeg" class="w-screen h-screen opacity-70 bg-blend-darken" />
-              <div
-                class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-full text-center"
-              >
-                <h1 class="text-7xl m-5 text-white font-black main-shadow">
-                  NITJ WELCOMES YOU
-                </h1>
-                <h1 class="text-6xl m-5 text-white font-extrabold main-shadow">
-                  49th IN ENGINEERING NIRF
-                </h1>
-              </div>
-            </div>
-            <label
-              for="carousel-1"
-              class="prev control-2 w-14 h-14 ml-2 md:ml-10 absolute cursor-pointer hidden text-4xl font-bold hover:text-blue-900 text-[#2167A7] hover:bg-no-repeat hover:bg-[url('img/slide1.jpeg')] hover:bg-cover opacity-70 bg-[#C7CDD0] hover:bg-center leading-tight text-center z-10 inset-y-0 left-0 my-auto"
-              >‹</label
-            >
-            <label
-              for="carousel-4"
-              class="next control-2 w-14 h-14 mr-2 md:mr-10 absolute cursor-pointer hidden text-4xl font-bold hover:text-blue-900 text-[#2167A7] hover:bg-no-repeat hover:bg-[url('img/slide3.jpeg')] hover:bg-cover opacity-70 bg-[#C7CDD0] hover:bg-center leading-tight text-center z-10 inset-y-0 right-0 my-auto"
-              >›</label
-            >
-
-            <!--Slide 3-->
-            <input
-              class="carousel-open duration-75"
-              type="radio"
-              id="carousel-3"
-              name="carousel"
-              aria-hidden="true"
-              hidden=""
-            />
-            <div class="carousel-item absolute opacity-0" style="height: 100vh">
-              <img src="img/slide3.jpeg" class="w-screen h-screen opacity-70 bg-blend-darken" />
-              <div
-                class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-full text-center"
-              >
-                <h1 class="text-7xl m-5 text-white font-black main-shadow">
-                  NITJ WELCOMES YOU
-                </h1>
-                <h1 class="text-6xl m-5 text-white font-extrabold main-shadow">
-                  78th IN OVERALL NIRF RANKING
-                </h1>
-              </div>
-            </div>
-            <label
-              for="carousel-2"
-              class="prev control-3 w-14 h-14 ml-2 md:ml-10 absolute cursor-pointer hidden text-4xl font-bold hover:text-blue-900 text-[#2167A7] hover:bg-no-repeat hover:bg-[url('img/slide2.jpeg')] hover:bg-cover opacity-70 bg-[#C7CDD0] hover:bg-center leading-tight text-center z-10 inset-y-0 left-0 my-auto"
-              >‹</label
-            >
-            <label
-              for="carousel-1"
-              class="next control-3 w-14 h-14 mr-2 md:mr-10 absolute cursor-pointer hidden text-4xl font-bold hover:text-blue-900 text-[#2167A7] hover:bg-no-repeat hover:bg-[url('img/slide2.jpeg')] hover:bg-cover opacity-70 bg-[#C7CDD0] hover:bg-center leading-tight text-center z-10 inset-y-0 right-0 my-auto"
-              >›</label
-            >
-
-            <!--Slide 4-->
-            <input
-              class="carousel-open duration-75"
-              type="radio"
-              id="carousel-4"
-              name="carousel"
-              aria-hidden="true"
-              hidden=""
-            />
-            <div class="carousel-item absolute opacity-0" style="height: 100vh">
-              <img src="img/slide4.jpeg" class="w-screen h-screen opacity-70 bg-blend-darken" />
-              <div
-                class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-full text-center"
-              >
-                <h1 class="text-7xl m-5 text-white font-black main-shadow">
-                  NITJ WELCOMES YOU
-                </h1>
-                <h1 class="text-6xl m-5 text-white font-extrabold main-shadow">
-                  BAND EXCELLENT IN ARIIA RANKINGS
-                </h1>
-              </div>
-            </div>
-            <label
-              for="carousel-4"
-              class="prev control-4 w-14 h-14 ml-2 md:ml-10 absolute cursor-pointer hidden text-4xl font-bold hover:text-blue-900 text-[#2167A7] hover:bg-no-repeat hover:bg-[url('img/slide2.jpeg')] hover:bg-cover opacity-70 bg-[#C7CDD0] hover:bg-center leading-tight text-center z-10 inset-y-0 left-0 my-auto"
-              >‹</label
-            >
-            <label
-              for="carousel-3"
-              class="next control-4 w-14 h-14 mr-2 md:mr-10 absolute cursor-pointer hidden text-4xl font-bold hover:text-blue-900 text-[#2167A7] hover:bg-no-repeat hover:bg-[url('img/slide2.jpeg')] hover:bg-cover opacity-70 bg-[#C7CDD0] hover:bg-center leading-tight text-center z-10 inset-y-0 right-0 my-auto"
-              >›</label
-            >
-          </div>
-        </div>
-      </div>
-
-      <div class="absolute items-center w-full top-2/3">
-        <div class="grid grid-cols-5 lg:gap-10 m-10">
-          <div
-            class="flex h-40 flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl"
-          >
-            <span class="material-symbols-outlined" class="p-5"> school </span>
-            <h2 class="text-center font-semibold text-2xl">PROGRAMS</h2>
-          </div>
-
-          <div
-            class="flex flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl"
-          >
-            <span class="material-symbols-outlined"> biotech </span>
-            <h2 class="text-center font-semibold text-2xl">RESEARCH</h2>
-          </div>
-
-          <div
-            class="flex flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl"
-          >
-            <span class="material-symbols-outlined"> sports_handball </span>
-            <h2 class="text-center font-semibold text-2xl">CAMPUS LIFE</h2>
-          </div>
-
-          <div
-            class="flex flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl"
-          >
-            <span class="material-symbols-outlined"> real_estate_agent </span>
-            <h2 class="text-center font-semibold text-2xl">PLACEMENTS</h2>
-          </div>
-
-          <div
-            class="flex flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl"
-          >
-            <span class="material-symbols-outlined"> newspaper </span>
-            <h2 class="text-center font-semibold text-2xl">HAPPENINGS</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- === Directors message starts === -->
-    <p class="p-4 text-5xl w-full font-bold text-center text-[#FF6600]">
-      DIRECTOR’S CORNER
-    </p>
-    <div class="container bg-[#ADC6DC] min-w-full">
-      <div class="flex flex-row w-full">
-        <div class="basis-1/5 flex flex-col">
-          <div class="m-10 h-full w-full bg-blue-800">
-            <img
-              class="translate-x-8 translate-y-6 h-full"
-              src="img/DirectorSir.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="basis-4/5 flex flex-row justify-center p-10">
-          <div class="flex-col">
-            <div class="flex flex-row justify-between">
-              <p class="text-center font-semibold text-3xl ml-16">
-                Dr Binod Kumar Kanaujia
-              </p>
-              <div class="p-1.5 text-lg pr-32">DIRECTOR, NITJ</div>
-            </div>
-            <div class="border-2 h-1 w-full border-[#2167A7]"></div>
-            <p class="text-lg text-justify px-16 py-10">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages.
-            </p>
-            <div
-              class="text-right text-lg font-semibold underline underline-offset-2 pr-16"
-            >
-              Read More 🡲
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- === Directors message ends === -->
-    <!-- === Institution in nos. starts === -->
-    <div class="container min-w-full bg-black my-20">
-      <img
-        class="absolute blur-sm bg-blend-darken"
-        src="img/institution-in-num.png"
-        alt=""
-      />
-      <div
-        class="relative grid grid-flow-row gap-16 grid-rows-3 text-center place-content-around py-10"
-      >
-        <div class="grid font-bold text-5xl text-white">
-          INSTITUTION IN NUMBERS
-        </div>
-        <div class="grid grid-cols-4 gap-48 place-content-between">
-          <div class="font-bold text-5xl text-white">5000+</div>
-          <div class="font-bold text-5xl text-white">500+</div>
-          <div class="font-bold text-5xl text-white">18</div>
-          <div class="font-bold text-5xl text-white">20</div>
-        </div>
-        <div class="grid grid-cols-4 gap-48 place-content-between">
-          <div class="font-bold text-2xl text-white">Students</div>
-          <div class="font-bold text-2xl text-white">Faculty and Staff</div>
-          <div class="font-bold text-2xl text-white">Dapertments</div>
-          <div class="font-bold text-2xl text-white">Clubs and Cells</div>
-        </div>
-      </div>
-    </div>
-    <!-- === Institution in nos. ends === -->
-    <!-- === Placement Stats starts === -->
-    <div class="container min-w-screen bg-black my-20">
-      <img
-        class="absolute blur-sm bg-blend-darken"
-        src="img/placement-stats.png"
-        alt=""
-      />
-      <div
-        class="relative grid grid-flow-row gap-7 grid-rows-3 px-30 text-center place-content-around py-10"
-      >
-        <div class="grid font-bold text-5xl text-white">PLACEMENT STATS</div>
-        <div class="grid grid-cols-4 gap-36 place-content-between">
-          <div class="font-bold text-5xl text-white">5000+</div>
-          <div class="font-bold text-5xl text-white">500+</div>
-          <div class="font-bold text-5xl text-white">18</div>
-          <div class="font-bold text-5xl text-white">20</div>
-        </div>
-        <div class="grid grid-cols-4 gap-36 place-content-between">
-          <div class="font-bold text-2xl text-white">995+ Students Placed</div>
-          <div class="font-bold text-2xl text-white">90+ Companies Visited</div>
-          <div class="font-bold text-2xl text-white">
-            Highest Package 44 Lac p.a.
-          </div>
-          <div class="font-bold text-2xl text-white">
-            15 ideas turned Startup Companies
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- === Placement Stats end === -->
-    <!-- === LIFE AT NITJ Starts === -->
-    <div class="text-center pt-[25px]">
-      <h1 class="text-[50px] uppercase font-semibold text-blue-500">
-        Life at NIT Jalandhar
-      </h1>
-      <div
-        class="flex flex-col lg:flex-row lg:h-[80vh] m-[15px] lg:m-[55px] lg:mt-[25px] gap-[50px]"
-      >
-        <div class="basis-2/5">
-          <h2
-            class="text-center text-[35px] font-semibold text-black mb-[10px]"
-          >
-            Clubs & Societies
-          </h2>
-          <div
-            class="flex items-center bg-gray-300 p-[15px] shadow-xl rounded-xl"
-          >
-            <div class="overflow-auto bg-white rounded-lg h-[68vh]">
-              <div
-                class="flex flex-col gap-[24px] border-[16px] border-white rounded-lg"
-              >
-                <div
-                  class="clubOne text-sm bg-blue-100 rounded-lg lg:p-[15px] p-[8px] shadow-lg"
-                >
-                  <h1 class="text-xl font-bold text-center mb-[10px]">
-                    Zeal Society
-                  </h1>
-                  <div class="flex flex-col mx-[12px] gap-[18px]">
-                    <div class="">
-                      <img
-                        src="img/rtistClub.png"
-                        class="mx-auto mb-[10px] lg:mr-[14px] lg:float-left object-cover shadow-lg shadow-blue-500/50"
-                      />
-                      <p class="text-[15px]">
-                        The club is all about robotics. This club serves as a
-                        platform for students to enhance their robotic skills
-                        and contribute for the development of the college.
-                      </p>
-                    </div>
-                    <div class="flex flex-row justify-between">
-                      <p
-                        class="inline-block mr-[10px] font-semibold text-blue-500"
-                      >
-                        Development Club
-                      </p>
-                      <p
-                        class="inline-block mr-[10px] font-semibold text-blue-500"
-                      >
-                        <i class="fa-solid fa-people-group text-[21px]"></i> 29
-                      </p>
-                      <a
-                        class="no-underline text-[16px] hover:cursor-pointer hover:text-yellow-300-600 hover:underline text-[#2167A7]"
-                      >
-                        Read more →
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="clubOne text-sm bg-yellow-100 rounded-lg lg:p-[15px] p-[8px] shadow-lg"
-                >
-                  <h1 class="text-xl font-bold text-center mb-[10px]">
-                    Media Cell
-                  </h1>
-                  <div class="flex flex-col mx-[12px] gap-[18px]">
-                    <div class="">
-                      <img
-                        src="img/rtistClub.png"
-                        class="mx-auto mb-[10px] lg:mr-[14px] lg:float-left object-cover shadow-lg shadow-yellow-500/50"
-                      />
-                      <p class="text-[15px]">
-                        The club is all about robotics. This club serves as a
-                        platform for students to enhance their robotic skills
-                        and contribute for the development of the college.
-                      </p>
-                    </div>
-                    <div class="flex flex-row justify-between">
-                      <p
-                        class="inline-block mr-[10px] font-semibold text-yellow-500"
-                      >
-                        Social Club
-                      </p>
-                      <p
-                        class="inline-block mr-[10px] font-semibold text-yellow-500"
-                      >
-                        <i class="fa-solid fa-people-group text-[21px]"></i> 45
-                      </p>
-                      <a
-                        class="no-underline text-[16px] hover:cursor-pointer hover:text-yellow-300-600 hover:underline text-[#2167A7]"
-                      >
-                        Read more →
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="clubOne text-sm bg-red-100 rounded-lg lg:p-[15px] p-[8px] shadow-lg"
-                >
-                  <h1 class="text-xl font-bold text-center mb-[10px]">SAARC</h1>
-                  <div class="flex flex-col mx-[12px] gap-[18px]">
-                    <div class="">
-                      <img
-                        src="img/rtistClub.png"
-                        class="mx-auto mb-[10px] lg:mr-[14px] lg:float-left object-cover shadow-lg shadow-red-500/50"
-                      />
-                      <p class="text-[15px]">
-                        The club is all about robotics. This club serves as a
-                        platform for students to enhance their robotic skills
-                        and contribute for the development of the college.
-                      </p>
-                    </div>
-                    <div class="flex flex-row justify-between">
-                      <p
-                        class="inline-block mr-[10px] font-semibold text-red-500"
-                      >
-                        Networking
-                      </p>
-                      <p
-                        class="inline-block mr-[10px] font-semibold text-red-500"
-                      >
-                        <i class="fa-solid fa-people-group text-[21px]"></i> 19
-                      </p>
-                      <a
-                        class="no-underline text-[16px] hover:cursor-pointer hover:text-yellow-300-600 hover:underline text-[#2167A7]"
-                      >
-                        Read more →
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="clubOne text-sm bg-green-100 rounded-lg lg:p-[15px] p-[8px] shadow-lg"
-                >
-                  <h1 class="text-xl font-bold text-center mb-[10px]">
-                    Criminalz Crew
-                  </h1>
-                  <div class="flex flex-col mx-[12px] gap-[18px]">
-                    <div class="">
-                      <img
-                        src="img/rtistClub.png"
-                        class="mx-auto mb-[10px] lg:mr-[14px] lg:float-left object-cover shadow-lg shadow-green-500/50"
-                      />
-                      <p class="text-[15px]">
-                        The club is all about robotics. This club serves as a
-                        platform for students to enhance their robotic skills
-                        and contribute for the development of the college.
-                      </p>
-                    </div>
-                    <div class="flex flex-row justify-between">
-                      <p
-                        class="inline-block mr-[10px] font-semibold text-green-500"
-                      >
-                        Dance Club
-                      </p>
-                      <p
-                        class="inline-block mr-[10px] font-semibold text-green-500"
-                      >
-                        <i class="fa-solid fa-people-group text-[21px]"></i> 64
-                      </p>
-                      <a
-                        class="no-underline text-[16px] hover:cursor-pointer hover:text-yellow-300-600 hover:underline text-[#2167A7]"
-                      >
-                        Read more →
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="basis-3/5">
-          <div class="">
-            <h2
-              class="text-center text-[35px] font-semibold text-black mb-[10px]"
-            >
-              Photo Gallery
-            </h2>
-            <div class="container w-full flex h-[22vh]">
-              <div class="box">
-                <img src="img/img1.png" />
-              </div>
-              <div class="box">
-                <img src="img/img2.png" />
-              </div>
-              <div class="box">
-                <img src="img/img3.png" />
-              </div>
-              <div class="hidden lg:block box">
-                <img src="img/img4.png" />
-              </div>
-            </div>
-
-            <div class="container w-full flex h-[22vh]">
-              <div class="box">
-                <img src="img/img5.png" />
-              </div>
-              <div class="box">
-                <img src="img/img6.png" />
-              </div>
-              <div class="box">
-                <img src="img/img7.png" />
-              </div>
-              <div class="hidden lg:block box">
-                <img src="img/img8.png" />
-              </div>
-            </div>
-
-            <div class="container w-full flex h-[22vh]">
-              <div class="box">
-                <img src="img/img9.png" />
-              </div>
-              <div class="box">
-                <img src="img/img10.png" />
-              </div>
-              <div class="box">
-                <img src="img/img11.png" />
-              </div>
-              <div class="hidden lg:block box">
-                <img src="img/danceClub.png" style="opacity: 1" />
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex flex-col gap-[15px] lg:flex-row lg:justify-center items-center mt-[15px] m-[auto]"
-          >
-            <a class="lg:mr-[80px] hover:text-[#2a78c1]" href="">
-              <i
-                class="fas fa-camera-alt text-[24px] text-[#2a78c1] mr-[6px]"
-              ></i>
-              <span class="font-semibold hover:underline">View Gallery →</span>
-            </a>
-            <a class="hover:text-[#2a78c1]" href="">
-              <i
-                class="fas fa-street-view text-[24px] text-[#2a78c1] mr-[6px]"
-              ></i>
-              <span class="font-semibold hover:underline">Campus Tour →</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="hidden lg:block base-image overflow-hidden"></div>
-    <div class="lg:hidden base-image-2 overflow-hidden"></div>
-    <!-- === LIFE AT NITJ Ends === -->
-    <!-- === FOOTER Starts === -->
-    <div
-      class="bg-gray-500 text-white flex flex-col lg:flex-row justify-between"
-      style="font-family: 'Roboto', sans-serif"
-    >
-      <div
-        class="p-[25px] basis-1/3 flex flex-col lg:border-r-2 border-y-gray-300"
-      >
-        <div class="pb-[10px] flex flex-row items-center gap-x-[10px]">
-          <img
-            src="./img/nitj-logo.png"
-            alt="NITJ logo"
-            class="w-[67px] h-[67px]"
-          />
-          <p class="text-white lg:text-[20px] font-semibold">
-            Dr. B R Ambedkar National Institute of Technology, Jalandhar
-          </p>
-        </div>
-
-        <div class="p-[20px]">
-          <div class="pb-[6px] lg:w-[85%]">
-            <i class="fas fa-location-dot pr-[8px]"></i
-            ><span class="opacity-90"
-              >G.T Road, Amritsar Bypass, Jalandhar, Punjab, India-144027</span
-            >
-          </div>
-          <div class="pb-[6px] flex flex-row">
-            <i class="fas fa-envelope mt-1 pr-[8px]"></i>
-            <h3 class="opacity-90">webmaster@nitj.ac.in</h3>
-          </div>
-          <div class="pb-[14px] flex flex-row align-center">
-            <i class="fas fa-phone mt-1 pr-[8px]"></i>
-            <h3 class="opacity-90">
-              +91-0181-5037855, 2690301, 2690453, 3082000
-            </h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="hidden lg:block basis-2/3 p-[25px]">
-        <h2 class="my-1 text-xl font-semibold">Quick Links</h2>
-        <div class="p-[15px] flex flex-row">
-          <div class="basis-1/4 flex flex-col lg:text-[14px] text-[11px]">
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Admission</a
-            >
-            <br />
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >UnderGrad Courses</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >PostGrad Courses</a
-            >
-            <br />
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Departments</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Academic Calender</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Clubs And Societies</a
-            >
-            <br />
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Campus Life</a
-            >
-          </div>
-          <div class="basis-1/4 flex flex-col lg:text-[14px] text-[11px]">
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Faculty</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300">Staff</a>
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Recruitment</a
-            >
-            <br />
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Research</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300">Patent</a>
-          </div>
-          <div class="basis-1/4 flex flex-col lg:text-[14px] text-[11px]">
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Institute Prospectus(2019-2020)</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Annual Reports</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300">MOM</a>
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >UGC Act</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >NIT Act and statutes</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Pension</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Ministry of Education Notifications</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Annual Property Return</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >Rules/Policies</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >ARIIA(2020-2021)</a
-            >
-          </div>
-          <div class="basis-1/4 flex flex-col lg:text-[14px] text-[11px]">
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >ARIIA(2020-2021)</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >NIRF-2022</a
-            >
-            <a href="#" class="hover:underline hover:text-yellow-300"
-              >NewsLetter</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-gray-500 p-[10px] flex flex-col border-t-2 pt-[20px]">
-      <div class="flex-row flex justify-center gap-[40px]">
-        <div class="text-white text-l">
-          <a href="https://www.facebook.com/NITJofficial/" target="_blank">
-            <i
-              class="fa-brands fa-facebook text-[21px] hover:text-yellow-300"
-            ></i
-          ></a>
-        </div>
-        <div class="text-white text-l">
-          <a
-            href="https://twitter.com/NITJofficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-            target="_blank"
-          >
-            <i class="fab fa-twitter text-[21px] hover:text-yellow-300"></i
-          ></a>
-        </div>
-        <div class="text-white text-l">
-          <a
-            href="https://in.linkedin.com/school/dr-b-r-ambedkar-national-institute-of-technology-jalandhar-official/"
-            target="_blank"
-          >
-            <i
-              class="fa-brands fa-linkedin text-[21px] hover:text-yellow-300"
-            ></i
-          ></a>
-        </div>
-        <div class="text-white text-l">
-          <a
-            href="https://www.instagram.com/nitjofficial/?hl=en"
-            target="_blank"
-          >
-            <i
-              class="fa-brands fa-instagram text-[21px] hover:text-yellow-300"
-            ></i
-          ></a>
-        </div>
-        <div class="text-white text-l">
-          <a href="https://www.youtube.com/c/NITJOfficial" target="_blank">
-            <i
-              class="fa-brands fa-youtube text-[21px] hover:text-yellow-300"
-            ></i
-          ></a>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="bg-gray-500 text-white flex lg:flex-row flex-col text-center p-[20px]"
-      style="font-family: 'Roboto', sans-serif"
-    >
-      <div class="lg:basis-1/3 lg:text-[15px] lg:pb-0 pb-[10px] text-[12px]">
-        © Copyright 2022, All Rights Reserved NIT Jalandhar
-      </div>
-
-      <div class="lg:basis-2/3 lg:w-[45%] text-[12px] lg:text-[15px] mx-auto">
-        <a href="#" class="lg:mx-2 mx-1 hover:underline hover:text-yellow-300"
-          >Other NITs</a
-        >
-        |
-        <a href="#" class="lg:mx-2 mx-1 hover:underline hover:text-yellow-300"
-          >MoU</a
-        >
-        |
-        <a href="#" class="lg:mx-2 mx-1 hover:underline hover:text-yellow-300"
-          >GIAN</a
-        >
-        |
-        <a href="#" class="lg:mx-2 mx-1 hover:underline hover:text-yellow-300"
-          >TEQIP</a
-        >
-        |
-        <a href="#" class="lg:mx-2 mx-1 hover:underline hover:text-yellow-300"
-          >Anti Ragging</a
-        >
-        |
-        <a href="#" class="lg:mx-2 mx-1 hover:underline hover:text-yellow-300"
-          >Terms of Use</a
-        >
-        |
-        <a href="#" class="lg:mx-2 mx-1 hover:underline hover:text-yellow-300"
-          >Credits</a
-        >
-      </div>
-    </div>
-    <!-- === FOOTER Ends === -->
     <script>
       var slideIndex = 0;
       carousel();
@@ -2233,12 +1375,6 @@
       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new Tooltip(tooltipTriggerEl);
       });
-    </script>
-    <script>
-      function mouseOver() {
-        document.getElementById("demo1").style.color = "#215ba7";
-        document.getElementById("demo2").style.color = "#215ba7";
-      }
     </script>
   </body>
 </html>
