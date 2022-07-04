@@ -1,3 +1,4 @@
+var visited = false;
 window.onscroll = function() {
   var institute_name = document.getElementsByClassName("institute_name");
   var full_navbar = document.getElementsByTagName("header");
@@ -19,7 +20,9 @@ window.onscroll = function() {
     institute_name[i].classList.add("text-sm");
     }
   }
-  
+  if(window.scrollY > 1000 && !visited){
+    animateValueIntiator();
+  }
 }
 else{
   logo.style.width="120px";
@@ -28,7 +31,7 @@ else{
   logo.classList.remove("top-0");
   logo.classList.add("top-8");
   for(var i=0;i<institute_name.length;i++){
-    console.log(institute_name[i].classList);
+    // console.log(institute_name[i].classList);
     if(institute_name[i].classList.contains("text-lg")){
       institute_name[i].classList.remove("text-lg");
       institute_name[i].classList.add("text-xl");
@@ -63,5 +66,49 @@ function showSearchPage(event){
   else{
     search_page.classList.remove("grid");
     search_page.classList.add("hidden");
+  }
+}
+
+function isInViewPort(element) {
+  var bounding = element.getBoundingClientRect();
+  if (
+      bounding.top >= 0 &&
+      bounding.left >= 0 &&
+      bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+      bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  ) {
+      console.log('In the viewport! :)');
+      return true;
+  } else {
+      console.log('Not in the viewport. :(');
+      return false;
+  }
+}
+function animateValue(obj, start, end, duration,index) {
+  if(isInViewPort(obj)){
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    if(index==0 || index==1){
+      obj.innerHTML = Math.floor(progress * (end - start) + start) + "+";
+    }
+    else{
+      obj.innerHTML = Math.floor(progress * (end - start) + start);
+    }
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+  }
+}
+
+function animateValueIntiator(){
+  var rolling_nums = document.getElementById("rolling_nums").children;
+  visited=true;
+  for(var i=0;i<rolling_nums.length;i++){
+    obj=rolling_nums[i];
+    animateValue(obj,0,parseInt(obj.innerHTML),3000,i);
   }
 }
