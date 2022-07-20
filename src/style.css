@@ -9,32 +9,32 @@
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 400;
-  src: url('./fonts/barlow-v12-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/barlow-v12-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
-    url('./fonts/barlow-v12-latin-regular.eot?#iefix')
+    url('../fonts/barlow-v12-latin-regular.eot?#iefix')
       format('embedded-opentype'),
-    /* IE6-IE8 */ url('./fonts/barlow-v12-latin-regular.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('./fonts/barlow-v12-latin-regular.woff')
+    /* IE6-IE8 */ url('../fonts/barlow-v12-latin-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../fonts/barlow-v12-latin-regular.woff')
       format('woff'),
-    /* Modern Browsers */ url('./fonts/barlow-v12-latin-regular.ttf')
+    /* Modern Browsers */ url('../fonts/barlow-v12-latin-regular.ttf')
       format('truetype'),
     /* Safari, Android, iOS */
-      url('./fonts/barlow-v12-latin-regular.svg#Barlow') format('svg'); /* Legacy iOS */
+      url('../fonts/barlow-v12-latin-regular.svg#Barlow') format('svg'); /* Legacy iOS */
 }
 /* barlow-500 - latin */
 @font-face {
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 500;
-  src: url('./fonts/barlow-v12-latin-500.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/barlow-v12-latin-500.eot'); /* IE9 Compat Modes */
   src: local(''),
-    url('./fonts/barlow-v12-latin-500.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('./fonts/barlow-v12-latin-500.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('./fonts/barlow-v12-latin-500.woff')
+    url('../fonts/barlow-v12-latin-500.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../fonts/barlow-v12-latin-500.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../fonts/barlow-v12-latin-500.woff')
       format('woff'),
-    /* Modern Browsers */ url('./fonts/barlow-v12-latin-500.ttf')
+    /* Modern Browsers */ url('../fonts/barlow-v12-latin-500.ttf')
       format('truetype'),
-    /* Safari, Android, iOS */ url('./fonts/barlow-v12-latin-500.svg#Barlow')
+    /* Safari, Android, iOS */ url('../fonts/barlow-v12-latin-500.svg#Barlow')
       format('svg'); /* Legacy iOS */
 }
 /* barlow-600 - latin */
@@ -42,15 +42,15 @@
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 600;
-  src: url('./fonts/barlow-v12-latin-600.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/barlow-v12-latin-600.eot'); /* IE9 Compat Modes */
   src: local(''),
-    url('./fonts/barlow-v12-latin-600.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('./fonts/barlow-v12-latin-600.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('./fonts/barlow-v12-latin-600.woff')
+    url('../fonts/barlow-v12-latin-600.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../fonts/barlow-v12-latin-600.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../fonts/barlow-v12-latin-600.woff')
       format('woff'),
-    /* Modern Browsers */ url('./fonts/barlow-v12-latin-600.ttf')
+    /* Modern Browsers */ url('../fonts/barlow-v12-latin-600.ttf')
       format('truetype'),
-    /* Safari, Android, iOS */ url('./fonts/barlow-v12-latin-600.svg#Barlow')
+    /* Safari, Android, iOS */ url('../fonts/barlow-v12-latin-600.svg#Barlow')
       format('svg'); /* Legacy iOS */
 }
 /* barlow-700 - latin */
@@ -58,15 +58,15 @@
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 700;
-  src: url('./fonts/barlow-v12-latin-700.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/barlow-v12-latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
-    url('./fonts/barlow-v12-latin-700.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('./fonts/barlow-v12-latin-700.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('./fonts/barlow-v12-latin-700.woff')
+    url('../fonts/barlow-v12-latin-700.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../fonts/barlow-v12-latin-700.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../fonts/barlow-v12-latin-700.woff')
       format('woff'),
-    /* Modern Browsers */ url('./fonts/barlow-v12-latin-700.ttf')
+    /* Modern Browsers */ url('../fonts/barlow-v12-latin-700.ttf')
       format('truetype'),
-    /* Safari, Android, iOS */ url('./fonts/barlow-v12-latin-700.svg#Barlow')
+    /* Safari, Android, iOS */ url('../fonts/barlow-v12-latin-700.svg#Barlow')
       format('svg'); /* Legacy iOS */
 }
 /* barlow-800 - latin */
@@ -74,14 +74,14 @@
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 800;
-  src: url('./fonts/barlow-v12-latin-800.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/barlow-v12-latin-800.eot'); /* IE9 Compat Modes */
   src: local(''),
-    url('./fonts/barlow-v12-latin-800.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('./fonts/barlow-v12-latin-800.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('./fonts/barlow-v12-latin-800.woff')
+    url('../fonts/barlow-v12-latin-800.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../fonts/barlow-v12-latin-800.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../fonts/barlow-v12-latin-800.woff')
       format('woff'),
-    /* Modern Browsers */ url('./fonts/barlow-v12-latin-800.ttf')
+    /* Modern Browsers */ url('../fonts/barlow-v12-latin-800.ttf')
       format('truetype'),
-    /* Safari, Android, iOS */ url('./fonts/barlow-v12-latin-800.svg#Barlow')
+    /* Safari, Android, iOS */ url('../fonts/barlow-v12-latin-800.svg#Barlow')
       format('svg'); /* Legacy iOS */
 }

@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
   <style>
     body {
       scrollbar-color: #fff #fff;
@@ -151,7 +151,7 @@
   </style>
 </head>
 
-<body class="font-body">
+<body class="font-body text-dark-purple">
   <header class="sticky top-0 z-50">
     <!-- TOP NAV BAR stats -->
     <div id="top_bar" class="z-50 flex flex-row py-0.5 bg-[#2a78c1] text-white font-bold px-12 text-sm h-7">
@@ -1425,7 +1425,24 @@
   </div>
   <!-- === News Section Ends === -->
   <!-- === Directors message starts === -->
-  <p class="p-4 text-3xl w-full font-bold text-center text-[#FF6600]">
+
+  <div id="Director's Corner" class="container mx-auto my-6 px-4">
+    <div class="space-y-6 md:flex-row md:space-x-6 items-center flex flex-col p-6 bg-white shadow-md rounded-lg">
+      <img src="./img/DirectorSir.png" class=" rounded-md w-32 h-32" alt="some image">
+      <div id="content" class="flex flex-col space-y-4">
+        <h1 class="text-4xl font-bold text-dark-purple">Director's <span class="text-sky-700">Note</span></h1>
+        <h2 class="text-xl opacity-80 font-medium">Dr. Binod Kumar Kanaujia</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nesciunt voluptatem sed dolore? Nisi
+          fugit ullam maiores eum, et, eaque aperiam necessitatibus, facere libero est repellat provident
+          labore quibusdam quae voluptate praesentium temporibus quos vitae amet. Quae voluptate ullam
+          assumenda
+          labore aliquam, quibusdam, debitis molestiae ratione exercitationem sed earum nihil.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <p class="p-4 text-3xl w-full font-bold text-center text-[#FF6600]">
     DIRECTOR’S CORNER
   </p>
   <div class="container h-72 bg-[#ADC6DC] min-w-full">
@@ -1460,7 +1477,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- === Directors message ends === -->
   <!-- === Admission Section Starts === -->
   <div>
@@ -1502,7 +1519,41 @@
   </div>
   <!-- === Admission Section Starts === -->
   <!-- === Institution in nos. starts === -->
-  <div class="container h-fit min-w-full" style="margin-top: 48px;margin-bottom: 96px;">
+
+  <!-- Numbers that prove NITJ -->
+  <section class="bg-[url('./img/bgnumbers.jpg')] bg-no-repeat bg-cover bg-top my-6" id="numbers">
+    <div class="bg-dark-purple-70">
+      <div
+        class="flex flex-col md:items-center md:space-y-0 md:justify-around space-y-20 md:flex-row container mx-auto px-4 py-10">
+        <h1 class="text-5xl font-bold text-white uppercase">#numbers <br>
+          <span style="-webkit-text-stroke: 1px #ffffff !important;-webkit-text-fill-color: transparent"
+            class="inline-block">that
+            prove</span> NITJ
+        </h1>
+        <div class="md:max-w-sm grid grid-cols-2 gap-10 text-white" id="stats">
+          <div id='number'>
+            <h1 class="uppercase text-5xl font-bold">995+</h1>
+            <p class="uppercase text-lg">Students placed</p>
+          </div>
+          <div id='number'>
+            <h1 class="uppercase text-5xl font-bold">150+</h1>
+            <p class="uppercase text-lg">Companies visited</p>
+          </div>
+          <div id='number'>
+            <h1 class="uppercase text-5xl font-bold">1.2 CR</h1>
+            <p class="uppercase text-lg">Highest package</p>
+          </div>
+          <div id='number'>
+            <h1 class="uppercase text-5xl font-bold">15+</h1>
+            <p class="uppercase text-lg">idead turned into startups</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <div class="container h-fit min-w-full" style="margin-top: 48px;margin-bottom: 96px;">
     <img class="absolute min-w-full h-72 bg-blend-darken brightness-50 contrast-90" src="img/institution-in-num.png"
       alt="" />
     <div class="relative grid grid-flow-row gap- grid-rows-3 text-center place-content-around py-10">
@@ -1522,7 +1573,9 @@
         <div class="font-bold text-2xl text-white">Clubs and Cells</div>
       </div>
     </div>
-  </div>
+  </div> -->
+
+
   <!-- === Institution in nos. ends === -->
   <!-- === Research Section Starts === -->
   <h1 class="font-semibold text-3xl text-center my-7 text-[#FF6600]">A CAMPUS THAT FORSTER CRITICAL THINKING</h1>
