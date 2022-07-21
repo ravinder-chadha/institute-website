@@ -7,8 +7,9 @@ module.exports = {
         body: ['Barlow'],
       },
       colors: {
-        'dark-purple-70': 'hsla(242, 83%, 7%, 0.7)',
-        'dark-purple': 'hsla(242, 83%, 7%, 1)',
+        'dark-purple': 'hsla(242, 83%, 7%)',
+        accent: 'hsla(201, 96%, 32%)',
+        'light-purple': 'hsla(242, 83%, 98%)',
       },
       backgroundImage: {
         'number-bg': "url('./Homepg/img/bgnumbers.jpg')",
