@@ -7,14 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Google Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
   <script src="app.js" defer></script>
   <style>
     body {
@@ -22,6 +26,7 @@
       background-color: #f5f5f5;
     }
 
+    /* Customizing the Scrollbar */
     ::-webkit-scrollbar {
       width: 10px;
     }
@@ -63,6 +68,8 @@
       background: #212121;
     }
 
+
+    /* Gallery Effects */
     .box {
       flex: 1;
       overflow: hidden;
@@ -1427,8 +1434,9 @@
   <!-- === Directors message starts === -->
 
   <div id="Director's Corner" class="container mx-auto my-6 px-4">
-    <div class="space-y-6 md:flex-row md:space-x-6 items-center flex flex-col p-6 bg-white shadow-md rounded-lg">
-      <img src="./img/DirectorSir.png" class=" rounded-md w-32 h-32" alt="some image">
+    <div
+      class="space-y-6 md:space-y-0 md:flex-row md:space-x-6 items-center flex flex-col p-6 bg-white shadow-md rounded-lg">
+      <img src="./img/DirectorSir 1.jpg" class=" rounded-md w-32 h-32" alt="some image">
       <div id="content" class="flex flex-col space-y-4">
         <h1 class="text-4xl font-bold text-dark-purple">Director's <span class="text-sky-700">Note</span></h1>
         <h2 class="text-xl opacity-80 font-medium">Dr. Binod Kumar Kanaujia</h2>
@@ -1521,39 +1529,10 @@
   <!-- === Institution in nos. starts === -->
 
   <!-- Numbers that prove NITJ -->
-  <section class="bg-[url('./img/bgnumbers.jpg')] bg-no-repeat bg-cover bg-top my-6" id="numbers">
-    <div class="bg-dark-purple-70">
-      <div
-        class="flex flex-col md:items-center md:space-y-0 md:justify-around space-y-20 md:flex-row container mx-auto px-4 py-10">
-        <h1 class="text-5xl font-bold text-white uppercase">#numbers <br>
-          <span style="-webkit-text-stroke: 1px #ffffff !important;-webkit-text-fill-color: transparent"
-            class="inline-block">that
-            prove</span> NITJ
-        </h1>
-        <div class="md:max-w-sm grid grid-cols-2 gap-10 text-white" id="stats">
-          <div id='number'>
-            <h1 class="uppercase text-5xl font-bold">995+</h1>
-            <p class="uppercase text-lg">Students placed</p>
-          </div>
-          <div id='number'>
-            <h1 class="uppercase text-5xl font-bold">150+</h1>
-            <p class="uppercase text-lg">Companies visited</p>
-          </div>
-          <div id='number'>
-            <h1 class="uppercase text-5xl font-bold">1.2 CR</h1>
-            <p class="uppercase text-lg">Highest package</p>
-          </div>
-          <div id='number'>
-            <h1 class="uppercase text-5xl font-bold">15+</h1>
-            <p class="uppercase text-lg">idead turned into startups</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 
-  <!-- <div class="container h-fit min-w-full" style="margin-top: 48px;margin-bottom: 96px;">
+
+  <div class="container h-fit min-w-full" style="margin-top: 48px;margin-bottom: 96px;">
     <img class="absolute min-w-full h-72 bg-blend-darken brightness-50 contrast-90" src="img/institution-in-num.png"
       alt="" />
     <div class="relative grid grid-flow-row gap- grid-rows-3 text-center place-content-around py-10">
@@ -1573,8 +1552,7 @@
         <div class="font-bold text-2xl text-white">Clubs and Cells</div>
       </div>
     </div>
-  </div> -->
-
+  </div>
 
   <!-- === Institution in nos. ends === -->
   <!-- === Research Section Starts === -->
@@ -1695,7 +1673,39 @@
   </div>
   <!-- === Research Section Ends === -->
   <!-- === Placement Stats starts === -->
-  <div class="container h-fit min-w-full" style="margin-top: 48px; margin-bottom: 96px;">
+
+  <section class="bg-[url('./img/placementStats.png')] bg-fixed bg-no-repeat bg-cover bg-center my-6">
+    <div class="backdrop-blur-md bg-dark-purple-70">
+      <div
+        class="flex flex-col md:items-center md:space-y-0 md:justify-around space-y-20 md:flex-row container mx-auto px-4 py-10">
+        <h1 class="text-5xl font-bold text-white uppercase">#numbers <br>
+          <span style="-webkit-text-stroke: 1px #ffffff !important;-webkit-text-fill-color: transparent"
+            class="inline-block">that
+            prove</span> NITJ
+        </h1>
+        <div class="md:max-w-sm grid grid-cols-2 gap-10 text-white" id="stats">
+          <div id='number'>
+            <h1 class="uppercase text-5xl font-bold">995+</h1>
+            <p class="uppercase text-lg">Students placed</p>
+          </div>
+          <div id='number'>
+            <h1 class="uppercase text-5xl font-bold">150+</h1>
+            <p class="uppercase text-lg">Companies visited</p>
+          </div>
+          <div id='number'>
+            <h1 class="uppercase text-5xl font-bold">1.2 CR</h1>
+            <p class="uppercase text-lg">Highest package</p>
+          </div>
+          <div id='number'>
+            <h1 class="uppercase text-5xl font-bold">15+</h1>
+            <p class="uppercase text-lg">idead turned into startups</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="container h-fit min-w-full" style="margin-top: 48px; margin-bottom: 96px;">
     <img class="absolute brightness-50 min-w-full h-72 contrast-90 bg-blend-darken" src="img/placement-stats.png"
       alt="" />
     <div class="relative grid grid-flow-row grid-rows-3 px-30 text-center place-content-around">
@@ -1716,7 +1726,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- === Placement Stats end === -->
   <!-- === LIFE AT NITJ Starts === -->
   <div class="text-center">

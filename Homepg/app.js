@@ -111,23 +111,15 @@ function animateValueIntiator() {
 
 // Parallex Effect
 
-const numbers = document.getElementById('numbers')
+// const numbers = document.getElementById('numbers')
 
 // window.addEventListener('scroll', () => {
-//   console.log('working ✅')
-//   let abvoe = numbers.offsetTop
 //   let offset = scrollY
-//   console.log(offset)
-//   numbers.style.backgroundPositionY = abvoe - offset * 0.7 + 'px'
+//   const viewport = window.outerHeight
+//   console.log('running')
+//   if (offset >= numbers.offsetTop - viewport) {
+//     console.log('touched')
+//     numbers.style.backgroundPositionY =
+//       -(numbers.offsetTop - offset) * 0.8 + 'px'
+//   }
 // })
-
-window.addEventListener('scroll', () => {
-  let offset = scrollY
-  const viewport = window.outerHeight
-  console.log('running')
-  if (offset >= numbers.offsetTop - viewport) {
-    console.log('touched')
-    numbers.style.backgroundPositionY =
-      -(numbers.offsetTop - offset) * 0.8 + 'px'
-  }
-})
