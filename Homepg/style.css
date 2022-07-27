@@ -970,6 +970,18 @@ video {
   height: 67px;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[224px\] {
+  height: 224px;
+}
+
+.h-\[5px\] {
+  height: 5px;
+}
+
 .max-h-96 {
   max-height: 24rem;
 }
@@ -1028,6 +1040,10 @@ video {
 
 .w-\[67px\] {
   width: 67px;
+}
+
+.w-\[111px\] {
+  width: 111px;
 }
 
 .min-w-max {
@@ -1273,6 +1289,30 @@ video {
 
 .gap-\[40px\] {
   gap: 40px;
+}
+
+.gap-\[\] {
+  gap: ;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-32 {
+  gap: 8rem;
+}
+
+.gap-\[48px\] {
+  gap: 48px;
+}
+
+.gap-\[16px\] {
+  gap: 16px;
+}
+
+.gap-\[32px\] {
+  gap: 32px;
 }
 
 .gap-x-\[10px\] {
@@ -1630,6 +1670,11 @@ video {
   background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1709,6 +1754,10 @@ video {
 
 .p-\[10px\] {
   padding: 10px;
+}
+
+.p-\[11\%\] {
+  padding: 11%;
 }
 
 .py-2\.5 {
@@ -1806,6 +1855,21 @@ video {
   padding-right: 1.5rem;
 }
 
+.px-\[11\%\] {
+  padding-left: 11%;
+  padding-right: 11%;
+}
+
+.py-\[48px\] {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.py-\[128px\] {
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
+
 .pr-16 {
   padding-right: 4rem;
 }
@@ -1860,6 +1924,22 @@ video {
 
 .pt-\[20px\] {
   padding-top: 20px;
+}
+
+.pl-\[\] {
+  padding-left: ;
+}
+
+.pl-\[32px\] {
+  padding-left: 32px;
+}
+
+.pl-\[64px\] {
+  padding-left: 64px;
+}
+
+.pl-\[80px\] {
+  padding-left: 80px;
 }
 
 .text-center {
@@ -1957,6 +2037,26 @@ video {
   font-size: 12px;
 }
 
+.text-\[88px\] {
+  font-size: 88px;
+}
+
+.text-\[44px\] {
+  font-size: 44px;
+}
+
+.text-\[64px\] {
+  font-size: 64px;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
+}
+
+.text-\[22px\] {
+  font-size: 22px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1989,8 +2089,28 @@ video {
   text-transform: capitalize;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .leading-tight {
   line-height: 1.25;
+}
+
+.leading-\[35px\] {
+  line-height: 35px;
+}
+
+.leading-\[32px\] {
+  line-height: 32px;
+}
+
+.leading-\[16px\] {
+  line-height: 16px;
+}
+
+.leading-\[24px\] {
+  line-height: 24px;
 }
 
 .text-white {
