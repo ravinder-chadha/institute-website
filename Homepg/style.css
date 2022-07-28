@@ -666,6 +666,10 @@ video {
   top: 66.666667%;
 }
 
+.top-\[60\%\] {
+  top: 60%;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -850,6 +854,10 @@ video {
 
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .block {

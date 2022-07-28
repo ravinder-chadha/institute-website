@@ -123,3 +123,16 @@ function animateValueIntiator() {
 //       -(numbers.offsetTop - offset) * 0.8 + 'px'
 //   }
 // })
+let home = 0;
+window.onload = function() { showHome(); }
+function showHome() {
+  let i;
+  let homeslider = document.getElementsByClassName("homeslide");
+  for (i = 0; i < homeslider.length; i++) {
+    homeslider[i].style.display = "none";
+  }
+  home++;
+  if (home > homeslider.length) {home = 1}
+  homeslider[home-1].style.display = "block";
+  setTimeout(showHome, 3000); // Change image every 3 seconds
+}
