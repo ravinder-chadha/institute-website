@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About - NITJ</title>
+
+    <script src="app.js" defer></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Homepg/style.css" />
 
     <!-- ICONS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,10 +26,40 @@
     <!-- font-family: 'Barlow', sans-serif;
     font-family: 'Poppins', sans-serif; -->
 
+    <!-- JAVASCRIPT -->
+    <script src="app.js" defer></script>
+
     <style>
+        /* Customizing the Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(30, 58, 138, 1);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: gray;
+        }
+
+        ::-webkit-resizer {
+            background-color: #ffffff;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: "FILL"0, "wght"300, "grad"0, "opzs"20;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
         .font2 {
             font-family: 'Barlow', sans-serif;
         }
+
         :root {
             --primary-color: #fff;
             --background-color: #212121;
@@ -44,6 +80,30 @@
             font-family: var(--font1);
         }
 
+        .titlebg {
+            background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(255, 255, 255, 0) 99.11%), url(img/img6.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .tile1 {
+            width: 250px;
+            height: 200px;
+            
+            background: linear-gradient(132.04deg, rgba(255, 255, 255, 0.1) 16.87%, rgba(255, 255, 255, 0.4) 75.02%);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(40px);
+            background-color: #0369A1;
+            /* Note: backdrop-filter has minimal browser support */
+            border-radius: 6px;
+            transition: all .3s ease-in-out;
+        }
+
+        .tile1:hover {
+            transform: scale(1.1);
+        }
+
         /* Outer Layer with the timeline border */
         .outer {
             border-left: 4px solid #0369A1;
@@ -51,24 +111,6 @@
 
         /* Card container */
         .card {
-            position: relative;
-            margin: 0 0 20px 20px;
-            padding: 10px;
-            color: gray;
-            border: 2px solid black;
-            border-radius: 8px;
-        }
-
-        /* Information about the timeline */
-        .info {
-            display: flex;
-            flex-direction: row;
-            gap: 16px;
-        }
-
-        /* Title of the card */
-        .title {
-            color: var(--blue-color);
             position: relative;
         }
 
@@ -80,144 +122,487 @@
             height: 15px;
             background: white;
             border-radius: 999px;
-            left: -41px;
+            left: -29px;
             border: 3px solid #0369A1;
+        }
+
+        .box {
+            flex: 1;
+            overflow: hidden;
+            transition: 0.5s;
+            line-height: 0;
+        }
+
+        .box>img {
+            width: 100%;
+            height: 100%;
+            border: 0.2rem solid white;
+            border-radius: 8px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            transition: ease 0.75s;
+            filter: grayscale(100%);
+        }
+
+        .box:hover {
+            flex: 1 1 30%;
+            /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .box:hover>img {
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .base-image {
+            margin-top: 40px;
+            background-image: url("img/nitj3.jpg"),
+                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+            -webkit-mask-image: linear-gradient(0deg, white, transparent);
+            background-color: #cccccc;
+            height: 400px;
+            background-position: 0% 28%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .base-image-2 {
+            margin-top: 40px;
+            background-image: url("img/nitj3.jpg"),
+                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+            background-color: #cccccc;
+            height: 300px;
+            background-position: 58% 28%;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     </style>
 </head>
 
-<body class="flex flex-col gap-32">
+<body>
+    <script src="../common template/header.js"></script>
 
-    <div class="flex flex-col justify-center items-start h-[224px] bg-light-purple px-[11%] py-[48px]">
-        <p class="font2 font-bold text-[88px] text-accent">ABOUT</p>
-        <p class="text-[21px]">HOME > ABOUT</p>
-    </div>
-
-    <div class="flex flex-col items-start px-[11%] gap-[48px]">
-        <div class="flex flex-col items-start">
-            <p class="font2 font-semibold text-[44px]">INTRODUCTION</p>
-            <div class="bg-accent w-[111px] h-[5px]"></div>
+    <div class="flex flex-col gap-12">
+        <div class="titlebg flex flex-col justify-center items-start h-[224px] px-[11%] py-[48px]">
+            <p class="font2 font-bold text-[88px] text-white">ABOUT</p>
+            <p class="text-[21px] text-white">HOME > ABOUT</p>
         </div>
-        <p class="text-[21px] leading-[35px] text-justify">
-            Dr B R Ambedkar National Institute of Technology was established in the year 1987 as Regional Engineering College and was given the status of National Institute of Technology (Deemed University) by the Government of India on October 17, 2002 under the aegis of Ministry of Education (Shiksha Mantralaya), New Delhi. Now the Ministry of Education (Shiksha Mantralaya), Government of India has declared the Institute as <span class="text-accent italic font-medium">“Institute of National Importance”</span> under the act of Parliament-2007. A large number of reputed Industrial houses in the country visit the Institution and select the final year students as Engineers/ Management Trainees. As one of the National Institutes of Technology (NIT), the Institute has the responsibility of providing high quality education in Engineering, Technology and Sciences to produce competent technical and scientific manpower for the country. The Institute offers BTech, MTech, MSc, MBA and PhD programmes in the several disciplines of Engineering, Technology and Sciences.
-        </p>
-    </div>
-
-    <div class="flex flex-row justify-between items-start px-[11%]">
-        <div class="basis-1/3 flex flex-col items-start gap-[48px]">
+    
+        <div class="flex flex-col items-start px-[11%] gap-[48px]">
             <div class="flex flex-col items-start">
-                <p class="font2 font-semibold text-[44px]">VISSION</p>
+                <p class="font2 font-semibold text-[44px]">INTRODUCTION</p>
                 <div class="bg-accent w-[111px] h-[5px]"></div>
             </div>
             <p class="text-[21px] leading-[35px] text-justify">
-                To build a rich intellectual potential embedded with interdisciplinary knowledge, human values and professional ethics among the youth, aspirant of becoming engineers and technologists, so that they contribute to society and create a niche for a successful career.
+                Dr B R Ambedkar National Institute of Technology was established in the year 1987 as Regional Engineering
+                College and was given the status of National Institute of Technology (Deemed University) by the Government
+                of India on October 17, 2002 under the aegis of Ministry of Education (Shiksha Mantralaya), New Delhi. Now
+                the Ministry of Education (Shiksha Mantralaya), Government of India has declared the Institute as <span
+                    class="text-accent italic font-medium">“Institute of National Importance”</span> under the act of
+                Parliament-2007. A large number of reputed Industrial houses in the country visit the Institution and select
+                the final year students as Engineers/ Management Trainees. As one of the National Institutes of Technology
+                (NIT), the Institute has the responsibility of providing high quality education in Engineering, Technology
+                and Sciences to produce competent technical and scientific manpower for the country. The Institute offers
+                BTech, MTech, MSc, MBA and PhD programmes in the several disciplines of Engineering, Technology and
+                Sciences.
             </p>
         </div>
-        <div class="basis-2/3 flex flex-col items-start gap-[48px] pl-[80px]">
+    
+        <div class="flex flex-row justify-between items-start px-[11%]">
+            <div class="basis-1/3 flex flex-col items-start gap-[48px]">
+                <div class="flex flex-col items-start">
+                    <p class="font2 font-semibold text-[44px]">VISSION</p>
+                    <div class="bg-accent w-[111px] h-[5px]"></div>
+                </div>
+                <p class="text-[21px] leading-[35px] text-justify">
+                    To build a rich intellectual potential embedded with interdisciplinary knowledge, human values and
+                    professional ethics among the youth, aspirant of becoming engineers and technologists, so that they
+                    contribute to society and create a niche for a successful career.
+                </p>
+            </div>
+            <div class="basis-2/3 flex flex-col items-start gap-[48px] pl-[80px]">
+                <div class="flex flex-col items-start">
+                    <p class="font2 font-semibold text-[44px]">MISSION</p>
+                    <div class="bg-accent w-[111px] h-[5px]"></div>
+                </div>
+                <p class="text-[21px] leading-[35px] text-justify">
+                    To become a leading and unique institution of higher learning, offering state-of-the-art education,
+                    research and training in engineering and technology to students who are able and eager to become change
+                    agents for the industrial and economic progress of the nation. To nurture and sustain an academic
+                    ambience conducive to the development and growth of committed professionals for sustainable development
+                    of the nation and to accomplish its
+                    integration into the global economy. To strive to be a Swachch NIT providing a guarantee of clean
+                    hostel, clean mess, clean water and hygienic & wholesome food to its students.
+                </p>
+            </div>
+        </div>
+    
+        <div class="flex flex-row justify-between items-start px-[11%]">
+            <div class="basis-1/3 flex flex-col items-start gap-[48px]">
+                <div class="flex flex-col items-start">
+                    <p class="font2 font-semibold text-[44px]">RANKINGS</p>
+                    <div class="bg-accent w-[111px] h-[5px]"></div>
+                </div>
+                <div class="flex flex-row items-start gap-[32px]">
+                    <p class="text-accent font-bold text-[64px] leading-[35px]">52</p>
+                    <p class="font-medium text-[22px]">NIRF ENGINEERING 2022</p>
+                </div>
+                <div class="flex flex-row items-start gap-[32px]">
+                    <p class="text-accent font-bold text-[64px] leading-[35px]">85</p>
+                    <p class="font-medium text-[22px]">NIRF OVERALL 2022</p>
+                </div>
+                <div class="flex flex-row items-start gap-[32px]">
+                    <p class="text-accent font-bold text-[64px] leading-[35px]">46</p>
+                    <p class="font-medium text-[22px]">TIMES ENGINEERING 2022</p>
+                </div>
+                <div>
+                    <a class="text-accent">View all rankings <span class="text-black"> →</span></a>
+                </div>
+            </div>
+            <div class="basis-2/3 flex flex-col items-start gap-[48px] pl-[80px]">
+                <div class="flex flex-col items-start">
+                    <p class="font2 font-semibold text-[44px]">QUALITY POLICY</p>
+                    <div class="bg-accent w-[111px] h-[5px]"></div>
+                </div>
+                <p class="text-[21px] leading-[35px] text-justify">
+                    To develop technical human resource of excellence suitable for global requirements. <br> <br>
+                    To ensure good quality academic and industrial research programmes in different areas of engineering and
+                    technology. <br> <br>
+                    To generate industry-institute synergy for shaping technical education to meet the requirement of
+                    industry.
+                </p>
+            </div>
+        </div>
+    
+        <div class="flex flex-col items-start px-[11%] py-[64px] gap-[48px]">
+            <div class="w-[100%] flex flex-row justify-between items-start gap-[64px]">
+                <div class="tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
+                    <i class="fa-solid fa-people-group text-[2em]"></i>
+                    <p class="font2 font-semibold text-[18px] leading-[22px] text-center">LEADERSHIP</p>
+                </div>
+                <div class="tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
+                    <i class="fa-solid fa-building-columns text-[2em]"></i>
+                    <p class="font2 font-semibold text-[18px] leading-[22px] text-center">GOVERNING BODIES</p>
+                </div>
+                <div class="tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
+                    <i class="fa-solid fa-circle-nodes text-[2em]"></i>
+                    <p class="font2 font-semibold text-[18px] leading-[22px] text-center">CELLS</p>
+                </div>
+                <div class="tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
+                    <i class="fa-solid fa-id-card-clip text-[2em]"></i>
+                    <p class="font2 font-semibold text-[18px] leading-[22px] text-center">COMMITTEES</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="flex flex-col items-start px-[11%] gap-[48px]">
             <div class="flex flex-col items-start">
-                <p class="font2 font-semibold text-[44px]">MISSION</p>
+                <p class="font2 font-semibold text-[44px]">INSTITUTE HISTORY</p>
                 <div class="bg-accent w-[111px] h-[5px]"></div>
             </div>
             <p class="text-[21px] leading-[35px] text-justify">
-                To become a leading and unique institution of higher learning, offering state-of-the-art education, research and training in engineering and technology to students who are able and eager to become change agents for the industrial and economic progress of the nation. To nurture and sustain an academic ambience conducive to the development and growth of committed professionals for sustainable development of the nation and to accomplish its 
-                integration into the global economy. To strive to be a Swachch NIT providing a guarantee of clean hostel, clean mess, clean water and hygienic & wholesome food to its students.
+                While Punjab was passing through insurgency since late 1970s, the 2nd National Policy on Education
+                introduced in May 1986, called for 'Special emphasis on the removal of disparities and to equalise
+                educational opportunity. To achieve such social integration, it promoted the establishment of new
+                educational institutions. Since model of RECS was already successful in several Indian states as an
+                all-India institution and was functioning as a beacon of peace. The idea of establishing the 17th Regional
+                Engineering College in Punjab at Jalandhar, with an intake of 260 students was conceived. 50% seats were
+                reserved for the students of states other than Punjab, which provided a feeling of mini India within a
+                campus of 153 acres. It started as a joint venture of the Central and State Government for providing
+                academic leadership to the technical institutions in the region. The journey began in the year 1989 with the
+                admission of 100 students in three branches, i.e Electronics and Communication Engineering, Industrial
+                Engineering and Textile Technology, affiliated to Guru Nanak Dev University, Amritsar. The institute picked
+                very well during the times of turmoil in Punjab and expanded in the very next year by offering five more
+                branches in the fields of Computer Science and Engineering, Instrumentation and Control Engineering,
+                Mechanical Machine Design and Automation, Structural and Construction Engineering, Chemical and Bio
+                Engineering. Leather Technology was added in the year 1995.
+                <br> <br>
+                The institute was rechristened as National Institute of Technology and taken over as a fully funded
+                institute of Centre Government with deemed university status on October, 17th 2002, under the aegis of
+                Ministry of Human Resource Development. Till then, the Institute was orientated towards undergraduate
+                education. In the year 2004, the Institute was further declared as ag Institute of National Importance by
+                the MHRD. Taking the responsibility of disseminating high quality education and contributhig to the research
+                and development activities of the country, Master's and PhD programs in different areas of engineering and
+                technology science and humanities were introduced.
+                <br> <br>
+                Since then, there is no looking back and the institute is marching ahead in high spirits to make a
+                remarkable contribution to the society.
             </p>
         </div>
-    </div>
-
-    <div class="flex flex-row justify-between items-start px-[11%]">
-        <div class="basis-1/3 flex flex-col items-start gap-[48px]">
-            <div class="flex flex-col items-start">
-                <p class="font2 font-semibold text-[44px]">RANKINGS</p>
+    
+        <div class="px-[11%]">
+            <div class="container flex h-[22vh] w-full">
+                <div class="box">
+                    <img src="img/img1.png" />
+                </div>
+                <div class="box">
+                    <img src="img/img2.png" />
+                </div>
+                <div class="box">
+                    <img src="img/img3.png" />
+                </div>
+                <div class="box hidden lg:block">
+                    <img src="img/img4.png" />
+                </div>
+            </div>
+    
+            <div class="container flex h-[22vh] w-full">
+                <div class="box">
+                    <img src="img/img5.png" />
+                </div>
+                <div class="box">
+                    <img src="img/img6.png" />
+                </div>
+                <div class="box">
+                    <img src="img/img7.png" />
+                </div>
+                <div class="box hidden lg:block">
+                    <img src="img/img8.png" />
+                </div>
+            </div>
+    
+            <div class="container flex h-[22vh] w-full">
+                <div class="box">
+                    <img src="img/img1.png" />
+                </div>
+                <div class="box">
+                    <img src="img/img2.png" />
+                </div>
+                <div class="box">
+                    <img src="img/img3.png" />
+                </div>
+                <div class="box hidden lg:block">
+                    <img src="img/img4.png" />
+                </div>
+            </div>
+    
+            <div class="container flex h-[22vh] w-full">
+                <div class="box">
+                    <img src="img/img9.png" />
+                </div>
+                <div class="box">
+                    <img src="img/img10.png" />
+                </div>
+                <div class="box">
+                    <img src="img/img11.png" />
+                </div>
+                <div class="box hidden lg:block">
+                    <img src="img/danceClub.png" style="opacity: 1" />
+                </div>
+            </div>
+    
+            <div class="container flex h-[22vh] w-full">
+                <div class="box">
+                    <img src="img/img1.png" />
+                </div>
+                <div class="box">
+                    <img src="img/img2.png" />
+                </div>
+                <div class="box">
+                    <img src="img/img3.png" />
+                </div>
+                <div class="box hidden lg:block">
+                    <img src="img/img4.png" />
+                </div>
+            </div>
+        </div>
+    
+        <div class="px-[11%]">
+            <div class="flex flex-col items-start mb-[64px]">
+                <p class="font2 font-semibold text-[44px]">ACADEMIC TIMELINE</p>
                 <div class="bg-accent w-[111px] h-[5px]"></div>
             </div>
-            <div class="flex flex-row items-start gap-[32px]">
-                <p class="text-accent font-bold text-[64px] leading-[35px]">52</p>
-                <p class="font-medium text-[22px]">NIRF ENGINEERING 2022</p>
+            <div class="outer text-justify">
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">1989</h3>
+                        <p class="basis-7/10 flex items-center">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">1990</h3>
+                        <p class="basis-7/10 flex items-center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">1995</h3>
+                        <p class="basis-7/10 flex items-center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">2002</h3>
+                        <p class="basis-7/10 flex items-center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">2004</h3>
+                        <p class="basis-7/10 flex items-center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">2006</h3>
+                        <p class="basis-7/10 flex items-center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">2007</h3>
+                        <p class="basis-7/10 flex items-center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">2009</h3>
+                        <p class="basis-7/10 flex items-center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">2010</h3>
+                        <p class="basis-7/10 flex items-center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">2013</h3>
+                        <p class="basis-7/10 flex items-center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">2015</h3>
+                        <p class="basis-7/10 flex items-center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">2017</h3>
+                        <p class="basis-7/10 flex items-center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">2018</h3>
+                        <p class="basis-7/10 flex items-center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ml-[20px] mb-[20px] p-[10px]">
+                    <div class="flex flex-row gap-[32px]">
+                        <h3 class="title basis-3/10 text-accent font-bold text-[64px] leading-[49px]">2019</h3>
+                        <p class="basis-7/10 flex items-center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="flex flex-row items-start gap-[32px]">
-                <p class="text-accent font-bold text-[64px] leading-[35px]">85</p>
-                <p class="font-medium text-[22px]">NIRF OVERALL 2022</p>
-            </div>
-            <div class="flex flex-row items-start gap-[32px]">
-                <p class="text-accent font-bold text-[64px] leading-[35px]">46</p>
-                <p class="font-medium text-[22px]">TIMES ENGINEERING 2022</p>
-            </div>
-            <div>
-                <a class="text-accent">View all rankings <span class="text-black"> →</span></a>
-            </div>
-        </div>
-        <div class="basis-2/3 flex flex-col items-start gap-[48px] pl-[80px]">
-            <div class="flex flex-col items-start">
-                <p class="font2 font-semibold text-[44px]">QUALITY POLICY</p>
-                <div class="bg-accent w-[111px] h-[5px]"></div>
-            </div>
-            <p class="text-[21px] leading-[35px] text-justify">
-                To develop technical human resource of excellence suitable for global requirements. <br> <br>
-                To ensure good quality academic and industrial research programmes in different areas of engineering and technology. <br> <br>
-                To generate industry-institute synergy for shaping technical education to meet the requirement of industry.
-            </p>
         </div>
     </div>
 
-    <div class="flex flex-col items-start px-[11%] py-[128px] gap-[48px] bg-accent">
-        <div class="flex flex-row justify-between ">
-
-        </div>
-    </div>
-
-    <div class="timeline px-[11%] text-accent">
-        <div class="outer">
-            <div class="card">
-                <div class="info">
-                    <h3 class="title">Title 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="info">
-                    <h3 class="title">Title 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="info">
-                    <h3 class="title">Title 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="info">
-                    <h3 class="title">Title 4</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="info">
-                    <h3 class="title">Title 5</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="info">
-                    <h3 class="title">Title 5</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script src="../common template/footer.js"></script>
 </body>
 
 </html>
