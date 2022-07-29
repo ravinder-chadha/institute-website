@@ -156,9 +156,10 @@
 </head>
 
 <body class="font-body text-dark-purple">
-  <header class="sticky top-0 z-50">
+  <header class="fixed bg-white top-0 right-0 left-0 z-50">
     <!-- TOP NAV BAR stats -->
-    <div id="top_bar" class="z-50 flex h-7 flex-row bg-accent py-0.5 px-12 text-sm font-bold text-white">
+    <div id="top_bar"
+      class="absolute top-0 right-0 left-0 transition-transform delay-200 z-50 flex h-7 flex-row bg-accent py-0.5 px-12 text-sm font-bold text-white">
       <div class="basis-1/2">
         <div class="flex flex-row justify-center">
           <div class="flex items-center pr-8" href="">
@@ -203,7 +204,7 @@
     </div>
     <!-- top nav bar ends -->
     <!-- INSTITUTE LOGO & NAME starts -->
-    <div class="mySlides z-50">
+    <div class="mySlides mt-7 z-50">
       <div class="align-center flex flex-row justify-between bg-white py-2.5 px-16">
         <div class="institute_name flex max-w-lg basis-1/2 justify-center text-center text-lg font-bold uppercase">
           <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
@@ -214,7 +215,7 @@
         </div>
       </div>
     </div>
-    <div class="mySlides z-50">
+    <div class="mySlides mt-7 z-50">
       <div class="align-center flex flex-row justify-between bg-white py-2.5 px-16">
         <div
           class="institute_name flex max-w-lg basis-1/2 justify-center px-16 text-center text-xl font-bold uppercase">
@@ -225,7 +226,7 @@
         </div>
       </div>
     </div>
-    <div class="mySlides z-50">
+    <div class="mySlides mt-7 z-50">
       <div class="align-center flex flex-row justify-between bg-white py-2.5 px-16">
         <div class="institute_name flex max-w-lg basis-1/2 justify-center px-8 text-center text-xl font-bold uppercase">
           <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
@@ -240,7 +241,7 @@
     <div class="absolute left-1/2 z-50 mx-auto -translate-x-1/2" style="width: 230px">
       <img src="img/Rectangle 47 (1).png" alt="" />
     </div>
-    <div id="logo_250" class="absolute left-1/2 top-8 z-50 -translate-x-1/2" style="width: 110px; height: 120px">
+    <div id="logo_250" class="absolute h-[120px] aspect-square left-1/2 top-8 z-50 -translate-x-1/2">
       <img src="img/logo_250.png" alt="" />
     </div>
     <!-- Logo CONTAINER ends -->
@@ -1186,77 +1187,88 @@
   <div class="main-slider">
     <!-- 1 -->
     <div class="homeslide">
-        <img src="img/slide1.jpeg" class="h-screen w-screen text-animation">
-        <div class="  w-fit text-center">
-          <h1 class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-fit text-7xl  text-white  font-black main-shadow">NITJ WELCOMES YOU</h1>
-          <h1 class="fade absolute top-[60%] left-1/2 -translate-y-1/2 -translate-x-1/2  w-fit text-6xl  text-white font-extrabold main-shadow">THE PLACE OF TRANSFORMATION</h1>
+      <img src="img/slide1.jpeg" class="h-screen w-screen text-animation">
+      <div class="  w-fit text-center">
+        <h1
+          class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-fit text-7xl  text-white  font-black main-shadow">
+          NITJ WELCOMES YOU</h1>
+        <h1
+          class="fade absolute top-[60%] left-1/2 -translate-y-1/2 -translate-x-1/2  w-fit text-6xl  text-white font-extrabold main-shadow">
+          THE PLACE OF TRANSFORMATION</h1>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="homeslide">
+      <img src="img/slide2.jpeg" class="h-screen w-screen text-animation">
+      <div class=" w-fit text-center">
+        <h1
+          class="w-fit absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-7xl  text-white  font-black main-shadow">
+          NITJ WELCOMES YOU</h1>
+        <h1
+          class="w-fit text-6xl  text-white font-extrabold fade absolute top-[60%] left-1/2 -translate-y-1/2 -translate-x-1/2 main-shadow">
+          49th IN ENGINEERING NIRF</h1>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="homeslide ">
+      <img src="img/slide3.jpeg" class="h-screen w-screen text-animation">
+      <div class=" w-fit text-center">
+        <h1
+          class="w-fit absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-7xl  text-white  font-black main-shadow">
+          NITJ WELCOMES YOU</h1>
+        <h1
+          class="text-6xl w-fit text-white font-extrabold fade absolute top-[60%] left-1/2 -translate-y-1/2 -translate-x-1/2 main-shadow">
+          78th IN OVERALL NIRF RANKING</h1>
+      </div>
+    </div>
+    <!-- 4 -->
+    <div class="homeslide ">
+      <img src="img/slide4.jpeg" class="h-screen w-screen text-animation">
+      <div class=" w-fit text-center">
+        <h1
+          class="absolute w-fit top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-7xl  text-white  font-black main-shadow">
+          NITJ WELCOMES YOU</h1>
+        <h1
+          class="text-6xl w-fit text-white font-extrabold fade absolute top-[60%] left-1/2 -translate-y-1/2 -translate-x-1/2 main-shadow">
+          BAND EXCELLENT IN ARIIA RANKINGS</h1>
+      </div>
+    </div>
+
+    <div class="absolute items-center w-full top-2/3 h-fit">
+      <div class="grid grid-cols-5 lg:gap-10 m-10 mb-0">
+        <div
+          class="flex h-40 flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl">
+          <span class="material-symbols-outlined" style="font-size:48px;"> school </span>
+          <h2 class="text-center font-semibold text-2xl">PROGRAMS</h2>
+        </div>
+
+        <div
+          class="flex flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl">
+          <span class="material-symbols-outlined" style="font-size:48px;"> biotech </span>
+          <h2 class="text-center font-semibold text-2xl">RESEARCH</h2>
+        </div>
+
+        <div
+          class="flex flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl">
+          <span class="material-symbols-outlined" style="font-size:48px;"> sports_handball </span>
+          <h2 class="text-center font-semibold text-2xl">CAMPUS LIFE</h2>
+        </div>
+
+        <div
+          class="flex flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl">
+          <span class="material-symbols-outlined" style="font-size:48px;"> real_estate_agent </span>
+          <h2 class="text-center font-semibold text-2xl">PLACEMENTS</h2>
+        </div>
+
+        <div
+          class="flex flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl">
+          <span class="material-symbols-outlined" style="font-size:48px;"> newspaper </span>
+          <h2 class="text-center font-semibold text-2xl">HAPPENINGS</h2>
         </div>
       </div>
-
-  <!-- 2 -->
-      <div class="homeslide">
-        <img src="img/slide2.jpeg" class="h-screen w-screen text-animation">
-        <div class=" w-fit text-center">
-          <h1 class="w-fit absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-7xl  text-white  font-black main-shadow">NITJ WELCOMES YOU</h1>
-          <h1 class="w-fit text-6xl  text-white font-extrabold fade absolute top-[60%] left-1/2 -translate-y-1/2 -translate-x-1/2 main-shadow">49th IN ENGINEERING NIRF</h1>
-        </div>
-      </div>
-<!-- 3 -->
-      <div class="homeslide ">
-        <img src="img/slide3.jpeg" class="h-screen w-screen text-animation">
-        <div class=" w-fit text-center">
-          <h1 class="w-fit absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-7xl  text-white  font-black main-shadow">NITJ WELCOMES YOU</h1>
-          <h1 class="text-6xl w-fit text-white font-extrabold fade absolute top-[60%] left-1/2 -translate-y-1/2 -translate-x-1/2 main-shadow">78th IN OVERALL NIRF RANKING</h1>
-        </div>
-      </div>
-<!-- 4 -->
-      <div class="homeslide ">
-        <img src="img/slide4.jpeg" class="h-screen w-screen text-animation">
-        <div class=" w-fit text-center">
-          <h1 class="absolute w-fit top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-7xl  text-white  font-black main-shadow">NITJ WELCOMES YOU</h1>
-          <h1 class="text-6xl w-fit text-white font-extrabold fade absolute top-[60%] left-1/2 -translate-y-1/2 -translate-x-1/2 main-shadow">BAND EXCELLENT IN ARIIA RANKINGS</h1>
-        </div>
-      </div>
-
-       <div class="absolute items-center w-full top-2/3 h-fit">
-        <div class="grid grid-cols-5 lg:gap-10 m-10 mb-0">
-          <div
-            class="flex h-40 flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl"
-          >
-            <span class="material-symbols-outlined" style="font-size:48px;"> school </span>
-            <h2 class="text-center font-semibold text-2xl">PROGRAMS</h2>
-          </div>
-
-          <div
-            class="flex flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl"
-          >
-            <span class="material-symbols-outlined" style="font-size:48px;"> biotech </span>
-            <h2 class="text-center font-semibold text-2xl">RESEARCH</h2>
-          </div>
-
-          <div
-            class="flex flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl"
-          >
-            <span class="material-symbols-outlined" style="font-size:48px;"> sports_handball </span>
-            <h2 class="text-center font-semibold text-2xl">CAMPUS LIFE</h2>
-          </div>
-
-          <div
-            class="flex flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl"
-          >
-            <span class="material-symbols-outlined" style="font-size:48px;"> real_estate_agent </span>
-            <h2 class="text-center font-semibold text-2xl">PLACEMENTS</h2>
-          </div>
-
-          <div
-            class="flex flex-col text-white bg-blue-900 rounded-lg place-content-center text-center hover:text-[#215ba7] hover:bg-white hover:scale-110 hover:text-2xl"
-          >
-            <span class="material-symbols-outlined" style="font-size:48px;"> newspaper </span>
-            <h2 class="text-center font-semibold text-2xl">HAPPENINGS</h2>
-          </div>
-        </div>
-      </div>
-     </div>
+    </div>
+  </div>
   <!-- === Carousel section ends === -->
   <!-- === News Section Starts === -->
 
@@ -1449,35 +1461,35 @@
     </h1>
     <div class="flex flex-row m-4 justify-center">
 
-        <!-- CARD  -->
-        <div class=" basis-1/4 mr-2">
-          <div class="flex flex-col">
-            <img src="img/undergrad.webp" class="h-80 "/>
-          </div>
-          <div class="bg-blue-800 h-16  text-center">
-            <h1 class="p-4 text-white font-bold text-xl"> UNDERGRADUATE PROGRAMS</h1>
-          </div>
+      <!-- CARD  -->
+      <div class=" basis-1/4 mr-2">
+        <div class="flex flex-col">
+          <img src="img/undergrad.webp" class="h-80 " />
         </div>
+        <div class="bg-blue-800 h-16  text-center">
+          <h1 class="p-4 text-white font-bold text-xl"> UNDERGRADUATE PROGRAMS</h1>
+        </div>
+      </div>
 
-        <div class=" basis-1/4 mr-2">
-          <div class="flex flex-col">
-            <img src="img/posgrad.jpg" class="h-80 "/>
-          </div>
-          <div class="bg-blue-800 h-16  text-center">
-            <h1 class="p-4 text-white font-bold text-xl"> POSTGRADUATE PROGRAMS</h1>
-          </div>
+      <div class=" basis-1/4 mr-2">
+        <div class="flex flex-col">
+          <img src="img/posgrad.jpg" class="h-80 " />
         </div>
+        <div class="bg-blue-800 h-16  text-center">
+          <h1 class="p-4 text-white font-bold text-xl"> POSTGRADUATE PROGRAMS</h1>
+        </div>
+      </div>
 
-        <div class=" basis-1/4">
-          <div class="flex flex-col">
-            <img src="img/doctrate.jpg" class="h-80 "/>
-          </div>
-          <div class="bg-blue-800 h-16  text-center">
-            <h1 class="p-4 text-white font-bold text-xl"> DOCTRATE PROGRAMS</h1>
-          </div>
+      <div class=" basis-1/4">
+        <div class="flex flex-col">
+          <img src="img/doctrate.jpg" class="h-80 " />
         </div>
+        <div class="bg-blue-800 h-16  text-center">
+          <h1 class="p-4 text-white font-bold text-xl"> DOCTRATE PROGRAMS</h1>
+        </div>
+      </div>
     </div>
-    <h1 class="font-semibold cursor-pointer underline text-lg text-center my-8 text-[#FF6600] m-5"> 
+    <h1 class="font-semibold cursor-pointer underline text-lg text-center my-8 text-[#FF6600] m-5">
       Explore More Programs->
     </h1>
   </div>
