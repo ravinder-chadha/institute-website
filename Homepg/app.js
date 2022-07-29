@@ -1,12 +1,16 @@
 var visited = false
 window.onscroll = function () {
-  var institute_name = document.getElementsByClassName('institute_name')
-  var full_navbar = document.getElementsByTagName('header')
-  var logo = document.getElementById('logo_250')
-  var topbar = document.getElementById('top_bar')
+  const institute_name = document.getElementsByClassName('institute_name')
+  const full_navbar = document.getElementsByTagName('header')
+  const logo = document.getElementById('logo_250')
+  const topbar = document.getElementById('top_bar')
+  const diff_lang = document.getElementsByClassName('mySlides')
   if (window.scrollY > 100) {
-    topbar.style.display = 'none'
-    for (var i = 0; i < institute_name.length; i++) {
+    topbar.style.transform = 'translateY(-50px)'
+    for (let i = 0; i < diff_lang.length; i++) {
+      diff_lang[i].classList.remove('mt-7')
+    }
+    for (let i = 0; i < institute_name.length; i++) {
       logo.style.width = '90px'
       logo.style.height = '90px'
       logo.classList.remove('top-8')
@@ -19,13 +23,13 @@ window.onscroll = function () {
         institute_name[i].classList.add('text-sm')
       }
     }
-    if (window.scrollY > 1000 && !visited) {
-      animateValueIntiator()
-    }
   } else {
     logo.style.width = '120px'
     logo.style.height = '120px'
-    topbar.style.display = 'flex'
+    topbar.style.transform = 'translateY(0)'
+    for (let i = 0; i < diff_lang.length; i++) {
+      diff_lang[i].classList.add('mt-7')
+    }
     logo.classList.remove('top-0')
     logo.classList.add('top-8')
     for (var i = 0; i < institute_name.length; i++) {
@@ -123,16 +127,20 @@ function animateValueIntiator() {
 //       -(numbers.offsetTop - offset) * 0.8 + 'px'
 //   }
 // })
-let home = 0;
-window.onload = function() { showHome(); }
+let home = 0
+window.onload = function () {
+  showHome()
+}
 function showHome() {
-  let i;
-  let homeslider = document.getElementsByClassName("homeslide");
+  let i
+  let homeslider = document.getElementsByClassName('homeslide')
   for (i = 0; i < homeslider.length; i++) {
-    homeslider[i].style.display = "none";
+    homeslider[i].style.display = 'none'
   }
-  home++;
-  if (home > homeslider.length) {home = 1}
-  homeslider[home-1].style.display = "block";
-  setTimeout(showHome, 3000); // Change image every 3 seconds
+  home++
+  if (home > homeslider.length) {
+    home = 1
+  }
+  homeslider[home - 1].style.display = 'block'
+  setTimeout(showHome, 3000) // Change image every 3 seconds
 }
