@@ -10,6 +10,7 @@ module.exports = {
         'dark-purple': 'hsla(242, 83%, 7%)',
         accent: 'hsla(201, 96%, 32%)',
         'light-purple': 'hsla(242, 83%, 98%)',
+        'accent-orange': 'hsla(12, 87%, 56%, 1)',
       },
       backgroundImage: {
         'number-bg': "url('./Homepg/img/bgnumbers.jpg')",
