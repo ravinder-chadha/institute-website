@@ -144,3 +144,19 @@ function showHome() {
   homeslider[home - 1].style.display = 'block'
   setTimeout(showHome, 3000) // Change image every 3 seconds
 }
+
+function slideCards(direction){
+  var container = document.getElementById('cards');
+  scrollCompleted = 0;
+  var slideVar = setInterval(function(){
+      if(direction == 'left'){
+          container.scrollLeft -= 20;
+      } else {
+          container.scrollLeft += 20;
+      }
+      scrollCompleted += 10;
+      if(scrollCompleted >= 100){
+          window.clearInterval(slideVar);
+      }
+  }, 50);
+}
