@@ -144,3 +144,41 @@ function showHome() {
   homeslider[home - 1].style.display = 'block'
   setTimeout(showHome, 3000) // Change image every 3 seconds
 }
+
+function slideCards(direction) {
+  var container = document.getElementById('cards')
+  scrollCompleted = 0
+  var slideVar = setInterval(function () {
+    if (direction == 'left') {
+      container.scrollLeft -= 20
+    } else {
+      container.scrollLeft += 20
+    }
+    scrollCompleted += 10
+    if (scrollCompleted >= 100) {
+      window.clearInterval(slideVar)
+    }
+  }, 50)
+}
+
+// Admission Section Tabs
+
+const openCourse = (e) => {
+  let tabcontent = document.getElementsByClassName('courseContent')
+  let tablinks = document.getElementsByClassName('tab-link')
+
+  for (let i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].classList.add('hidden')
+  }
+  for (let i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.add(
+      'hover:bg-blue-100',
+      'active:bg-blue-200',
+      'text-accent'
+    )
+    tablinks[i].classList.remove('bg-accent')
+  }
+  e.classList.add('bg-accent', 'text-white')
+  e.classList.remove('hover:bg-blue-100', 'active:bg-blue-200', 'text-accent')
+  document.getElementById(e.dataset.course).classList.remove('hidden')
+}
