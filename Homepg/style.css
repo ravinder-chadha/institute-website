@@ -707,6 +707,16 @@ video {
   margin-right: 1.5rem;
 }
 
+.my-7 {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -756,6 +766,16 @@ video {
   margin-top: 2.25rem;
   margin-bottom: 2.25rem;
 }
+
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
 
 .mb-\[64px\] {
   margin-bottom: 64px;
@@ -820,6 +840,13 @@ video {
 .mt-1 {
   margin-top: 0.25rem;
 }
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
 
 .mb-12 {
   margin-bottom: 3rem;
@@ -850,7 +877,28 @@ video {
 }
 
 .mt-10 {
-  margin-top: 2.5rem;
+  margin-top: 2.5rem;}
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-40 {
+  margin-top: 10rem;
+}
+
+.mt-56 {
+  margin-top: 14rem;
+}
+
+.mt-60 {
+  margin-top: 15rem;
+}
+
+.mt-64 {
+  margin-top: 16rem;
+}
+.mr-1 {
+  margin-right: 0.25rem;
 }
 
 .mr-4 {
@@ -979,6 +1027,22 @@ video {
   height: 67px;
 }
 
+.h-\[250px\] {
+  height: 250px;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-\[150px\] {
+  height: 150px;
+}
+
+.h-\[125px\] {
+  height: 125px;
+}
+
 .max-h-96 {
   max-height: 24rem;
 }
@@ -1041,6 +1105,10 @@ video {
   width: auto;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .w-1 {
   width: 0.25rem;
 }
@@ -1055,6 +1123,14 @@ video {
 
 .w-1\/4 {
   width: 25%;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[150px\] {
+  width: 150px;
 }
 
 .min-w-max {
@@ -1337,6 +1413,11 @@ video {
   gap: 15px;
 }
 
+
+.gap-8 {
+  gap: 2rem;
+}
+
 .gap-x-\[10px\] {
   -moz-column-gap: 10px;
        column-gap: 10px;
@@ -1580,6 +1661,13 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(161 161 170 / var(--tw-border-opacity));
 }
+
+
+
+.border-accent\/50 {
+  border-color: hsl(201 96% 32% / 0.5);
+}
+
 
 .border-y-gray-300 {
   --tw-border-opacity: 1;
@@ -1831,11 +1919,6 @@ video {
 .py-\[48px\] {
   padding-top: 48px;
   padding-bottom: 48px;
-}
-
-.py-\[64px\] {
-  padding-top: 64px;
-  padding-bottom: 64px;
 }
 
 .py-2\.5 {
@@ -2221,7 +2304,6 @@ video {
 .text-accent-orange {
   color: hsla(12, 87%, 56%, 1);
 }
-
 .text-dark-purple\/80 {
   color: hsl(242 83% 7% / 0.8);
 }
@@ -2508,14 +2590,14 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-blue-100:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-blue-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-blue-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
 
 .hover\:text-2xl:hover {
@@ -2778,6 +2860,10 @@ video {
     margin-right: 0.5rem;
   }
 
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
   .lg\:mt-\[25px\] {
     margin-top: 25px;
   }
@@ -2788,6 +2874,10 @@ video {
 
   .lg\:mr-\[80px\] {
     margin-right: 80px;
+  }
+
+  .lg\:mt-32 {
+    margin-top: 8rem;
   }
 
   .lg\:block {
@@ -2802,6 +2892,10 @@ video {
     height: 80vh;
   }
 
+  .lg\:h-\[200px\] {
+    height: 200px;
+  }
+
   .lg\:w-2\/3 {
     width: 66.666667%;
   }
@@ -2814,6 +2908,14 @@ video {
     width: 85%;
   }
 
+  .lg\:w-\[300px\] {
+    width: 300px;
+  }
+
+  .lg\:w-\[250px\] {
+    width: 250px;
+  }
+
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -2822,12 +2924,24 @@ video {
     flex-direction: row;
   }
 
+  .lg\:items-start {
+    align-items: flex-start;
+  }
+
   .lg\:justify-center {
     justify-content: center;
   }
 
   .lg\:gap-10 {
     gap: 2.5rem;
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
+  }
+
+  .lg\:gap-\[64px\] {
+    gap: 64px;
   }
 
   .lg\:border-r {
@@ -2843,13 +2957,26 @@ video {
     padding: 15px;
   }
 
+  .lg\:py-\[64px\] {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
   .lg\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
   }
 
+  .lg\:pl-\[80px\] {
+    padding-left: 80px;
+  }
+
   .lg\:pb-0 {
     padding-bottom: 0px;
+  }
+
+  .lg\:text-\[21px\] {
+    font-size: 21px;
   }
 
   .lg\:text-\[20px\] {
@@ -2862,5 +2989,9 @@ video {
 
   .lg\:text-\[15px\] {
     font-size: 15px;
+  }
+
+  .lg\:leading-\[35px\] {
+    line-height: 35px;
   }
 }
