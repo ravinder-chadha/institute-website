@@ -171,11 +171,7 @@ const openCourse = (e) => {
     tabcontent[i].classList.add('hidden')
   }
   for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.add(
-      'hover:bg-blue-100',
-      'active:bg-blue-200',
-      'text-accent'
-    )
+    tablinks[i].classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
     tablinks[i].classList.remove('bg-accent')
   }
   e.classList.add('bg-accent', 'text-white')
