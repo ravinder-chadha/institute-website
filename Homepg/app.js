@@ -150,12 +150,12 @@ function slideCards(direction) {
   scrollCompleted = 0
   var slideVar = setInterval(function () {
     if (direction == 'left') {
-      container.scrollLeft -= 20
+      container.scrollLeft -= 200
     } else {
-      container.scrollLeft += 20
+      container.scrollLeft += 200
     }
-    scrollCompleted += 10
-    if (scrollCompleted >= 100) {
+    scrollCompleted += 100
+    if (scrollCompleted >= 1000) {
       window.clearInterval(slideVar)
     }
   }, 50)
