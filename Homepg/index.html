@@ -181,45 +181,47 @@
   <header class="fixed bg-white top-0 right-0 left-0 z-50">
     <!-- TOP NAV BAR stats -->
     <div id="top_bar"
-      class="absolute top-0 right-0 left-0 transition-transform delay-200 z-50 flex h-7 flex-row bg-accent py-0.5 px-12 text-sm font-bold text-white">
-      <div class="basis-1/2">
-        <div class="flex flex-row justify-center">
-          <div class="flex items-center pr-8" href="">
-            <span class="material-symbols-outlined"> engineering </span>
-            <a href="" class="pl-1.5 text-sm">Jobs</a>
-          </div>
-          <div class="flex items-center pr-8" href="">
-            <span class="material-symbols-outlined"> add_business </span>
-            <a href="" class="pl-1.5 text-sm">Tenders</a>
-          </div>
-          <div class="flex items-center pr-8" href="">
-            <span class="material-symbols-outlined"> badge </span>
-            <a href="" class="pl-1.5 text-sm">Placements</a>
-          </div>
-          <div class="flex items-center pr-8" href="">
-            <span class="material-symbols-outlined"> event_note </span>
-            <a href="" class="pl-1.5 text-sm">Resources</a>
-          </div>
-          <div class="flex items-center" href="">
-            <span class="material-symbols-outlined"> psychology_alt </span>
-            <a href="" class="pl-1.5 text-sm">Help</a>
+      class="absolute top-0 right-0 left-0 transition-transform delay-200 z-50 h-7 bg-accent py-0.5 px-12 text-sm font-bold text-white">
+      <div class="container mx-auto flex flex-row">
+        <div class="basis-1/2">
+          <div class="flex flex-row justify-center">
+            <div class="flex items-center pr-8" href="">
+              <span class="material-symbols-outlined"> engineering </span>
+              <a href="" class="pl-1.5 text-sm">Jobs</a>
+            </div>
+            <div class="flex items-center pr-8" href="">
+              <span class="material-symbols-outlined"> add_business </span>
+              <a href="" class="pl-1.5 text-sm">Tenders</a>
+            </div>
+            <div class="flex items-center pr-8" href="">
+              <span class="material-symbols-outlined"> badge </span>
+              <a href="" class="pl-1.5 text-sm">Placements</a>
+            </div>
+            <div class="flex items-center pr-8" href="">
+              <span class="material-symbols-outlined"> event_note </span>
+              <a href="" class="pl-1.5 text-sm">Resources</a>
+            </div>
+            <div class="flex items-center" href="">
+              <span class="material-symbols-outlined"> psychology_alt </span>
+              <a href="" class="pl-1.5 text-sm">Help</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="basis-1/2 pl-8">
-        <div class="flex flex-row justify-between">
-          <div class="flex basis-1/6 flex-row items-center">
-            <img src="img\facebook-icon.svg" class="h-5 px-1" style="height: 20px" />
-            <img src="img\facebook-icon.svg" class="h-5 px-1" style="height: 20px" />
-            <img src="img\facebook-icon.svg" class="h-5 px-1" style="height: 20px" />
-          </div>
-          <div class="flex basis-1/3 items-center">
-            <span class="material-symbols-outlined"> g_translate </span>
-            <a href="" class="pl-1">हिन्दी / <span class="text-lg">A</span>+A-</a>
-          </div>
-          <div class="flex basis-1/3 items-center">
-            <span class="material-symbols-outlined"> contacts </span>
-            <a href="" class="pl-1.5 text-sm">ERP</a>
+        <div class="basis-1/2 pl-8">
+          <div class="flex flex-row justify-between">
+            <div class="flex basis-1/6 flex-row items-center">
+              <img src="img\facebook-icon.svg" class="h-5 px-1" style="height: 20px" />
+              <img src="img\facebook-icon.svg" class="h-5 px-1" style="height: 20px" />
+              <img src="img\facebook-icon.svg" class="h-5 px-1" style="height: 20px" />
+            </div>
+            <div class="flex basis-1/3 items-center">
+              <span class="material-symbols-outlined"> g_translate </span>
+              <a href="" class="pl-1">हिन्दी / <span class="text-lg">A</span>+A-</a>
+            </div>
+            <div class="flex basis-1/3 items-center">
+              <span class="material-symbols-outlined"> contacts </span>
+              <a href="" class="pl-1.5 text-sm">ERP</a>
+            </div>
           </div>
         </div>
       </div>
@@ -1295,8 +1297,8 @@
   <!-- === News Section Starts === -->
 
   <div id="News section" class="pt-10 pb-5 my-10">
-    <div class="mx-auto flex max-w-screen-xl flex-col lg:flex-row">
-      <div id="announcements" class="container mx-auto flex w-full lg:w-2/3 flex-col space-y-6 p-6">
+    <div class="container flex flex-col justify-start lg:flex-row">
+      <div id="announcements" class="container mx-auto flex w-full lg:w-2/3 flex-col space-y-6">
         <div class="flex items-center justify-start space-x-6">
           <h1 class="uppercase text-4xl font-semibold text-dark-purple">
             Latest <span class="text-accent">News</span>
@@ -1421,7 +1423,7 @@
         </div>
       </div>
 
-      <div id="notices" class="container mx-auto flex max-h-96 grow lg:w-1/3 w-full flex-col space-y-6 py-6">
+      <div id="notices" class="container mx-auto flex grow lg:w-1/3 w-full flex-col space-y-6">
         <div class="flex items-center justify-start space-x-6">
           <h1 class="text-4xl font-semibold uppercase text-gray-900">Notices</h1>
           <span class="material-symbols-outlined text-xl" style="font-size: 40px; color: var(--dark-purple)">
@@ -1467,7 +1469,7 @@
   <!-- === News Section Ends === -->
   <!-- === Directors message starts === -->
 
-  <div id="Director's Corner" class="container mx-auto my-10 px-4">
+  <div id="Director's Corner" class="container mx-auto my-10 px-4 lg:px-10">
     <div class="flex flex-col space-y-6 rounded-lg bg-white p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
       <img src="./img/DirectorSir 1.jpg" class="h-32 w-32 rounded-md" alt="some image" />
       <div id="content" class="flex flex-col space-y-4">
@@ -1529,38 +1531,40 @@
   <!-- === Admission Section Starts === -->
 
   <div class="container mx-auto my-10 pt-10">
-    <div class="mx-6 mb-6 flex items-start justify-start space-x-6">
-      <p class="text-4xl font-semibold uppercase text-dark-purple">Be an nitjian</p>
+    <div class="mb-10 flex items-start justify-start space-x-6">
+      <h1 class="uppercase text-4xl font-semibold text-dark-purple">
+        Be an <span class="text-accent">Nitjian</span>
+      </h1>
       <span class="material-symbols-outlined self-center" style="font-size:40px;">
         add_reaction
       </span>
     </div>
-    <div class="flex flex-col md:flex-row mt-10">
+    <div class="flex flex-col lg:flex-row mt-10">
 
       <div
-        class="inline-flex max-h-80 w-fit select-none flex-col items-stretch justify-start gap-4 overflow-y-auto overflow-x-hidden">
+        class="inline-flex h-80 w-fit select-none flex-col items-stretch justify-between overflow-y-auto overflow-x-hidden">
         <button data-course="b-tech"
           class="tab-link inline-flex items-center justify-center rounded-tl-xl rounded-bl-xl text-white bg-accent px-5 py-2.5 transition-all"
           onclick="openCourse(this)">
           <p class="text-lg font-bold uppercase ">b.tech</p>
         </button>
         <button data-course="m-tech"
-          class="tab-link inline-flex select-none items-center text-accent justify-center rounded-tl-xl rounded-bl-xl px-5 py-2 transition-all hover:bg-blue-100 active:bg-blue-200"
+          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center rounded-tl-xl rounded-bl-xl px-5 py-2 transition-all hover:bg-blue-100 active:bg-blue-200"
           onclick="openCourse(this)">
           <p class="text-lg font-bold uppercase">M.tech</p>
         </button>
         <button data-course="m-sc"
-          class="tab-link inline-flex select-none items-center text-accent justify-center rounded-tl-xl rounded-bl-xl px-5 py-2 transition-all hover:bg-blue-100 active:bg-blue-200"
+          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center rounded-tl-xl rounded-bl-xl px-5 py-2 transition-all hover:bg-blue-100 active:bg-blue-200"
           onclick="openCourse(this)">
           <p class="text-lg font-bold uppercase">m.sc</p>
         </button>
         <button data-course="pg_diploma"
-          class="tab-link inline-flex select-none items-center text-accent justify-center rounded-tl-xl rounded-bl-xl px-5 py-2 transition-all hover:bg-blue-100 active:bg-blue-200"
+          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center rounded-tl-xl rounded-bl-xl px-5 py-2 transition-all hover:bg-blue-100 active:bg-blue-200"
           onclick="openCourse(this)">
           <p class="text-lg font-bold uppercase">pg diploma</p>
         </button>
         <button data-course="dasa_students"
-          class="tab-link inline-flex select-none items-center text-accent justify-center rounded-tl-xl rounded-bl-xl px-5 py-2 transition-all hover:bg-blue-100 active:bg-blue-200"
+          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center rounded-tl-xl rounded-bl-xl px-5 py-2 transition-all hover:bg-blue-100 active:bg-blue-200"
           onclick="openCourse(this)">
           <p class="text-lg font-bold uppercase">DASA students</p>
         </button>
@@ -1568,8 +1572,8 @@
 
       <!-- B.tech Admissions Content -->
       <div id="b-tech"
-        class="courseContent bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50 basis-2/3 p-10 mr-4">
-        <ul id="updates" class="flex list-disc flex-col gap-4">
+        class="courseContent bg-light-purple max-h-80 rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50 basis-2/3 p-10 mr-4">
+        <ul id="updates" class="flex list-disc flex-col justify-between">
           <li>
             <div class="inline-flex flex-col items-start justify-start space-y-4">
               <p class="text-xl font-semibold text-accent">Welcome session for new admissions for the undergraduate
@@ -1596,14 +1600,14 @@
           </li>
         </ul>
         <button
-          class="inline-flex items-center justify-start space-x-2.5 rounded-lg mt-10 bg-accent px-4 py-2 hover:bg-blue-900">
+          class="inline-flex items-center justify-start space-x-2.5 mt-6 rounded-lg bg-accent px-4 py-2 hover:bg-blue-900">
           <p class="font-semibold uppercase text-purple-50">View All</p>
           <p class="text-2xl text-white">&rarr;</p>
         </button>
       </div>
       <!-- M.tech Admissions Content -->
       <div id="m-tech"
-        class="hidden courseContent  bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50  basis-2/3 space-y-10 p-10">
+        class="hidden courseContent mr-4  bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50  basis-2/3 space-y-10 p-10">
         <ul id="updates" class="flex list-disc flex-col gap-4">
           <li>
             <div class="inline-flex flex-col items-start justify-start space-y-4">
@@ -1638,7 +1642,7 @@
       </div>
       <!-- M.sc Admission content -->
       <div id="m-sc"
-        class="hidden courseContent  bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50 basis-2/3 space-y-10 p-10">
+        class="hidden courseContent mr-4  bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50 basis-2/3 space-y-10 p-10">
         <ul id="updates" class="flex list-disc flex-col gap-4">
           <li>
             <div class="inline-flex flex-col items-start justify-start space-y-4">
@@ -1673,7 +1677,7 @@
       </div>
       <!-- PG Diploma Admission content -->
       <div id="pg_diploma"
-        class="hidden courseContent  bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50 basis-2/3 space-y-10 p-10">
+        class="hidden courseContent mr-4  bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50 basis-2/3 space-y-10 p-10">
         <ul id="updates" class="flex list-disc flex-col gap-4">
           <li>
             <div class="inline-flex flex-col items-start justify-start space-y-4">
@@ -1710,7 +1714,7 @@
       </div>
       <!-- DASA Students Admission content -->
       <div id="dasa_students"
-        class="hidden courseContent  bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50 basis-2/3 space-y-10 p-10">
+        class="hidden courseContent mr-4  bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50 basis-2/3 space-y-10 p-10">
         <ul id="updates" class="flex list-disc flex-col gap-4">
           <li>
             <div class="inline-flex flex-col items-start justify-start space-y-4">
@@ -1744,10 +1748,9 @@
         </button>
       </div>
 
-      <div id="help-desk"
-        class="py-4 px-6 border-2 h-full border-accent/50 bg-blue-50 rounded-xl flex w-1/4 flex-col gap-4">
-        <div class="w-fit select-none items-center text-accent justify-center rounded-xl px-5 py-2 bg-blue-100">
-          <p class="text-lg font-bold uppercase">FAQs</p>
+      <div id="help-desk" class="py-4 px-6 border-2 h-80 border-accent/50 rounded-xl flex w-1/4 flex-col gap-4">
+        <div class="w-fit select-none items-center text-accent justify-center rounded-xl px-5 py-2 bg-blue-100  mb-6">
+          <p class="text-lg font-bold uppercase ">FAQs</p>
         </div>
         <div class="flex">
           <i class="fas fa-location-dot self-center mr-2 text-accent"></i><span>G.T Road, Amritsar Bypass, Jalandhar,
@@ -1763,32 +1766,11 @@
             +91-0181-5037855, 2690301, 2690453, 3082000
           </h3>
         </div>
-
       </div>
-
     </div>
   </div>
 
-  <!-- === Admission Section Starts === -->
-  <!-- === Institution in nos. starts === -->
-
-
-  <!-- <div class="bg-[url('./img/institution-in-num.png')] my-20">
-    <img class="absolute min-w-full h-72 bg-blend-darken brightness-50 contrast-90" src="img/institution-in-num.png"
-      alt="bg-image" />
-
-      <div class="grid grid-cols-4 gap-48 place-content-between" id="rolling_nums">
-        <div class="font-bold text-5xl text-white">500+</div>
-        <div class="font-bold text-5xl text-white">18</div>
-        <div class="font-bold text-5xl text-white">20</div>
-      </div>
-      <div class="grid grid-cols-4 gap-48 place-content-between">
-        <div class="text-xl uppercase text-white">Faculty and Staff</div>
-        <div class="text-xl uppercase text-white">Dapertments</div>
-        <div class="text-xl uppercase text-white">Clubs and Cells</div>
-      </div>
-    </div>
-  </div> -->
+  <!-- Institute on Numbers section -->
 
   <div class="my-20 bg-fixed bg-[url('./img/institution-in-num.png')]">
     <div class="bg-dark-purple/50  backdrop-blur">
