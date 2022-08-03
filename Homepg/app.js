@@ -171,10 +171,12 @@ const openCourse = (e) => {
     tabcontent[i].classList.add('hidden')
   }
   for (let i = 0; i < tablinks.length; i++) {
+    console.log('1')
     tablinks[i].classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
+    console.log('2')
     tablinks[i].classList.remove('bg-accent')
   }
+  e.classList.remove('bg-blue-100', 'hover:bg-blue-100', 'text-accent')
   e.classList.add('bg-accent', 'text-white')
-  e.classList.remove('hover:bg-blue-100', 'active:bg-blue-200', 'text-accent')
   document.getElementById(e.dataset.course).classList.remove('hidden')
 }
