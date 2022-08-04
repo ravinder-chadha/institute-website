@@ -1312,7 +1312,7 @@
         <!-- Cards Component -->
         <div class="flex flex-row">
           <i class="fa-solid fa-angle-left self-center pl-4 text-2xl" onclick="slideCards('left')"></i>
-          <div id="cards" class="no-scrollbar flex space-x-8 overflow-y-visible overflow-x-scroll py-8 px-4">
+          <div id="cards" class="scrollbar-hide flex space-x-8 overflow-y-visible overflow-x-scroll py-8 px-4">
             <div id="card">
               <div
                 class="mx-auto flex w-52 flex-col items-start justify-start overflow-hidden rounded-xl border-black border-opacity-20 bg-white shadow-xl ring-1">
@@ -1542,40 +1542,60 @@
         add_reaction
       </span>
     </div>
-    <div class="flex flex-col lg:flex-row mt-10">
+    <div class="flex flex-col lg:flex-row gap-4 lg:gap-0 items-start lg:items-stretch mt-10">
 
       <div
-        class="inline-flex h-80 w-fit select-none flex-col items-stretch justify-between overflow-y-auto overflow-x-hidden">
+        class="inline-flex w-full lg:w-fit lg:h-96 select-none scrollbar-hide lg:scrollbar-default flex-row lg:flex-col gap-4 items-stretch justify-between overflow-scroll">
         <button data-course="b-tech"
-          class="tab-link inline-flex items-center justify-center rounded-tl-xl rounded-bl-xl text-white bg-accent px-5 py-2.5 transition-all"
+          class="tab-link inline-flex items-center justify-center lg:rounded-tr-none lg:rounded-br-none rounded-xl text-white bg-accent px-5 py-2.5 transition-all"
           onclick="openCourse(this)">
-          <p class="text-lg font-bold uppercase ">b.tech</p>
+          <p class="text-lg font-bold uppercase lg:whitespace-normal whitespace-nowrap ">b.tech</p>
         </button>
         <button data-course="m-tech"
-          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center rounded-tl-xl rounded-bl-xl px-5 py-2 transition-all hover:bg-blue-200"
+          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center lg:rounded-tr-none lg:rounded-br-none rounded-xl px-5 py-2 transition-all hover:bg-blue-200"
           onclick="openCourse(this)">
-          <p class="text-lg font-bold uppercase">M.tech</p>
+          <p class="text-lg font-bold uppercase lg:whitespace-normal whitespace-nowrap">M.tech</p>
         </button>
         <button data-course="m-sc"
-          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center rounded-tl-xl rounded-bl-xl px-5 py-2 transition-all hover:bg-blue-200"
+          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center lg:rounded-tr-none lg:rounded-br-none rounded-xl px-5 py-2 transition-all hover:bg-blue-200"
           onclick="openCourse(this)">
-          <p class="text-lg font-bold uppercase">m.sc</p>
+          <p class="text-lg font-bold uppercase lg:whitespace-normal whitespace-nowrap">m.sc</p>
         </button>
         <button data-course="pg_diploma"
-          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center rounded-tl-xl rounded-bl-xl px-5 py-2 transition-all hover:bg-blue-200"
+          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center lg:rounded-tr-none lg:rounded-br-none rounded-xl px-5 py-2 transition-all hover:bg-blue-200"
           onclick="openCourse(this)">
-          <p class="text-lg font-bold uppercase">pg diploma</p>
+          <p class="text-lg font-bold uppercase lg:whitespace-normal whitespace-nowrap">pg diploma</p>
         </button>
         <button data-course="dasa_students"
-          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center rounded-tl-xl rounded-bl-xl px-5 py-2 transition-all hover:bg-blue-200"
+          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center lg:rounded-tr-none lg:rounded-br-none rounded-xl px-5 py-2 transition-all hover:bg-blue-200"
           onclick="openCourse(this)">
-          <p class="text-lg font-bold uppercase">DASA students</p>
+          <p class="text-lg font-bold uppercase lg:whitespace-normal whitespace-nowrap">DASA students</p>
+        </button>
+        <button data-course="m-tech"
+          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center lg:rounded-tr-none lg:rounded-br-none rounded-xl px-5 py-2 transition-all hover:bg-blue-200"
+          onclick="openCourse(this)">
+          <p class="text-lg font-bold uppercase lg:whitespace-normal whitespace-nowrap">M.tech</p>
+        </button>
+        <button data-course="m-sc"
+          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center lg:rounded-tr-none lg:rounded-br-none rounded-xl px-5 py-2 transition-all hover:bg-blue-200"
+          onclick="openCourse(this)">
+          <p class="text-lg font-bold uppercase lg:whitespace-normal whitespace-nowrap">m.sc</p>
+        </button>
+        <button data-course="pg_diploma"
+          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center lg:rounded-tr-none lg:rounded-br-none rounded-xl px-5 py-2 transition-all hover:bg-blue-200"
+          onclick="openCourse(this)">
+          <p class="text-lg font-bold uppercase lg:whitespace-normal whitespace-nowrap">pg diploma</p>
+        </button>
+        <button data-course="dasa_students"
+          class="tab-link bg-blue-100 inline-flex select-none items-center text-accent justify-center lg:rounded-tr-none lg:rounded-br-none rounded-xl px-5 py-2 transition-all hover:bg-blue-200"
+          onclick="openCourse(this)">
+          <p class="text-lg font-bold uppercase lg:whitespace-normal whitespace-nowrap">DASA students</p>
         </button>
       </div>
 
       <!-- B.tech Admissions Content -->
       <div id="b-tech"
-        class="courseContent bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50 basis-2/3 p-10 mr-4">
+        class="courseContent bg-light-purple rounded-xl lg:rounded-tl-none lg:rounded-bl-none border-2 border-accent/50 basis-2/3 p-10 lg:mr-4">
         <ul id="updates" class="flex list-disc flex-col justify-between">
           <li>
             <div class="inline-flex flex-col items-start justify-start space-y-4">
@@ -1610,7 +1630,7 @@
       </div>
       <!-- M.tech Admissions Content -->
       <div id="m-tech"
-        class="hidden courseContent mr-4  bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50  basis-2/3 space-y-10 p-10">
+        class="hidden courseContent lg:mr-4  bg-light-purple rounded-xl lg:rounded-tl-none lg:rounded-bl-none border-2 border-accent/50  basis-2/3 space-y-10 p-10">
         <ul id="updates" class="flex list-disc flex-col gap-4">
           <li>
             <div class="inline-flex flex-col items-start justify-start space-y-4">
@@ -1645,7 +1665,7 @@
       </div>
       <!-- M.sc Admission content -->
       <div id="m-sc"
-        class="hidden courseContent mr-4  bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50 basis-2/3 space-y-10 p-10">
+        class="hidden courseContent lg:mr-4  bg-light-purple rounded-xl lg:rounded-tl-none lg:rounded-bl-none border-2 border-accent/50 basis-2/3 space-y-10 p-10">
         <ul id="updates" class="flex list-disc flex-col gap-4">
           <li>
             <div class="inline-flex flex-col items-start justify-start space-y-4">
@@ -1680,7 +1700,7 @@
       </div>
       <!-- PG Diploma Admission content -->
       <div id="pg_diploma"
-        class="hidden courseContent mr-4  bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50 basis-2/3 space-y-10 p-10">
+        class="hidden courseContent lg:mr-4  bg-light-purple rounded-xl lg:rounded-tl-none lg:rounded-bl-none border-2 border-accent/50 basis-2/3 space-y-10 p-10">
         <ul id="updates" class="flex list-disc flex-col gap-4">
           <li>
             <div class="inline-flex flex-col items-start justify-start space-y-4">
@@ -1717,7 +1737,7 @@
       </div>
       <!-- DASA Students Admission content -->
       <div id="dasa_students"
-        class="hidden courseContent mr-4  bg-light-purple rounded-xl rounded-tl-none rounded-bl-none border-2 border-accent/50 basis-2/3 space-y-10 p-10">
+        class="hidden courseContent lg:mr-4  bg-light-purple rounded-xl lg:rounded-tl-none lg:rounded-bl-none border-2 border-accent/50 basis-2/3 space-y-10 p-10">
         <ul id="updates" class="flex list-disc flex-col gap-4">
           <li>
             <div class="inline-flex flex-col items-start justify-start space-y-4">
@@ -1751,7 +1771,8 @@
         </button>
       </div>
 
-      <div id="help-desk" class="py-4 px-6 border-2 h-80 border-accent/50 rounded-xl flex w-1/4 flex-col gap-4">
+      <div id="help-desk"
+        class="py-4 px-6 border-2 w-full h-80 border-accent/50 rounded-xl flex basis-1/4 flex-col gap-4">
         <div class="w-fit select-none items-center text-accent justify-center rounded-xl px-5 py-2 bg-blue-100  mb-6">
           <p class="text-lg font-bold uppercase ">FAQs</p>
         </div>
@@ -1813,7 +1834,7 @@
         <span class="material-symbols-outlined self-center text-5xl font-bold" onclick="slideCards('left')">
           keyboard_arrow_left
         </span>
-        <div id="cards" class="no-scrollbar overflow-y-visible overflow-x-scroll flex space-x-8  py-8 ">
+        <div id="cards" class="scrollbar-hide overflow-y-visible overflow-x-scroll flex space-x-8  py-8 ">
           <div id="card">
             <div
               class="border-t-4 border-b-4 border-[#0369A1] emx-auto flex w-72 flex-col items-start justify-start overflow-hidden rounded-xl  bg-[#F6F6FE] ">
