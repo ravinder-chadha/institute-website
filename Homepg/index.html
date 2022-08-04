@@ -67,7 +67,7 @@
     }
 
     .material-symbols-outlined {
-      font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
+      font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
     }
 
     ::-webkit-scrollbar {
@@ -2091,23 +2091,28 @@
   </div> -->
   <!-- === Placement Stats end === -->
   <!-- === LIFE AT NITJ Starts === -->
-  <div>
-    <h1 class="text-3xl font-semibold uppercase text-[#FF6600]">
+  <div class="container my-20">
+    <!-- <h1 class="text-3xl font-semibold uppercase text-[#FF6600]">
       A CAMPUS FOR ALL TALENTS
-    </h1>
-    <div class="m-[15px] flex flex-col gap-[50px] lg:m-[55px] lg:mt-[25px] lg:h-[80vh] lg:flex-row">
+    </h1> -->
+    <div class="flex flex-col gap-10 lg:flex-row">
       <div class="basis-2/5">
-        <h2 class="text-2xl font-semibold text-black">
-          Clubs & Societies
-        </h2>
-        <div class="flex items-center rounded-xl bg-light-purple p-4">
+        <div class="mb-10 flex items-center justify-start space-x-6">
+          <h1 class="uppercase text-4xl font-semibold w-fit text-dark-purple">
+            Clubs & <span class="text-accent">Societies</span>
+          </h1>
+          <span class="material-symbols-outlined" style="font-size: 40px;">
+            atr
+          </span>
+        </div>
+        <div class="flex items-center rounded-xl bg-light-purple p-2">
 
-          <div class="h-[68vh] overflow-auto rounded-lg ">
-            <div class="flex flex-col gap-[24px] rounded-lg ">
+          <div class="h-[68vh] overflow-auto rounded-lg p-2">
+            <div class="flex flex-col gap-6">
 
               <div id="club-card" class="overflow-hidden rounded-xl bg-white shadow-lg">
                 <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
-                  <div class="w-2/5 bg-[url(https://via.placeholder.com/300)] bg-cover bg-center bg-no-repeat">
+                  <div class="w-2/5 bg-[url(./img/DSC_Logo.svg)] bg-cover bg-center bg-no-repeat">
                   </div>
                   <div class="flex flex-col p-6 w-3/5">
                     <div class="flex flex-col items-start justify-start space-y-3">
@@ -2129,7 +2134,7 @@
               </div>
               <div id="club-card" class="overflow-hidden rounded-xl bg-white shadow-lg">
                 <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
-                  <div class="w-2/5 bg-[url(https://via.placeholder.com/300)] bg-cover bg-center bg-no-repeat">
+                  <div class="w-2/5 bg-[url(./img/rtist_logo.png)] bg-cover bg-center bg-no-repeat">
                   </div>
                   <div class="flex flex-col p-6 w-3/5">
                     <div class="flex flex-col items-start justify-start space-y-3">
@@ -2151,7 +2156,7 @@
               </div>
               <div id="club-card" class="overflow-hidden rounded-xl bg-white shadow-lg">
                 <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
-                  <div class="w-2/5 bg-[url(https://via.placeholder.com/300)] bg-cover bg-center bg-no-repeat">
+                  <div class="w-2/5 bg-[url(./img/DSC_Logo.svg)] bg-cover bg-center bg-no-repeat">
                   </div>
                   <div class="flex flex-col p-6 w-3/5">
                     <div class="flex flex-col items-start justify-start space-y-3">
@@ -2173,7 +2178,7 @@
               </div>
               <div id="club-card" class="overflow-hidden rounded-xl bg-white shadow-lg">
                 <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
-                  <div class="w-2/5 bg-[url(https://via.placeholder.com/300)] bg-cover bg-center bg-no-repeat">
+                  <div class="w-2/5 bg-[url(./img/mediacell_logo.png)] bg-cover bg-center bg-no-repeat">
                   </div>
                   <div class="flex flex-col p-6 w-3/5">
                     <div class="flex flex-col items-start justify-start space-y-3">
@@ -2193,17 +2198,21 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
 
       <div class="basis-3/5">
-        <div class="">
-          <h2 class="text-center text-2xl font-semibold text-black">
-            Photo Gallery
-          </h2>
+        <div>
+          <div class="mb-10 flex items-center justify-start space-x-6">
+            <h1 class="uppercase text-4xl font-semibold text-dark-purple">
+              Photo <span class="text-accent">Gallery</span>
+            </h1>
+            <span class="material-symbols-outlined" style="font-size: 40px;">
+              imagesmode
+            </span>
+          </div>
           <div class="container flex h-[22vh] w-full">
             <div class="box">
               <img src="img/img1.png" />
@@ -2249,7 +2258,7 @@
             </div>
           </div>
         </div>
-        <div class="m-[auto] mt-[15px] flex flex-col items-center gap-[15px] lg:flex-row lg:justify-center">
+        <!-- <div class="m-[auto] mt-[15px] flex flex-col items-center gap-[15px] lg:flex-row lg:justify-center">
           <a class="hover:text-accent lg:mr-[80px]" href="">
             <i class="fas fa-camera-alt mr-[6px] text-[24px] text-accent"></i>
             <span class="font-semibold hover:underline">View Gallery →</span>
@@ -2258,13 +2267,12 @@
             <i class="fas fa-street-view mr-[6px] text-[24px] text-accent"></i>
             <span class="font-semibold hover:underline">Campus Tour →</span>
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
 
   <div class="base-image hidden overflow-hidden lg:block"></div>
-  <div class="base-image-2 overflow-hidden lg:hidden"></div>
   <!-- === LIFE AT NITJ Ends === -->
   <!-- === FOOTER Starts === -->
   <div class="flex flex-col justify-between bg-slate-800 text-white lg:flex-row lg:px-20 h-full">
