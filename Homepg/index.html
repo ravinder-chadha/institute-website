@@ -1815,20 +1815,23 @@
   <!-- === Research Section Starts === -->
   <div class="grid lg:grid-cols-3  sm:grid-cols-1 m-4">
     <div class=" lg:col-span-2 lg:row-span-1 overflow-hidden gap-10 my-4 sm:col-span-1 row-span-1">
-      <h2 class="text-left ml-12 text-3xl font-semibold text-black">
-        LATEST RESEARCH
-      </h2>
+      <div class="flex items-center justify-start space-x-6 ml-12">
+        <h1 class="uppercase text-4xl font-semibold text-dark-purple">
+          Latest <span class="text-accent">Research</span>
+        </h1>
+        <span><img src="img/Loudspeaker.png" style="height:40px;"></span>
+      </div>
       <!-- Cards Component -->
   <div class="flex flex-row w-full">
-  <span class="material-symbols-outlined self-center text-5xl font-bold" onclick="slideCards('left')">
+  <span class="material-symbols-outlined self-center text-5xl font-bold hover:cursor-pointer hover:scale-110 hover:font-extrabold" onclick="slideResearch('left')">
   keyboard_arrow_left
   </span>
-  <div id="cards" class="no-scrollbar overflow-y-visible overflow-x-scroll flex space-x-8  py-8 ">
-    <div id="card">
+  <div id="slides" class="no-scrollbar overflow-y-visible overflow-x-scroll flex space-x-8  py-8 ">
+    <div id="slide">
       <div
         class="border-t-4 border-b-4 border-[#0369A1] emx-auto flex w-72 flex-col items-start justify-start overflow-hidden rounded-xl  bg-[#F6F6FE] ">
 
-        <div class="m-3" >
+        <div class="m-2" >
           <img class="h-40 w-full bg-sky-100 bg-center rounded-lg" src="./img/card1.jpg" />
         </div>
         <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-6">
@@ -1843,11 +1846,11 @@
         </div>
       </div>
     </div>
-    <div id="card">
+    <div id="slide">
       <div
         class="border-t-4 bg-[#F6F6FE] mx-auto flex w-72 flex-col items-start justify-start overflow-hidden rounded-xl order-t-4 border-b-4 border-[#0369A1]">
 
-        <div class="m-3">
+        <div class="m-2">
           <img class="h-40 w-full bg-sky-100 bg-cover bg-center rounded-md" src="./img/card2.jpg" />
         </div>
         <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-6">
@@ -1863,11 +1866,11 @@
         </div>
       </div>
     </div>
-    <div id="card">
+    <div id="slide">
       <div
         class="border-t-4 bg-[#F6F6FE] mx-auto flex w-72 flex-col items-start justify-start overflow-hidden rounded-xl  order-t-4 border-b-4 border-[#0369A1]">
 
-        <div class="m-3">
+        <div class="m-2">
           <img class="h-40 w-full bg-sky-100 bg-cover bg-center rounded-md" src="./img/card3.jpg" />
         </div>
         <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-6">
@@ -1883,10 +1886,10 @@
         </div>
       </div>
     </div>
-    <div id="card" class="m-">
+    <div id="slide">
       <div
         class="border-t-4 bg-[#F6F6FE] mx-auto flex w-72 flex-col items-start justify-start overflow-hidden rounded-xl order-t-4 border-b-4 border-[#0369A1]">
-      <div class="m-3">
+      <div class="m-2">
         <img class="h-40 w-full bg-sky-100 bg-cover bg-center rounded-md" src="./img/card2.jpg" />
       </div>
 
@@ -1905,7 +1908,7 @@
     </div>
   </div>
 
-  <span class="material-symbols-outlined self-center p-4 text-5xl font-bold" onclick="slideCards('right')">
+  <span class="material-symbols-outlined self-center p-4 text-5xl font-bold hover:cursor-pointer hover:scale-110 hover:font-extrabold" onclick="slideResearch('right')">
 keyboard_arrow_right
 </span>
       </div>
@@ -2018,9 +2021,10 @@ keyboard_arrow_right
       </div>
     </div>
     <div class="sm:col-span-1 sm:row-span-1 lg:col-span-2 lg:row-span-1 m-4 mt-0">
-      <div class="flex justify-between rounded-md bg-gradient-to-r from-sky-500 to-indigo-500 p-4">
-        <div class="text-white text-2xl">
-          <h1 class="font-black"> #SUPPORT </h1>
+      <div class="relative flex justify-between  rounded-md  p-4  bg-gradient-to-r from-sky-500 to-indigo-500 mix-blend-multiply">
+
+        <div class="text-white text-2xl mix-blend-over">
+          <h1 class="font-bold text-3xl"> #SUPPORT </h1>
           <h1 class="font-bold">RESEARCH AT NITJ</h1>
         </div>
    <div class="self-center">

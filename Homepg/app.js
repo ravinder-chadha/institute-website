@@ -161,6 +161,22 @@ function slideCards(direction) {
   }, 50)
 }
 
+function slideResearch(direction) {
+  var container = document.getElementById('slides')
+  scrollComp = 0
+  var slide = setInterval(function () {
+    if (direction == 'left') {
+      container.scrollLeft -= 40
+    } else {
+      container.scrollLeft += 40
+    }
+    scrollComp += 10
+    if (scrollComp >= 100) {
+      window.clearInterval(slide)
+    }
+  }, 50)
+}
+
 // Admission Section Tabs
 
 const openCourse = (e) => {
