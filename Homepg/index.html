@@ -1299,9 +1299,9 @@
   <!-- === Carousel section ends === -->
   <!-- === News Section Starts === -->
 
-  <div id="News section" class="pt-10 pb-5 my-10">
+  <div id="News section" class="my-20">
     <div class="container flex flex-col justify-start lg:flex-row">
-      <div id="announcements" class="container mx-auto flex w-full lg:w-2/3 flex-col space-y-6">
+      <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
         <div class="flex items-center justify-start space-x-6">
           <h1 class="uppercase text-4xl font-semibold text-dark-purple">
             Latest <span class="text-accent">News</span>
@@ -1310,117 +1310,163 @@
         </div>
 
         <!-- Cards Component -->
-        <div class="flex flex-row">
-          <i class="fa-solid fa-angle-left self-center pl-4 text-2xl" onclick="slideCards('left')"></i>
-          <div id="cards" class="scrollbar-hide flex space-x-8 overflow-y-visible overflow-x-scroll py-8 px-4">
+        <div class="flex flex-row relative">
+          <i class="absolute top-1/2 -left-10 -translate-y-1/2 fa-solid fa-angle-left self-center pl-4 text-2xl"
+            onclick="slideCards('left')"></i>
+          <div id="cards" class="scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 py-8">
             <div id="card">
               <div
-                class="mx-auto flex w-52 flex-col items-start justify-start overflow-hidden rounded-xl border-black border-opacity-20 bg-white shadow-xl ring-1">
-                <img class="h-56 w-full bg-sky-100 bg-cover bg-center object-cover" src="./img/img1.png" />
-                <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-6">
-                  <p class="text-sm font-bold uppercase text-gray-900 opacity-50">
-                    July 22, 2022
-                  </p>
-                  <p class="text-lg font-semibold text-gray-900">
-                    Lorem ipsum dolor sit amet, Card 1
-                  </p>
-                  <div class="mt-auto flex w-1/2 items-center justify-start space-x-3">
-                    <a class="text- cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
-                      &rarr;</a>
+                class="flex flex-col overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./img/img1.png" />
+                  <div class="flex flex-col space-y-5 p-4">
+                    <p class="text-sm font-bold uppercase text-gray-900 opacity-50">
+                      July 22, 2022
+                    </p>
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      Card 1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure autem id illum nostrum
+                      veniam
+                      totam officiis nam, dolores quas voluptas qui reprehenderit accusamus quo delectus quis molestiae.
+                      Rerum, nostrum praesentium.
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
+                        &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="card">
+              <div
+                class="flex flex-col items-start justify-start overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./img/img1.png" />
+                  <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-4">
+                    <p class="text-sm font-bold uppercase text-gray-900 opacity-50">
+                      July 22, 2022
+                    </p>
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      Card 2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure autem id illum nostrum
+                      veniam
+                      totam officiis nam, dolores quas voluptas qui reprehenderit accusamus quo delectus quis molestiae.
+                      Rerum, nostrum praesentium.
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
+                        &rarr;</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div id="card">
               <div
-                class="mx-auto flex w-52 flex-col items-start justify-start overflow-hidden rounded-xl border-black border-opacity-20 bg-white shadow-xl ring-1">
-                <img class="h-56 w-full bg-sky-100 bg-cover bg-center object-cover" src="./img/img1.png" />
-                <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-6">
-                  <p class="text-sm font-bold uppercase text-gray-900 opacity-50">
-                    July 22, 2022
-                  </p>
-                  <p class="text-lg font-semibold text-gray-900">
-                    Lorem ipsum dolor sit amet, Card 2
-                  </p>
-                  <div class="mt-auto flex w-1/2 items-center justify-start space-x-3">
-                    <a class="text- cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
-                      &rarr;</a>
+                class="flex flex-col items-start justify-start overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./img/img1.png" />
+                  <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-4">
+                    <p class="text-sm font-bold uppercase text-gray-900 opacity-50">
+                      July 22, 2022
+                    </p>
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      Card 3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure autem id illum nostrum
+                      veniam
+                      totam officiis nam, dolores quas voluptas qui reprehenderit accusamus quo delectus quis molestiae.
+                      Rerum, nostrum praesentium.
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
+                        &rarr;</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div id="card">
               <div
-                class="mx-auto flex w-52 flex-col items-start justify-start overflow-hidden rounded-xl border-black border-opacity-20 bg-white shadow-xl ring-1">
-                <img class="h-56 w-full bg-sky-100 bg-cover bg-center object-cover" src="./img/img1.png" />
-                <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-6">
-                  <p class="text-sm font-bold uppercase text-gray-900 opacity-50">
-                    July 22, 2022
-                  </p>
-                  <p class="text-lg font-semibold text-gray-900">
-                    Lorem ipsum dolor sit amet, Card 3
-                  </p>
-                  <div class="mt-auto flex w-1/2 items-center justify-start space-x-3">
-                    <a class="text- cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
-                      &rarr;</a>
+                class="flex flex-col items-start justify-start overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./img/img1.png" />
+                  <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-4">
+                    <p class="text-sm font-bold uppercase text-gray-900 opacity-50">
+                      July 22, 2022
+                    </p>
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      Card 4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure autem id illum nostrum
+                      veniam
+                      totam officiis nam, dolores quas voluptas qui reprehenderit accusamus quo delectus quis molestiae.
+                      Rerum, nostrum praesentium.
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
+                        &rarr;</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div id="card">
               <div
-                class="mx-auto flex w-52 flex-col items-start justify-start overflow-hidden rounded-xl border-black border-opacity-20 bg-white shadow-xl ring-1">
-                <img class="h-56 w-full bg-sky-100 bg-cover bg-center object-cover" src="./img/img1.png" />
-                <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-6">
-                  <p class="text-sm font-bold uppercase text-gray-900 opacity-50">
-                    July 22, 2022
-                  </p>
-                  <p class="text-lg font-semibold text-gray-900">
-                    Lorem ipsum dolor sit amet, Card 4
-                  </p>
-                  <div class="mt-auto flex w-1/2 items-center justify-start space-x-3">
-                    <a class="text- cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
-                      &rarr;</a>
+                class="flex flex-col items-start justify-start overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./img/img1.png" />
+                  <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-4">
+                    <p class="text-sm font-bold uppercase text-gray-900 opacity-50">
+                      July 22, 2022
+                    </p>
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      Card 5 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure autem id illum nostrum
+                      veniam
+                      totam officiis nam, dolores quas voluptas qui reprehenderit accusamus quo delectus quis molestiae.
+                      Rerum, nostrum praesentium.
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
+                        &rarr;</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div id="card">
               <div
-                class="mx-auto flex w-52 flex-col items-start justify-start overflow-hidden rounded-xl border-black border-opacity-20 bg-white shadow-xl ring-1">
-                <img class="h-56 w-full bg-sky-100 bg-cover bg-center object-cover" src="./img/img1.png" />
-                <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-6">
-                  <p class="text-sm font-bold uppercase text-gray-900 opacity-50">
-                    July 22, 2022
-                  </p>
-                  <p class="text-lg font-semibold text-gray-900">
-                    Lorem ipsum dolor sit amet, Card 5
-                  </p>
-                  <div class="mt-auto flex w-1/2 items-center justify-start space-x-3">
-                    <a class="text- cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
-                      &rarr;</a>
+                class="flex flex-col items-start justify-start overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./img/img1.png" />
+                  <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-4">
+                    <p class="text-sm font-bold uppercase text-gray-900 opacity-50">
+                      July 22, 2022
+                    </p>
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      Card 6 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure autem id illum nostrum
+                      veniam
+                      totam officiis nam, dolores quas voluptas qui reprehenderit accusamus quo delectus quis molestiae.
+                      Rerum, nostrum praesentium.
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
+                        &rarr;</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="card">
-              <div
-                class="mx-auto flex w-52 flex-col items-start justify-start overflow-hidden rounded-xl border-black border-opacity-20 bg-white shadow-xl ring-1">
-                <img class="h-56 w-full bg-sky-100 bg-cover bg-center object-cover" src="./img/img1.png" />
-                <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-6">
-                  <p class="text-sm font-bold uppercase text-gray-900 opacity-50">
-                    July 22, 2022
-                  </p>
-                  <p class="text-lg font-semibold text-gray-900">
-                    Lorem ipsum dolor sit amet, Card 6
-                  </p>
-                  <div class="mt-auto flex w-1/2 items-center justify-start space-x-3">
-                    <a class="text- cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
-                      &rarr;</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           </div>
           <i class="fa-solid fa-angle-right self-center p-4 text-2xl" onclick="slideCards('right')"></i>
         </div>
@@ -1433,31 +1479,58 @@
             newspaper
           </span>
         </div>
-        <div class="flex flex-col space-y-6 py-6">
-          <div class="rounded-xl p-4 shadow-md odd:bg-emerald-200 even:bg-sky-200">
-            <div class="flex flex-col items-start justify-start space-y-2 border-l-4 border-gray-800 pl-5">
-              <p class="w-full text-xl font-semibold">This is a headline</p>
-              <p class="w-full text-base">
+        <div class="flex flex-col space-y-4 py-6 px-2 overflow-scroll h-[29rem] ">
+          <div class="rounded-xl p-4 shadow-md odd:bg-blue-100/50 even:bg-blue-200">
+            <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
+              <p class="w-full text-lg font-semibold">This is a headline</p>
+              <p class="w-full line-clamp-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-                ipsum dolor sit
+                ipsum dolor sit 1
               </p>
             </div>
           </div>
-          <div class="rounded-xl p-4 shadow-md odd:bg-emerald-200 even:bg-sky-200">
-            <div class="flex flex-col items-start justify-start space-y-2 border-l-4 border-gray-800 pl-5">
-              <p class="w-full text-xl font-semibold">This is a headline</p>
-              <p class="w-full text-base">
+          <div class="rounded-xl p-4 shadow-md odd:bg-blue-100/50 even:bg-blue-200">
+            <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
+              <p class="w-full text-lg font-semibold">This is a headline</p>
+              <p class="w-full line-clamp-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-                ipsum dolor sit
+                ipsum dolor sit 2
               </p>
             </div>
           </div>
-          <div class="rounded-xl p-4 shadow-md odd:bg-emerald-200 even:bg-sky-200">
-            <div class="flex flex-col items-start justify-start space-y-2 border-l-4 border-gray-800 pl-5">
-              <p class="w-full text-xl font-semibold">This is a headline</p>
-              <p class="w-full text-base">
+          <div class="rounded-xl p-4 shadow-md odd:bg-blue-100/50 even:bg-blue-200">
+            <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
+              <p class="w-full text-lg font-semibold">This is a headline</p>
+              <p class="w-full line-clamp-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-                ipsum dolor sit
+                ipsum dolor sit 3
+              </p>
+            </div>
+          </div>
+          <div class="rounded-xl p-4 shadow-md odd:bg-blue-100/50 even:bg-blue-200">
+            <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
+              <p class="w-full text-lg font-semibold">This is a headline</p>
+              <p class="w-full line-clamp-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
+                ipsum dolor sit 4
+              </p>
+            </div>
+          </div>
+          <div class="rounded-xl p-4 shadow-md odd:bg-blue-100/50 even:bg-blue-200">
+            <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
+              <p class="w-full text-lg font-semibold">This is a headline</p>
+              <p class="w-full line-clamp-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
+                ipsum dolor sit 5
+              </p>
+            </div>
+          </div>
+          <div class="rounded-xl p-4 shadow-md odd:bg-blue-100/50 even:bg-blue-200">
+            <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
+              <p class="w-full text-lg font-semibold">This is a headline</p>
+              <p class="w-full line-clamp-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
+                ipsum dolor sit 6
               </p>
             </div>
           </div>
@@ -1466,15 +1539,12 @@
     </div>
   </div>
 
-
-
-
   <!-- === News Section Ends === -->
   <!-- === Directors message starts === -->
 
-  <div id="Director's Corner" class="container mx-auto my-10 px-4 lg:px-10">
-    <div class="flex flex-col space-y-6 rounded-lg bg-white p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
-      <img src="./img/DirectorSir 1.jpg" class="h-32 w-32 rounded-md" alt="some image" />
+  <div id="Director's Corner" class="container mx-auto my-10">
+    <div class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
+      <img src="./img/DirectorSir 1.png" class="h-32 w-32 rounded-xl shadow-lg" alt="Director's Image" />
       <div id="content" class="flex flex-col space-y-4">
         <h1 class="text-4xl font-bold text-dark-purple">
           Director's <span class="text-accent">Note</span>
@@ -1494,43 +1564,6 @@
     </div>
   </div>
 
-  <!-- <p class="p-4 text-3xl w-full font-bold text-center text-[#FF6600]">
-    DIRECTOR’S CORNER
-  </p>
-  <div class="container h-72 bg-[#ADC6DC] min-w-full">
-    <div class="flex flex-row w-full items-center">
-      <div class="basis-1/5 flex flex-col items-end">
-        <div class="h-52 w-48 bg-blue-800">
-          <img class="translate-x-1/4 translate-y-4 w-auto h-52" src="img/DirectorSir.png" alt="" />
-        </div>
-      </div>
-      <div class="basis-4/5 flex flex-row justify-center py-5">
-        <div class="flex-col">
-          <div class="flex flex-row justify-between">
-            <p class="text-center font-semibold text-2xl ml-16">
-              Dr Binod Kumar Kanaujia
-            </p>
-            <div class="p-1.5 text-base pr-32">DIRECTOR, NITJ</div>
-          </div>
-          <div class="border-2 h-1 w-full border-[#2167A7]"></div>
-          <p class="text-base text-justify px-16 py-10">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages.
-          </p>
-          <div class="text-right text-lg font-semibold underline underline-offset-2 pr-16">
-            Read More 🡲
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!-- === Directors message ends === -->
   <!-- === Admission Section Starts === -->
 
   <div class="container mx-auto my-10 pt-10">
@@ -1796,31 +1829,42 @@
 
   <!-- Institute on Numbers section -->
 
-  <div class="my-20 bg-fixed bg-[url('./img/institution-in-num.png')]">
-    <div class="bg-dark-purple/50  backdrop-blur">
-      <div class="container mx-auto place-content-around py-10 text-center">
-        <div class="mb-12 text-3xl font-bold uppercase text-white">Institution in Numbers</div>
-        <div class="grid grid-flow-row auto-cols-auto md:grid-cols-2 lg:grid-cols-4 gap-16">
-          <div>
-            <div class="text-5xl font-bold text-white">5000+</div>
-            <div class="text-xl uppercase text-white">Students</div>
+
+  <section id="institute_numbers"
+    class="my-6 bg-[url('./img/numbers_section.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
+    <div class="bg-dark-purple/70">
+      <div
+        class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10  md:flex-row-reverse md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
+        <h1 class="text-5xl font-bold uppercase text-white md:text-right">
+          #Numbers <br />
+          <span style="
+                -webkit-text-stroke: 1px #ffffff !important;
+                -webkit-text-fill-color: transparent;
+              " class="inline-block">that makes</span>
+          NITJ
+        </h1>
+        <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="stats">
+          <div id="number">
+            <h1 class="text-5xl font-bold uppercase">5000+</h1>
+            <p class="text-lg uppercase">Students</p>
           </div>
-          <div>
-            <div class="text-5xl font-bold text-white">500+</div>
-            <div class="text-xl uppercase text-white">Faculty and Staff</div>
+          <div id="number">
+            <h1 class="text-5xl font-bold uppercase">500+</h1>
+            <p class="text-lg uppercase">Faculty & Staff</p>
           </div>
-          <div>
-            <div class="text-5xl font-bold text-white">18</div>
-            <div class="text-xl uppercase text-white">Departments</div>
+          <div id="number">
+            <h1 class="text-5xl font-bold uppercase">18</h1>
+            <p class="text-lg uppercase">Departments</p>
           </div>
-          <div>
-            <div class="text-5xl font-bold text-white">20</div>
-            <div class="text-xl uppercase text-white">Clubs and Cells</div>
+          <div id="number">
+            <h1 class="text-5xl font-bold uppercase">20+</h1>
+            <p class="text-lg uppercase">Clubs & Cells</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
 
   <!-- === Institution in nos. ends === -->
   <!-- === Research Section Starts === -->
@@ -2054,10 +2098,11 @@
   <!-- === Research Section Ends === -->
   <!-- === Placement Stats starts === -->
 
-  <section class="my-6 bg-[url('./img/placementStats.png')] bg-cover bg-fixed bg-center bg-no-repeat">
-    <div class="bg-dark-purple bg-opacity-50 backdrop-blur">
+  <section id="placement_stats"
+    class="my-6 bg-[url('./img/placementStats.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
+    <div class="bg-dark-purple/70">
       <div
-        class="container mx-auto flex flex-col space-y-20 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
+        class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
         <h1 class="text-5xl font-bold uppercase text-white">
           #numbers <br />
           <span style="
@@ -2081,7 +2126,7 @@
           </div>
           <div id="number">
             <h1 class="text-5xl font-bold uppercase">15+</h1>
-            <p class="text-lg uppercase">idead turned into startups</p>
+            <p class="text-lg uppercase">startups</p>
           </div>
         </div>
       </div>
@@ -2234,7 +2279,7 @@
               imagesmode
             </span>
           </div>
-          <div class="container flex h-[22vh] w-full">
+          <div class="flex h-[22vh] w-full">
             <div class="box">
               <img src="img/img1.png" />
             </div>
@@ -2249,7 +2294,7 @@
             </div>
           </div>
 
-          <div class="container flex h-[22vh] w-full">
+          <div class="flex h-[22vh] w-full">
             <div class="box">
               <img src="img/img5.png" />
             </div>
@@ -2264,7 +2309,7 @@
             </div>
           </div>
 
-          <div class="container flex h-[22vh] w-full">
+          <div class="flex h-[22vh] w-full">
             <div class="box">
               <img src="img/img9.png" />
             </div>
