@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <link rel="icon" type="image/x-icon" href="./img/logo.png">
+  <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
   <!-- RESEARCH -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +43,6 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-  <script src="app.js" defer></script>
   <style>
     body {
       scrollbar-color: #fff #fff;
@@ -1303,17 +1303,19 @@
     <div class="container flex flex-col justify-start lg:flex-row">
       <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
         <div class="flex items-center justify-start space-x-6">
-          <h1 class="uppercase text-4xl font-semibold text-dark-purple">
-            Latest <span class="text-accent">News</span>
+          <h1 class="uppercase text-4xl font-semibold text-accent">
+            Latest <span class="text-dark-purple">News</span>
           </h1>
-          <span><img src="img/Loudspeaker.png" style="height:40px;"></span>
+          <span class="material-symbols-outlined" style="font-size: 40px ; color: var(--accent);">
+            feed
+          </span>
         </div>
 
-        <!-- Cards Component -->
+        <!-- Cards -->
         <div class="flex flex-row relative">
           <i class="absolute top-1/2 -left-10 -translate-y-1/2 fa-solid fa-angle-left self-center pl-4 text-2xl"
             onclick="slideCards('left')"></i>
-          <div id="cards" class="scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 py-8">
+          <div id="cards" class="scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 pt-8">
             <div id="card">
               <div
                 class="flex flex-col overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
@@ -1453,29 +1455,21 @@
                 </div>
               </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           </div>
           <i class="fa-solid fa-angle-right self-center p-4 text-2xl" onclick="slideCards('right')"></i>
+
+        </div>
+        <div class="flex items-end w-fit">
+          <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="#">
+            <span class="font-semibold hover:underline">View All →</span>
+          </a>
         </div>
       </div>
 
       <div id="notices" class="container mx-auto flex grow lg:w-1/3 w-full flex-col space-y-6">
         <div class="flex items-center justify-start space-x-6">
           <h1 class="text-4xl font-semibold uppercase text-gray-900">Notices</h1>
-          <span class="material-symbols-outlined text-xl" style="font-size: 40px; color: var(--dark-purple)">
+          <span class="material-symbols-outlined text-xl" style="font-size: 40px; color: var(--accent)">
             newspaper
           </span>
         </div>
@@ -1568,10 +1562,10 @@
 
   <div class="container mx-auto my-10 pt-10">
     <div class="mb-10 flex items-start justify-start space-x-6">
-      <h1 class="uppercase text-4xl font-semibold text-dark-purple">
-        Be an <span class="text-accent">Nitjian</span>
+      <h1 class="uppercase text-4xl font-semibold text-accent">
+        Be an <span class="text-dark-purple">Nitjian</span>
       </h1>
-      <span class="material-symbols-outlined self-center" style="font-size:40px;">
+      <span class="material-symbols-outlined self-center" style="font-size:40px; color:var(--accent);">
         add_reaction
       </span>
     </div>
@@ -1829,41 +1823,41 @@
 
   <!-- Institute on Numbers section -->
 
-
-  <section id="institute_numbers"
-    class="my-6 bg-[url('./img/numbers_section.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
+  <section id="placement_stats"
+    class="my-6 bg-[url('./img/placementStats.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
     <div class="bg-dark-purple/70">
       <div
-        class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10  md:flex-row-reverse md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
-        <h1 class="text-5xl font-bold uppercase text-white md:text-right">
-          #Numbers <br />
+        class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
+        <h1 class="text-5xl font-bold uppercase text-white">
+          #numbers <br />
           <span style="
-                -webkit-text-stroke: 1px #ffffff !important;
-                -webkit-text-fill-color: transparent;
-              " class="inline-block">that makes</span>
+              -webkit-text-stroke: 1px #ffffff !important;
+              -webkit-text-fill-color: transparent;
+            " class="inline-block">that prove</span>
           NITJ
         </h1>
         <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="stats">
           <div id="number">
-            <h1 class="text-5xl font-bold uppercase">5000+</h1>
-            <p class="text-lg uppercase">Students</p>
+            <h1 class="text-5xl font-bold uppercase">995+</h1>
+            <p class="text-lg uppercase">Students placed</p>
           </div>
           <div id="number">
-            <h1 class="text-5xl font-bold uppercase">500+</h1>
-            <p class="text-lg uppercase">Faculty & Staff</p>
+            <h1 class="text-5xl font-bold uppercase">150+</h1>
+            <p class="text-lg uppercase">Companies visited</p>
           </div>
           <div id="number">
-            <h1 class="text-5xl font-bold uppercase">18</h1>
-            <p class="text-lg uppercase">Departments</p>
+            <h1 class="text-5xl font-bold uppercase">1.2 CR</h1>
+            <p class="text-lg uppercase">Highest package</p>
           </div>
           <div id="number">
-            <h1 class="text-5xl font-bold uppercase">20+</h1>
-            <p class="text-lg uppercase">Clubs & Cells</p>
+            <h1 class="text-5xl font-bold uppercase">15+</h1>
+            <p class="text-lg uppercase">startups</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 
 
   <!-- === Institution in nos. ends === -->
@@ -2098,40 +2092,44 @@
   <!-- === Research Section Ends === -->
   <!-- === Placement Stats starts === -->
 
-  <section id="placement_stats"
-    class="my-6 bg-[url('./img/placementStats.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
+
+
+  <section id="institute_numbers"
+    class="my-6 bg-[url('./img/numbers_section.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
     <div class="bg-dark-purple/70">
       <div
-        class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
-        <h1 class="text-5xl font-bold uppercase text-white">
-          #numbers <br />
+        class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10  md:flex-row-reverse md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
+        <h1 class="text-5xl font-bold uppercase text-white md:text-right">
+          #Numbers <br />
           <span style="
                 -webkit-text-stroke: 1px #ffffff !important;
                 -webkit-text-fill-color: transparent;
-              " class="inline-block">that prove</span>
+              " class="inline-block">that makes</span>
           NITJ
         </h1>
         <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="stats">
           <div id="number">
-            <h1 class="text-5xl font-bold uppercase">995+</h1>
-            <p class="text-lg uppercase">Students placed</p>
+            <h1 class="text-5xl font-bold uppercase">5000+</h1>
+            <p class="text-lg uppercase">Students</p>
           </div>
           <div id="number">
-            <h1 class="text-5xl font-bold uppercase">150+</h1>
-            <p class="text-lg uppercase">Companies visited</p>
+            <h1 class="text-5xl font-bold uppercase">500+</h1>
+            <p class="text-lg uppercase">Faculty & Staff</p>
           </div>
           <div id="number">
-            <h1 class="text-5xl font-bold uppercase">1.2 CR</h1>
-            <p class="text-lg uppercase">Highest package</p>
+            <h1 class="text-5xl font-bold uppercase">18</h1>
+            <p class="text-lg uppercase">Departments</p>
           </div>
           <div id="number">
-            <h1 class="text-5xl font-bold uppercase">15+</h1>
-            <p class="text-lg uppercase">startups</p>
+            <h1 class="text-5xl font-bold uppercase">20+</h1>
+            <p class="text-lg uppercase">Clubs & Cells</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+
 
   <!-- <div class="container h-fit min-w-full" style="margin-top: 48px; margin-bottom: 96px;">
     <img class="absolute brightness-50 min-w-full h-72 contrast-90 bg-blend-darken" src="img/placement-stats.png"
@@ -2164,10 +2162,10 @@
     <div class="flex flex-col gap-10 lg:flex-row">
       <div class="basis-2/5">
         <div class="mb-10 flex items-center justify-start space-x-6">
-          <h1 class="uppercase text-4xl font-semibold w-fit text-dark-purple">
-            Clubs & <span class="text-accent">Societies</span>
+          <h1 class="uppercase text-4xl font-semibold w-fit text-accent">
+            Clubs & <span class="text-dark-purple">Societies</span>
           </h1>
-          <span class="material-symbols-outlined" style="font-size: 40px;">
+          <span class="material-symbols-outlined" style="font-size: 40px; color:var(--accent);">
             atr
           </span>
         </div>
@@ -2267,15 +2265,20 @@
             </div>
           </div>
         </div>
+        <div class="flex items-end w-fit m-2 ml-4">
+          <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="#">
+            <span class="font-semibold hover:underline">View All →</span>
+          </a>
+        </div>
       </div>
 
       <div class="basis-3/5">
         <div>
           <div class="mb-10 flex items-center justify-start space-x-6">
-            <h1 class="uppercase text-4xl font-semibold text-dark-purple">
-              Photo <span class="text-accent">Gallery</span>
+            <h1 class="uppercase text-4xl font-semibold text-accent">
+              Photo <span class="text-dark-purple">Gallery</span>
             </h1>
-            <span class="material-symbols-outlined" style="font-size: 40px;">
+            <span class="material-symbols-outlined" style="font-size: 40px; color:var(--accent);">
               imagesmode
             </span>
           </div>
@@ -2324,16 +2327,16 @@
             </div>
           </div>
         </div>
-        <!-- <div class="m-[auto] mt-[15px] flex flex-col items-center gap-[15px] lg:flex-row lg:justify-center">
-          <a class="hover:text-accent lg:mr-[80px]" href="">
+        <div class="m-[auto] mt-[15px] flex flex-col items-center gap-[15px] lg:flex-row lg:justify-center">
+          <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="">
             <i class="fas fa-camera-alt mr-[6px] text-[24px] text-accent"></i>
             <span class="font-semibold hover:underline">View Gallery →</span>
           </a>
-          <a class="hover:text-accent" href="">
+          <a class="text-accent hover:text-sky-500" href="">
             <i class="fas fa-street-view mr-[6px] text-[24px] text-accent"></i>
             <span class="font-semibold hover:underline">Campus Tour →</span>
           </a>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -2490,12 +2493,13 @@
     });
   </script>
 
-  <script>
+  <!-- <script>
     function mouseOver() {
       document.getElementById("demo1").style.color = "#215ba7";
       document.getElementById("demo2").style.color = "#215ba7";
     }
-  </script>
+  </script> -->
+  <script src="app.js" defer></script>
 </body>
 
 </html>
