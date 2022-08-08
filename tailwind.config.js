@@ -18,6 +18,17 @@ module.exports = {
       },
     },
     extend: {
+      keyframes: {
+        images: {
+          '0%': { 'background-image': "url('./img/IMG_0195.JPG')" },
+          '33.33%': { 'background-image': "url('./img/IMG_0196.JPG')" },
+          '66.66%': { 'background-image': "url('./img/IMG_0198.JPG')" },
+          '100%': { 'background-image': "url('./img/IMG_0195.JPG')" },
+        },
+      },
+      animation: {
+        'image-slider': 'images 10s ease-in-out infinite',
+      },
       fontFamily: {
         sans: ['Barlow', 'ui-sans-serif', 'system-ui'],
         body: ['Barlow'],
