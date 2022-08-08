@@ -7,17 +7,8 @@
 @layer base {
   :root {
     --dark-purple: hsla(242, 83%, 7%, 1);
-  }
-}
-
-@layer utilities {
-  /* Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    --accent: hsla(201, 96%, 32%);
+    --light-purple: hsla(242, 83%, 98%);
+    --accent-orange: hsla(12, 87%, 56%, 1);
   }
 }
