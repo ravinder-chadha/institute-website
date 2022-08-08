@@ -179,3 +179,20 @@ const openCourse = (e) => {
   e.classList.add('bg-accent', 'text-white')
   document.getElementById(e.dataset.course).classList.remove('hidden')
 }
+
+// Image Slider Animation::
+
+// const mainText = document.getElementById('main-slider-text')
+const mainImg = document.getElementById('main-image')
+const slider = [
+  ['The Place of transformation', './img/IMG_0196.JPG'],
+  ['78th IN OVERALL NIRF RANKING', './img/IMG_0198.JPG'],
+  ['49th IN ENGINEERING NIRF', './img/IMG_0195.JPG'],
+]
+
+let i = 0
+setInterval(() => {
+  // mainText.innerText = slider[i % slider.length][0]
+  mainImg.style.backgroundImage = `url('${slider[i % slider.length][1]}')`
+  i++
+}, 2000)
