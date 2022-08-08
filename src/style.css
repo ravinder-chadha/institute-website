@@ -7,17 +7,37 @@
 @layer base {
   :root {
     --dark-purple: hsla(242, 83%, 7%, 1);
+    --accent: hsla(201, 96%, 32%);
+    --light-purple: hsla(242, 83%, 98%);
+    --accent-orange: hsla(12, 87%, 56%, 1);
   }
 }
-
 @layer utilities {
-  /* Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
+  .main-slider-text {
+    height: 120px;
+    overflow: hidden;
   }
-
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+  .main-slider-text h2 {
+    animation: rotate 8s ease-in-out 500ms infinite;
+  }
+  @keyframes rotate {
+    10% {
+      transform: translateY(-5%);
+    }
+    33.33% {
+      transform: translateY(0%);
+    }
+    43.33% {
+      transform: translateY(-112%);
+    }
+    66.66% {
+      transform: translateY(-100%);
+    }
+    76.66% {
+      transform: translateY(-205%);
+    }
+    100% {
+      transform: translateY(-200%);
+    }
   }
 }
