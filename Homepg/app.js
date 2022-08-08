@@ -3,25 +3,18 @@ window.onscroll = function () {
   const institute_name = document.getElementsByClassName('institute_name')
   const full_navbar = document.getElementsByTagName('header')
   const logo = document.getElementById('logo_250')
-  const logoCurve = document.getElementById('logo_curve')
   const topbar = document.getElementById('top_bar')
   const diff_lang = document.getElementsByClassName('mySlides')
-  const diff_langBG = document.getElementsByClassName('mySlidesBG')
   if (window.scrollY > 100) {
     topbar.style.transform = 'translateY(-50px)'
     for (let i = 0; i < diff_lang.length; i++) {
       diff_lang[i].classList.remove('mt-7')
-      diff_lang[i].style.transform = 'translateY(-100px)'
-      // diff_langBG[i].classList.remove('p-2.5')
-      // diff_langBG[i].classList.add('p-1')
     }
-    logoCurve.classList.add('top-14')
-    logoCurve.style.width = '300px'
     for (let i = 0; i < institute_name.length; i++) {
-      logo.style.width = '60px'
-      logo.style.height = '60px'
+      logo.style.width = '90px'
+      logo.style.height = '90px'
       logo.classList.remove('top-8')
-      logo.classList.add('py-1')
+      logo.classList.add('top-0')
       if (institute_name[i].classList.contains('text-xl')) {
         institute_name[i].classList.remove('text-xl')
         institute_name[i].classList.add('text-lg')
@@ -31,19 +24,14 @@ window.onscroll = function () {
       }
     }
   } else {
-    logo.style.width = '100px'
-    logo.style.height = '100px'
+    logo.style.width = '120px'
+    logo.style.height = '120px'
     topbar.style.transform = 'translateY(0)'
     for (let i = 0; i < diff_lang.length; i++) {
       diff_lang[i].classList.add('mt-7')
-      diff_lang[i].style.transform = 'translateY(0)'
-      // diff_langBG[i].classList.add('p-2.5')
-      // diff_langBG[i].classList.remove('p-1')
     }
     logo.classList.remove('top-0')
     logo.classList.add('top-8')
-    logoCurve.classList.remove('top-16')
-    logoCurve.style.width = '230px'
     for (var i = 0; i < institute_name.length; i++) {
       // console.log(institute_name[i].classList);
       if (institute_name[i].classList.contains('text-lg')) {
@@ -142,18 +130,6 @@ function animateValueIntiator() {
 let home = 0
 window.onload = function () {
   showHome()
-  // Work In Progress
-  // var wid = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-  // console.log(wid)
-  // if(wid <= 700){
-  //   topbar.style.transform = 'translateY(-50px)'
-  //   for (let i = 0; i < diff_lang.length; i++) {
-  //     diff_lang[i].classList.remove('mt-7')
-  //     diff_lang[i].style.transform = 'translateY(-100px)'
-  //   }
-  //   logo.style.transform = 'translateX(-500px)'
-  //   logoCurve.style.transform = 'translateX(-500px)'
-  // }
 }
 function showHome() {
   let i
