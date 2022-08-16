@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:css": "tailwind build src/style.css -o Homepg/style.css",
+    "build:css": "tailwind build -i src/style.css -o Homepg/style.css",
     "watch:css": "tailwindcss -i src/style.css -o Homepg/style.css --watch"
   },
   "keywords": [],

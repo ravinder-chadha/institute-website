@@ -26,6 +26,9 @@
   }
 }
 @layer utilities {
+  .animate-delay {
+    animate-delay: 100ms;
+  }
   .main-slider-text {
     height: 120px;
     overflow: hidden;
