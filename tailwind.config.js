@@ -40,7 +40,8 @@ module.exports = {
         'accent-orange': 'hsla(12, 87%, 56%, 1)',
       },
       backgroundImage: {
-        'number-bg': "url('./Homepg/img/bgnumbers.jpg')",
+        'gradient-radial':
+          'radial-gradient(ellipse at top, var(--tw-gradient-stops))',
       },
     },
   },
