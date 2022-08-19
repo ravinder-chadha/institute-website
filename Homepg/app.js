@@ -150,12 +150,12 @@ function slideCards(direction) {
   scrollCompleted = 0
   var slideVar = setInterval(function () {
     if (direction == 'left') {
-      container.scrollLeft -= 20
+      container.scrollLeft -= 200
     } else {
-      container.scrollLeft += 20
+      container.scrollLeft += 200
     }
-    scrollCompleted += 10
-    if (scrollCompleted >= 100) {
+    scrollCompleted += 100
+    if (scrollCompleted >= 1000) {
       window.clearInterval(slideVar)
     }
   }, 50)
@@ -186,15 +186,29 @@ const openCourse = (e) => {
   for (let i = 0; i < tabcontent.length; i++) {
     tabcontent[i].classList.add('hidden')
   }
+
   for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.add(
-      'hover:bg-blue-100',
-      'active:bg-blue-200',
-      'text-accent'
-    )
-    tablinks[i].classList.remove('bg-accent')
+    tablinks[i].classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
+    tablinks[i].classList.remove('bg-accent', 'text-white')
   }
+  e.classList.remove('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
   e.classList.add('bg-accent', 'text-white')
-  e.classList.remove('hover:bg-blue-100', 'active:bg-blue-200', 'text-accent')
   document.getElementById(e.dataset.course).classList.remove('hidden')
 }
+
+// Image Slider Animation::
+
+// const mainText = document.getElementById('main-slider-text')
+const mainImg = document.getElementById('main-image')
+const slider = [
+  ['The Place of transformation', './img/IMG_0196.JPG'],
+  ['78th IN OVERALL NIRF RANKING', './img/IMG_0198.JPG'],
+  ['49th IN ENGINEERING NIRF', './img/IMG_0195.JPG'],
+]
+
+let i = 0
+setInterval(() => {
+  // mainText.innerText = slider[i % slider.length][0]
+  mainImg.style.backgroundImage = `url('${slider[i % slider.length][1]}')`
+  i++
+}, 2000)
