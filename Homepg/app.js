@@ -150,15 +150,15 @@ function slideCards(direction) {
   scrollCompleted = 0
   var slideVar = setInterval(function () {
     if (direction == 'left') {
-      container.scrollLeft -= 200
+      container.scrollLeft -= 300
     } else {
-      container.scrollLeft += 200
+      container.scrollLeft += 300
     }
     scrollCompleted += 100
     if (scrollCompleted >= 1000) {
       window.clearInterval(slideVar)
     }
-  }, 50)
+  }, 2)
 }
 
 function slideResearch(direction) {
@@ -166,15 +166,15 @@ function slideResearch(direction) {
   scrollComp = 0
   var slide = setInterval(function () {
     if (direction == 'left') {
-      container.scrollLeft -= 40
+      container.scrollLeft -= 300
     } else {
-      container.scrollLeft += 40
+      container.scrollLeft += 300
     }
     scrollComp += 10
     if (scrollComp >= 100) {
       window.clearInterval(slide)
     }
-  }, 50)
+  }, 2)
 }
 
 // Admission Section Tabs

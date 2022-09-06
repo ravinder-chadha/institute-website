@@ -1810,254 +1810,280 @@
     </div>
   </section>
   <!-- === Research Section Starts === -->
-  <div class="grid lg:grid-cols-3  sm:grid-cols-1 m-4">
-    <div class=" lg:col-span-2 lg:row-span-1 overflow-hidden gap-10 my-4 sm:col-span-1 row-span-1">
-      <div class="flex items-center justify-start space-x-4 ml-12">
-        <h1 class="uppercase text-4xl font-semibold text-dark-purple">
-          <span class="text-accent">Research</span> Highlights
-        </h1>
-        <span class="material-symbols-outlined self-center" style="font-size:40px; color:var(--accent);">
-          biotech
-        </span>
-      </div>
-      <!-- Cards Component -->
 
-      <div class="flex flex-row w-full">
-        <span
-          class="material-symbols-outlined self-center text-5xl font-bold hover:cursor-pointer hover:scale-110 hover:font-extrabold"
-          onclick="slideResearch('left')">
-          keyboard_arrow_left
-        </span>
-        <div id="slides" class="no-scrollbar overflow-y-visible overflow-x-scroll flex py-8">
-          <div id="slide" class="m-1">
-            <div
-              class="border-t-4 border-b-4 border-accent emx-auto flex w-72 flex-col items-start justify-start overflow-hidden rounded-xl  bg-light-purple">
-
-              <div class="m-2">
-                <img class="h-40 w-full bg-sky-100 bg-center rounded-lg" src="./img/card1.jpg" />
-              </div>
-              <div class="flex h-full w-full flex-col items-start justify-start p-6">
-                <p class="text-lg font-semibold text-gray-900">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                  aliquam, purus sit amet luctus venenatis
-                </p>
-                <div class="mt-3 flex w-1/2 items-center justify-start ">
-                  <a class="underline cursor-pointer font-semibold text-sky-500 hover:text-sky-600">LEARN
-                    MORE
-                    &rarr;</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="slide" class="m-1">
-            <div
-              class="border-t-4 bg-light-purple mx-auto flex w-72 flex-col items-start justify-start overflow-hidden rounded-xl order-t-4 border-b-4 border-accent">
-
-              <div class="m-2">
-                <img class="h-40 w-full bg-sky-100 bg-cover bg-center rounded-md" src="./img/card2.jpg" />
-              </div>
-              <div class="flex h-full w-full flex-col items-start justify-start p-6">
-
-                <p class="text-lg font-semibold text-gray-900">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                  aliquam, purus sit amet luctus venenatis
-                </p>
-                <div class="mt-3 flex w-1/2 items-center justify-start ">
-                  <a class="underline cursor-pointer font-semibold text-sky-500 hover:text-sky-600">LEARN
-                    MORE
-                    &rarr;</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="slide" class="m-1">
-            <div
-              class="border-t-4 bg-light-purple mx-auto flex w-72 flex-col items-start justify-start overflow-hidden rounded-xl  order-t-4 border-b-4 border-accent">
-
-              <div class="m-2">
-                <img class="h-40 w-full bg-sky-100 bg-cover bg-center rounded-md" src="./img/card3.jpg" />
-              </div>
-              <div class="flex h-full w-full flex-col items-start justify-start  p-6">
-
-                <p class="text-lg font-semibold text-gray-900">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                  aliquam, purus sit amet luctus venenatis
-                </p>
-                <div class="mt-3 flex w-1/2 items-center justify-start ">
-                  <a class="underline cursor-pointer font-semibold text-sky-500 hover:text-sky-600">LEARN
-                    MORE
-                    &rarr;</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="slide" class="m-1">
-            <div
-              class="border-t-4 bg-light-purple mx-auto flex w-72 flex-col items-start justify-start overflow-hidden rounded-xl order-t-4 border-b-4 border-accent">
-              <div class="m-2">
-                <img class="h-40 w-full bg-sky-100 bg-cover bg-center rounded-md" src="./img/card2.jpg" />
-              </div>
-
-              <div class="flex h-full w-full flex-col items-start justify-start p-6">
-
-                <p class="text-lg font-semibold text-gray-900">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                  aliquam, purus sit amet luctus venenatis
-                </p>
-                <div class="mt-3 flex w-1/2 items-center justify-start">
-                  <a class="underline cursor-pointer font-semibold text-sky-500 hover:text-sky-600">LEARN
-                    MORE
-                    &rarr;</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
+  <div id="research" class="my-20">
+    <div class="container grid grid-cols-1 gap-5 md:grid-cols-3 md:grid-rows-3">
+      <div id="announcements" class="col-start-1 col-end-3 row-span-2 flex flex-col space-y-6">
+        <div class="flex items-center justify-start space-x-6">
+          <h1 class="uppercase text-4xl font-semibold text-accent">
+            Research <span class="text-dark-purple">Highlights</span>
+          </h1>
+          <span class="material-symbols-outlined" style="font-size: 40px ; color: var(--accent);">
+            biotech
+          </span>
         </div>
 
-        <span
-          class="material-symbols-outlined self-center p-1.5 text-5xl font-bold hover:cursor-pointer hover:scale-110 hover:font-extrabold"
-          onclick="slideResearch('right')">
-          keyboard_arrow_right
-        </span>
+        <!-- Cards -->
+        <div class="flex flex-row relative">
+          <i class="absolute top-1/2 -left-10 -translate-y-1/2 fa-solid fa-angle-left self-center pl-4 text-2xl cursor-pointer"
+            onclick="slideResearch('left')"></i>
+          <div id="slides" class="scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 pt-8 scroll-smooth">
+            <div id="card">
+              <div
+                class="flex flex-col overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./img/img1.png" />
+                  <div class="flex flex-col space-y-5 p-4">
 
-      </div>
-      <a href="#" class="w-full flex justify-center  underline font-bold text-accent">VIEW ALL &rarr;</a>
-    </div>
-    <div
-      class="sm:col-span-1 sm:row-span-1 h-fit border-accent border-t-4 bg-light-purple border-b-4 lg:row-span-2 lg:col-span-1 m-4 rounded-lg">
-      <div class="flex items-center space-x-4 ml-8 m-3">
-        <h2 class="text-3xl font-semibold text-dark-purple">
-          PUBLICATIONS
-        </h2>
-        <span class="material-symbols-outlined self-center" style="font-size:40px; color:var(--accent);">
-          feed
-        </span>
-      </div>
-      <div class="flex  items-center rounded-xl flex-col">
-        <div class="h-[72vh] overflow-auto rounded-lg bg-light-purple m-2">
-
-          <div class="flex flex-col  rounded-lg ">
-
-            <div class="clubOne  rounded-lg bg-light-purple p-[8px] text-sm  lg:p-[10px]">
-              <div class="mx-[12px] flex flex-col gap-[18px]">
-                <div class="">
-
-                  <p class="text-[15px]">
-                    Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of natural fibers and their application
-                    as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
-                    1253–1272
-
-                  </p>
-                </div>
-                <div class="flex flex-row justify-between">
-                  <a class="mr-[10px] inline-block font-semibold  text-2xl text-accent">
-                    More Details
-                  </a>
-
-                  <p class=" text-[16px] m-1 ml-0 no-underline hover:cursor-pointer hover:underline">
-                    Date: <b>9 July 22</b>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="w-[100%] content-center h-[1px] bg-black"></div>
-            <div class="clubOne  rounded-lg bg-light-purplep-[8px] text-sm  lg:p-[15px]">
-              <div class="mx-[12px] flex flex-col gap-[18px]">
-                <div class="">
-
-                  <p class="text-[15px]">
-                    Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of natural fibers and their application
-                    as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
-                    1253–1272
-
-                  </p>
-                </div>
-                <div class="flex flex-row justify-between">
-                  <a class="mr-[10px] inline-block font-semibold  text-2xl text-accent">
-                    More Details
-                  </a>
-
-                  <p class=" text-[16px] m-1 ml-0 no-underline hover:cursor-pointer hover:underline">
-                    Date: <b>9 July 22</b>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="w-[100%] content-center h-[1px] bg-black"></div>
-            <div class="clubOne  rounded-lg bg-light-purplep-[8px] text-sm  lg:p-[15px]">
-              <div class="mx-[12px] flex flex-col gap-[18px]">
-                <div class="">
-
-                  <p class="text-[15px]">
-                    Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of natural fibers and their application
-                    as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
-                    1253–1272
-
-                  </p>
-                </div>
-                <div class="flex flex-row justify-between">
-                  <a class="mr-[10px] inline-block font-semibold  text-2xl text-accent">
-                    More Details
-                  </a>
-
-                  <p class=" text-[16px] m-1 ml-0 no-underline hover:cursor-pointer hover:underline">
-                    Date: <b>9 July 22</b>
-                  </p>
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      Card 1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure autem id illum nostrum
+                      veniam
+                      totam officiis nam, dolores quas voluptas qui reprehenderit accusamus quo delectus quis molestiae.
+                      Rerum, nostrum praesentium.
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
+                        &rarr;</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="w-[100%] content-center h-[1px] bg-black"></div>
-            <div class="clubOne  rounded-lg bg-light-purplep-[8px] text-sm  lg:p-[15px]">
-              <div class="mx-[12px] flex flex-col gap-[18px]">
-                <div class="">
+            <div id="card">
+              <div
+                class="flex flex-col items-start justify-start overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./img/img2.png" />
+                  <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-4">
 
-                  <p class="text-[15px]">
-                    Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of natural fibers and their application
-                    as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
-                    1253–1272
-
-                  </p>
-                </div>
-                <div class="flex flex-row justify-between">
-                  <a class="mr-[10px] inline-block font-semibold  text-2xl text-accent">
-                    More Details
-                  </a>
-
-                  <p class=" text-[16px] m-1 ml-0 no-underline hover:cursor-pointer hover:underline">
-                    Date: <b>9 July 22</b>
-                  </p>
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      Card 2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure autem id illum nostrum
+                      veniam
+                      totam officiis nam, dolores quas voluptas qui reprehenderit accusamus quo delectus quis molestiae.
+                      Rerum, nostrum praesentium.
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
+                        &rarr;</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="w-[100%] content-center h-[1px] bg-black"></div>
+            <div id="card">
+              <div
+                class="flex flex-col items-start justify-start overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./img/img3.png" />
+                  <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-4">
+
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      Card 3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure autem id illum nostrum
+                      veniam
+                      totam officiis nam, dolores quas voluptas qui reprehenderit accusamus quo delectus quis molestiae.
+                      Rerum, nostrum praesentium.
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
+                        &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="card">
+              <div
+                class="flex flex-col items-start justify-start overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./img/img4.png" />
+                  <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-4">
+
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      Card 4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure autem id illum nostrum
+                      veniam
+                      totam officiis nam, dolores quas voluptas qui reprehenderit accusamus quo delectus quis molestiae.
+                      Rerum, nostrum praesentium.
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
+                        &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="card">
+              <div
+                class="flex flex-col items-start justify-start overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./img/img5.png" />
+                  <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-4">
+
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      Card 5 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure autem id illum nostrum
+                      veniam
+                      totam officiis nam, dolores quas voluptas qui reprehenderit accusamus quo delectus quis molestiae.
+                      Rerum, nostrum praesentium.
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
+                        &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="card">
+              <div
+                class="flex flex-col items-start justify-start overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./img/img6.png" />
+                  <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-4">
+
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      Card 6 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure autem id illum nostrum
+                      veniam
+                      totam officiis nam, dolores quas voluptas qui reprehenderit accusamus quo delectus quis molestiae.
+                      Rerum, nostrum praesentium.
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
+                        &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <i class="fa-solid fa-angle-right self-center p-4 text-2xl cursor-pointer"
+            onclick="slideResearch('right')"></i>
 
         </div>
-        <a href="#" class="m-2 underline font-bold text-accent">VIEW ALL &rarr;</a>
+        <div class="flex items-end w-fit">
+          <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="#">
+            <span class="font-semibold hover:underline">View All →</span>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="sm:col-span-1 sm:row-span-1 lg:col-span-2 lg:row-span-1 m-4 mt-0 ">
 
-      <div class="slideshow-container bg-gradient-to-r from-sky-500 to-indigo-500 h-[10vh]">
 
-        <!-- Full-width images with number and caption text -->
-        <div class="w-full h-full bg-[url('/img/card1.jpg')]">
-          <!-- <img src="img/card1.jpg" class="h-[100px]" > -->
+      <div id="testimonial" class="col-start-1 col-end-3 row-start-3 bg-slate-800 rounded-lg h-40"></div>
+      <div id="publications"
+        class="col-start-3 col-end-4 row-span-3 py-3 px-8 h-fit border-accent border-t-4 bg-light-purple border-b-4 rounded-lg ">
+        <div class=" flex flex-col gap-3 mb-8">
 
+          <div class="flex items-center justify-start space-x-6">
+            <h1 class="uppercase text-4xl font-semibold">
+              Publications
+            </h1>
+            <span class="material-symbols-outlined" style="font-size: 40px ; color: var(--accent);">
+              feed
+            </span>
+          </div>
+          <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="#">
+            <span class="font-semibold hover:underline">View All →</span>
+          </a>
         </div>
 
-        <!-- <div class="w-full h-10">
-  <img src="img/img2.png" style="width:100%">
-</div>
+        <div class="max-h-[35rem] flex items-center rounded-xl flex-col overflow-scroll">
+          <div class="pr-2">
 
-<div class="w-full h-10">
-  <img src="img/img3.png" style="width:100%">
-</div> -->
+            <div class="flex flex-col divide-y-2">
+              <div id="publication-card" class="flex flex-col gap-4 py-2">
+
+                <p>
+                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of natural fibers and their application
+                  as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
+                  1253–1272
+                </p>
+                <a href="#"
+                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
+                  More Details
+                </a>
+              </div>
+              <div id="publication-card" class="flex flex-col gap-4 py-2">
+
+                <p>
+                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of natural fibers and their application
+                  as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
+                  1253–1272
+                </p>
+                <a href="#"
+                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
+                  More Details
+                </a>
+              </div>
+              <div id="publication-card" class="flex flex-col gap-4 py-2">
+
+                <p>
+                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of natural fibers and their application
+                  as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
+                  1253–1272
+                </p>
+                <a href="#"
+                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
+                  More Details
+                </a>
+              </div>
+              <div id="publication-card" class="flex flex-col gap-4 py-2">
+
+                <p>
+                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of natural fibers and their application
+                  as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
+                  1253–1272
+                </p>
+                <a href="#"
+                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
+                  More Details
+                </a>
+              </div>
+              <div id="publication-card" class="flex flex-col gap-4 py-2">
+
+                <p>
+                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of natural fibers and their application
+                  as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
+                  1253–1272
+                </p>
+                <a href="#"
+                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
+                  More Details
+                </a>
+              </div>
+              <div id="publication-card" class="flex flex-col gap-4 py-2">
+
+                <p>
+                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of natural fibers and their application
+                  as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
+                  1253–1272
+                </p>
+                <a href="#"
+                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
+                  More Details
+                </a>
+              </div>
+              <div id="publication-card" class="flex flex-col gap-4 py-2">
+
+                <p>
+                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of natural fibers and their application
+                  as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
+                  1253–1272
+                </p>
+                <a href="#"
+                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
+                  More Details
+                </a>
+              </div>
+
+
+
+
+
+            </div>
+          </div>
+        </div>
 
       </div>
-
     </div>
   </div>
   <!-- === Research Section Ends === -->
@@ -2126,7 +2152,8 @@
                         <p class="text-xs font-bold uppercase text-purple-500">Development Club</p>
                       </div>
                       <p class="line-clamp-3 leading-5">The club is all about robotics. This club serves as a platform
-                        for students to enhance their robotic skills and contribute for the development of the college.
+                        for students to enhance their robotic skills and contribute for the development of the
+                        college.
                       </p>
                     </div>
                     <div class="mt-5 flex items-center justify-start space-x-3">
@@ -2148,7 +2175,8 @@
                         <p class="text-xs font-bold uppercase text-green-500">Robotics Club</p>
                       </div>
                       <p class="line-clamp-3 leading-5">The club is all about robotics. This club serves as a platform
-                        for students to enhance their robotic skills and contribute for the development of the college.
+                        for students to enhance their robotic skills and contribute for the development of the
+                        college.
                       </p>
                     </div>
                     <div class="mt-5 flex items-center justify-start space-x-3">
@@ -2170,7 +2198,8 @@
                         <p class="text-xs font-bold uppercase text-lime-500">Dance Club</p>
                       </div>
                       <p class="line-clamp-3 leading-5">The club is all about robotics. This club serves as a platform
-                        for students to enhance their robotic skills and contribute for the development of the college.
+                        for students to enhance their robotic skills and contribute for the development of the
+                        college.
                       </p>
                     </div>
                     <div class="mt-5 flex items-center justify-start space-x-3">
@@ -2192,7 +2221,8 @@
                         <p class="text-xs font-bold uppercase text-red-500">Reporting Club</p>
                       </div>
                       <p class="line-clamp-3 leading-5">The club is all about robotics. This club serves as a platform
-                        for students to enhance their robotic skills and contribute for the development of the college.
+                        for students to enhance their robotic skills and contribute for the development of the
+                        college.
                       </p>
                     </div>
                     <div class="mt-5 flex items-center justify-start space-x-3">
