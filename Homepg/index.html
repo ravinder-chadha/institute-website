@@ -143,7 +143,7 @@
   </style>
 </head>
 
-<body class="font-body text-dark-purple">
+<body class="font-body text-dark-purple scroll-smooth">
   <header class="fixed bg-white top-0 right-0 left-0 z-50">
     <!-- TOP NAV BAR stats -->
     <div id="top_bar"
@@ -1200,41 +1200,51 @@
         <div id="tiles" class="flex mt-[10vh] gap-5 w-[90%] items-start">
           <div
             class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-            <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-              style="font-size:48px;"> school
-            </span>
-            <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              Programs
-            </p>
+            <a href="#admission" class="flex flex-col space-y-4 items-center justify-center ">
+              <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
+                style="font-size:48px;"> school
+              </span>
+              <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
+                Programs
+              </p>
+            </a>
           </div>
           <div
             class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-            <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-              style="font-size:48px;"> biotech </span>
-
-            <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">Research
-            </p>
+            <a href="#research" class="flex flex-col space-y-4 items-center justify-center">
+              <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
+                style="font-size:48px;"> biotech </span>
+              <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
+                Research
+              </p>
+            </a>
           </div>
           <div
             class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-            <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-              style="font-size:48px;"> newspaper</span>
-
-            <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">News</p>
+            <a href="#news" class="flex flex-col space-y-4 items-center justify-center">
+              <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
+                style="font-size:48px;"> newspaper</span>
+              <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">News
+              </p>
+            </a>
           </div>
           <div
             class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-            <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-              style="font-size:48px;"> sports_handball </span>
-            <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">campus
-              life</p>
+            <a href="#campus-life" class="flex flex-col space-y-4 items-center justify-center">
+              <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
+                style="font-size:48px;"> sports_handball </span>
+              <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">campus
+                life</p>
+            </a>
           </div>
           <div
             class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-            <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-              style="font-size:48px;"> real_estate_agent </span>
-            <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              Placements</p>
+            <a href="#placement-stats" class="flex flex-col space-y-4 items-center justify-center">
+              <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
+                style="font-size:48px;"> real_estate_agent </span>
+              <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
+                Placements</p>
+            </a>
           </div>
         </div>
 
@@ -1244,8 +1254,7 @@
 
   <!-- === Carousel section ends === -->
   <!-- === News Section Starts === -->
-
-  <div id="News section" class="my-20">
+  <div id="news" class="my-20 scroll-mt-32">
     <div class="container flex flex-col justify-start lg:flex-row">
       <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
         <div class="flex items-center justify-start space-x-6">
@@ -1514,7 +1523,7 @@
   </div>
 
   <!-- === Admission Section Starts === -->
-  <div class="container mx-auto my-10 pt-10">
+  <div id="admission" class="container mx-auto scroll-mt-32 my-10 pt-10">
     <div class="mb-10 flex items-start justify-start space-x-6">
       <h1 class="uppercase text-4xl font-semibold text-accent">
         Be an <span class="text-dark-purple">Nitjian</span>
@@ -1775,8 +1784,8 @@
     </div>
   </div>
   <!-- Institute in Numbers section -->
-  <section id="placement_stats"
-    class="my-6 bg-[url('./img/placementStats.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
+  <section id="placement-stats"
+    class="my-6 scroll-mt-32 bg-[url('./img/placementStats.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
     <div class="bg-dark-purple/70">
       <div
         class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
@@ -1811,7 +1820,7 @@
   </section>
   <!-- === Research Section Starts === -->
 
-  <div id="research" class="my-20">
+  <div id="research" class="my-20 scroll-mt-32">
     <div class="container grid grid-cols-1 gap-5 md:grid-cols-3 md:grid-rows-3">
       <div id="announcements" class="col-start-1 col-end-3 row-span-2 flex flex-col space-y-6">
         <div class="flex items-center justify-start space-x-6">
@@ -2089,7 +2098,7 @@
   <!-- === Research Section Ends === -->
   <!-- === Placement Stats starts === -->
   <section id="institute_numbers"
-    class="my-6 bg-[url('./img/numbers_section.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
+    class=" scroll-mt-32 my-6 bg-[url('./img/numbers_section.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
     <div class="bg-dark-purple/70">
       <div
         class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10  md:flex-row-reverse md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
@@ -2124,7 +2133,7 @@
   </section>
 
   <!-- === LIFE AT NITJ Starts === -->
-  <div class="container my-20">
+  <div id="campus-life" class="container my-20 scroll-mt-32">
     <div class="flex flex-col gap-10 lg:flex-row">
       <div class="basis-2/5">
         <div class="mb-10 flex items-center justify-start space-x-6">
