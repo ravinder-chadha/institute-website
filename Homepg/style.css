@@ -1193,6 +1193,10 @@ sup {
   justify-content: flex-start;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -2473,6 +2477,11 @@ sup {
 .group:hover .group-hover\:animate-shake {
   -webkit-animation: shake 300ms ease-in-out;
           animation: shake 300ms ease-in-out;
+}
+
+.group:hover .group-hover\:bg-orange-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
 }
 
 .group:hover .group-hover\:text-white {
