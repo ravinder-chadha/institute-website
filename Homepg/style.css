@@ -629,10 +629,6 @@ sup {
   border-width: 0;
 }
 
-.invisible {
-  visibility: hidden;
-}
-
 .static {
   position: static;
 }
@@ -727,10 +723,6 @@ sup {
 
 .m-\[auto\] {
   margin: auto;
-}
-
-.-m-\[100px\] {
-  margin: -100px;
 }
 
 .mx-auto {
@@ -981,10 +973,6 @@ sup {
   height: 67px;
 }
 
-.h-\[100px\] {
-  height: 100px;
-}
-
 .max-h-\[1000px\] {
   max-height: 1000px;
 }
@@ -1157,18 +1145,6 @@ sup {
           user-select: none;
 }
 
-.scroll-mt-10 {
-  scroll-margin-top: 2.5rem;
-}
-
-.scroll-mt-20 {
-  scroll-margin-top: 5rem;
-}
-
-.scroll-mt-28 {
-  scroll-margin-top: 7rem;
-}
-
 .scroll-mt-32 {
   scroll-margin-top: 8rem;
 }
@@ -1312,6 +1288,12 @@ sup {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
