@@ -1261,7 +1261,7 @@
           <h1 class="uppercase text-4xl font-semibold text-accent">
             Latest <span class="text-dark-purple">News</span>
           </h1>
-          <span class="material-symbols-outlined" style="font-size: 40px ; color: var(--accent);">
+          <span class="material-symbols-outlined hover:animate-bounce" style="font-size: 40px ; color: var(--accent);">
             feed
           </span>
         </div>
@@ -1422,9 +1422,10 @@
       </div>
 
       <div id="notices" class="container mx-auto flex grow lg:w-1/3 w-full flex-col">
-        <div class="flex items-center mb-6 justify-start space-x-6">
+        <div class="flex items-center mb-6 justify-start space-x-6 group">
           <h1 class="text-4xl font-semibold uppercase text-gray-900">Notices</h1>
-          <span class="material-symbols-outlined text-xl" style="font-size: 40px; color: var(--accent)">
+          <span class="material-symbols-outlined text-xl group-hover:animate-vote animate-delay"
+            style="font-size: 40px; color: var(--accent)">
             newspaper
           </span>
         </div>
@@ -1803,20 +1804,20 @@
           NITJ
         </h1>
         <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="stats">
-          <div id="number">
-            <h1 class="text-5xl font-bold uppercase">995+</h1>
+          <div class="number">
+            <h1 class="text-5xl font-bold uppercase"><span>995</span>+</h1>
             <p class="text-lg uppercase">Students placed</p>
           </div>
-          <div id="number">
-            <h1 class="text-5xl font-bold uppercase">150+</h1>
+          <div class="number">
+            <h1 class="text-5xl font-bold uppercase"><span>150</span>+</h1>
             <p class="text-lg uppercase">Companies visited</p>
           </div>
-          <div id="number">
-            <h1 class="text-5xl font-bold uppercase">1.2 CR</h1>
+          <div class="number">
+            <h1 class="text-5xl font-bold uppercase"><span>1.2</span> CR</h1>
             <p class="text-lg uppercase">Highest package</p>
           </div>
-          <div id="number">
-            <h1 class="text-5xl font-bold uppercase">15+</h1>
+          <div class="number">
+            <h1 class="text-5xl font-bold uppercase"><span>15</span>+</h1>
             <p class="text-lg uppercase">startups</p>
           </div>
         </div>
