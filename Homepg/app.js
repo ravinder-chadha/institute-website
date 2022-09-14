@@ -18,9 +18,12 @@ window.onscroll = function () {
       if (institute_name[i].classList.contains('text-xl')) {
         institute_name[i].classList.remove('text-xl')
         institute_name[i].classList.add('text-lg')
+        institute_name[i].classList.add('tracking-widest')
+        console.log(institute_name)
       } else if (institute_name[i].classList.contains('text-lg')) {
         institute_name[i].classList.remove('text-lg')
         institute_name[i].classList.add('text-sm')
+        institute_name[i].classList.remove('tracking-widest')
       }
     }
   } else {
@@ -37,9 +40,11 @@ window.onscroll = function () {
       if (institute_name[i].classList.contains('text-lg')) {
         institute_name[i].classList.remove('text-lg')
         institute_name[i].classList.add('text-xl')
+        institute_name[i].classList.remove('tracking-widest')
       } else if (institute_name[i].classList.contains('text-sm')) {
         institute_name[i].classList.remove('text-sm')
         institute_name[i].classList.add('text-lg')
+        institute_name[i].classList.remove('tracking-widest')
       }
     }
   }
