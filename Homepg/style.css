@@ -2277,39 +2277,6 @@ sup {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-@-webkit-keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-            animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-            animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-            animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-            animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-.hover\:animate-bounce:hover {
-  -webkit-animation: bounce 1s infinite;
-          animation: bounce 1s infinite;
-}
-
 .hover\:rounded-full:hover {
   border-radius: 9999px;
 }
@@ -2442,6 +2409,20 @@ sup {
   display: flex;
 }
 
+@-webkit-keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -2461,7 +2442,7 @@ sup {
           animation: bounce 1s infinite;
 }
 
-@-webkit-keyframes vote {
+@-webkit-keyframes shake {
   0%, 100% {
     transform: rotate(0deg);
   }
@@ -2475,7 +2456,7 @@ sup {
   }
 }
 
-@keyframes vote {
+@keyframes shake {
   0%, 100% {
     transform: rotate(0deg);
   }
@@ -2489,9 +2470,9 @@ sup {
   }
 }
 
-.group:hover .group-hover\:animate-vote {
-  -webkit-animation: vote 300ms ease-in-out;
-          animation: vote 300ms ease-in-out;
+.group:hover .group-hover\:animate-shake {
+  -webkit-animation: shake 300ms ease-in-out;
+          animation: shake 300ms ease-in-out;
 }
 
 .group:hover .group-hover\:text-white {

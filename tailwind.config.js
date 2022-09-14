@@ -25,7 +25,7 @@ module.exports = {
           '66.66%': { 'background-image': "url('./img/IMG_0198.JPG')" },
           '100%': { 'background-image': "url('./img/IMG_0195.JPG')" },
         },
-        vote: {
+        shake: {
           '0%, 100%': {
             transform: 'rotate(0deg)',
           },
@@ -38,7 +38,7 @@ module.exports = {
         },
       },
       animation: {
-        vote: 'vote 300ms ease-in-out',
+        shake: 'shake 300ms ease-in-out',
         'image-slider': 'images 10s ease-in-out infinite',
       },
       fontFamily: {
