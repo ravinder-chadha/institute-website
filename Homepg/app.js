@@ -5,6 +5,8 @@ window.onscroll = function () {
   const logo = document.getElementById('logo_250')
   const topbar = document.getElementById('top_bar')
   const diff_lang = document.getElementsByClassName('mySlides')
+  animateValueIntiator()
+
   if (window.scrollY > 100) {
     topbar.style.transform = 'translateY(-50px)'
     for (let i = 0; i < diff_lang.length; i++) {
@@ -90,17 +92,16 @@ function isInViewPort(element) {
     return false
   }
 }
-function animateValue(obj, start, end, duration, index) {
+
+function animateValue(obj, start, end, duration) {
   if (isInViewPort(obj)) {
+    visited = true
     let startTimestamp = null
     const step = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp
       const progress = Math.min((timestamp - startTimestamp) / duration, 1)
-      if (index == 0 || index == 1) {
-        obj.innerHTML = Math.floor(progress * (end - start) + start) + '+'
-      } else {
-        obj.innerHTML = Math.floor(progress * (end - start) + start)
-      }
+      obj.innerText = Math.floor(progress * (end - start) + start)
+
       if (progress < 1) {
         window.requestAnimationFrame(step)
       }
@@ -110,11 +111,11 @@ function animateValue(obj, start, end, duration, index) {
 }
 
 function animateValueIntiator() {
-  var rolling_nums = document.getElementById('rolling_nums').children
-  visited = true
-  for (var i = 0; i < rolling_nums.length; i++) {
+  const rolling_nums = document.querySelectorAll('.number h1 span')
+  if (visited) return
+  for (let i = 0; i < rolling_nums.length; i++) {
     obj = rolling_nums[i]
-    animateValue(obj, 0, parseInt(obj.innerHTML), 3000, i)
+    animateValue(obj, 0, Number(obj.innerText), 3000)
   }
 }
 
@@ -132,23 +133,29 @@ function animateValueIntiator() {
 //       -(numbers.offsetTop - offset) * 0.8 + 'px'
 //   }
 // })
-let home = 0
-window.onload = function () {
-  showHome()
-}
-function showHome() {
-  let i
-  let homeslider = document.getElementsByClassName('homeslide')
-  for (i = 0; i < homeslider.length; i++) {
-    homeslider[i].style.display = 'none'
-  }
-  home++
-  if (home > homeslider.length) {
-    home = 1
-  }
-  homeslider[home - 1].style.display = 'block'
-  setTimeout(showHome, 3000) // Change image every 3 seconds
-}
+
+// Old Image slider
+
+// let home = 0
+// window.onload = function () {
+//   showHome()
+// }
+// function showHome() {
+//   let i
+//   let homeslider = document.getElementsByClassName('homeslide')
+//   for (i = 0; i < homeslider.length; i++) {
+//     homeslider[i].style.display = 'none'
+//   }
+//   home++
+//   if (home > homeslider.length) {
+//     home = 1
+//   }
+//   homeslider[home - 1].style.display = 'block'
+//   setTimeout(showHome, 3000) // Change image every 3 seconds
+// }
+
+// ////////////////////////////
+// Right and left buttons on the research and news section
 
 function slideCards(direction) {
   var container = document.getElementById('cards')
@@ -182,6 +189,7 @@ function slideResearch(direction) {
   }, 2)
 }
 
+// ///////////////////////////
 // Admission Section Tabs
 
 const openCourse = (e) => {
@@ -201,6 +209,7 @@ const openCourse = (e) => {
   document.getElementById(e.dataset.course).classList.remove('hidden')
 }
 
+// ///////////////////////////
 // Image Slider Animation::
 
 // const mainText = document.getElementById('main-slider-text')

@@ -25,8 +25,20 @@ module.exports = {
           '66.66%': { 'background-image': "url('./img/IMG_0198.JPG')" },
           '100%': { 'background-image': "url('./img/IMG_0195.JPG')" },
         },
+        vote: {
+          '0%, 100%': {
+            transform: 'rotate(0deg)',
+          },
+          '25%': {
+            transform: 'rotate(-10deg)',
+          },
+          '75%': {
+            transform: 'rotate(10deg)',
+          },
+        },
       },
       animation: {
+        vote: 'vote 300ms ease-in-out',
         'image-slider': 'images 10s ease-in-out infinite',
       },
       fontFamily: {
