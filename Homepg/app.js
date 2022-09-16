@@ -2,7 +2,7 @@ window.onscroll = function () {
   const institute_name = document.getElementsByClassName('institute_name')
   const full_navbar = document.getElementsByTagName('header')
   const logo = document.getElementById('logo_250')
-  const topbar = document.getElementById('top_bar')
+  const topbar = document.getElementById('top-bar')
   const diff_lang = document.getElementsByClassName('mySlides')
   animateValueIntiator()
   animateValueIntiatorInstitute()
@@ -22,7 +22,7 @@ window.onscroll = function () {
         institute_name[i].classList.remove('text-xl')
         institute_name[i].classList.add('text-lg')
         institute_name[i].classList.add('tracking-widest')
-        console.log(institute_name)
+        // console.log(institute_name)
       } else if (institute_name[i].classList.contains('text-lg')) {
         institute_name[i].classList.remove('text-lg')
         institute_name[i].classList.add('text-sm')
@@ -76,52 +76,7 @@ function showSearchPage(event) {
   }
 }
 
-function isInViewPort(element) {
-  var bounding = element.getBoundingClientRect()
-  if (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth) &&
-    bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight)
-  ) {
-    return true
-  } else {
-    return false
-  }
-}
-
-function animateValue(obj, start, end, duration, visitor) {
-  if (isInViewPort(obj)) {
-    let startTimestamp = null
-    const step = (timestamp) => {
-      if (!startTimestamp) startTimestamp = timestamp
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1)
-      obj.innerText = Math.floor(progress * (end - start) + start)
-
-      if (progress < 1) {
-        window.requestAnimationFrame(step)
-      }
-    }
-    window.requestAnimationFrame(step)
-  }
-}
-
-function animateValueIntiator() {
-  const rolling_nums = document.querySelectorAll('.number h1 span')
-  rolling_nums.forEach((num) => {
-    animateValue(num, 0, Number(num.innerHTML), 3000)
-  })
-}
-
-function animateValueIntiatorInstitute() {
-  const rolling_nums = document.querySelectorAll('.number-in h1 span')
-  for (let i = 0; i < 4; i++) {
-    obj = rolling_nums[i]
-    animateValue(obj, 0, Number(obj.innerText), 3000)
-  }
-}
+// Check if element is in viewport
 
 // Parallex Effect
 
@@ -251,3 +206,81 @@ setInterval(() => {
   mainImg.style.backgroundImage = `url('${slider[i % slider.length][1]}')`
   i++
 }, 2000)
+
+// Animate the numbers on the stats section
+const stats = document.getElementById('placement-stats')
+const campusStats = document.getElementById('institute-numbers')
+
+let placeStatsVisited = false
+let campusStatsVisited = false
+window.addEventListener('scroll', () => {
+  if (isInViewPort(stats) && !placeStatsVisited) {
+    animateValueIntiator()
+    placeStatsVisited = true
+  }
+  if (isInViewPort(campusStats) && !campusStatsVisited) {
+    animateValueIntiatorInstitute()
+    campusStatsVisited = true
+  }
+})
+
+function isInViewPort(el) {
+  const rect = el.getBoundingClientRect()
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+}
+
+// assumes integer values for start and end
+
+// function animateValue(obj, start, end, duration) {
+//   let startTimestamp = null
+//   const step = (timestamp) => {
+//     if (!startTimestamp) startTimestamp = timestamp
+//     const progress = Math.min((timestamp - startTimestamp) / duration, 1)
+//     obj.innerText = Math.floor(progress * (end - start) + start)
+
+//     if (progress < 1) {
+//       window.requestAnimationFrame(step)
+//     }
+//   }
+//   window.requestAnimationFrame(step)
+// }
+
+function animateValueIntiator() {
+  const rolling_nums = document.querySelectorAll('.number h1 span')
+  rolling_nums.forEach((num) => {
+    animateValue(num, 0, Number(num.innerHTML), 3000)
+  })
+}
+
+function animateValueIntiatorInstitute() {
+  const rolling_nums = document.querySelectorAll('.number-in h1 span')
+  rolling_nums.forEach((num) => {
+    animateValue(num, 0, Number(num.innerHTML), 3000)
+  })
+}
+
+function animateValue(obj, start, end, duration) {
+  let range = end - start
+  let stepTime = Math.abs(Math.floor(duration / range))
+  let startTime = new Date().getTime()
+  let endTime = startTime + duration
+  let timer
+  function run() {
+    let now = new Date().getTime()
+    let remaining = Math.max((endTime - now) / duration, 0)
+    let value = Math.round(end - remaining * range)
+    obj.innerHTML = value
+    console.log(value)
+    if (value == end) {
+      clearInterval(timer)
+    }
+  }
+  timer = setInterval(run, stepTime)
+  run()
+}
