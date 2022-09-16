@@ -121,9 +121,9 @@ function slideCards(direction) {
   scrollCompleted = 0
   var slideVar = setInterval(function () {
     if (direction == 'left') {
-      container.scrollLeft -= 300
+      container.scrollLeft -= container.clientWidth
     } else {
-      container.scrollLeft += 300
+      container.scrollLeft += container.clientWidth
     }
     scrollCompleted += 100
     if (scrollCompleted >= 1000) {
@@ -137,9 +137,9 @@ function slideResearch(direction) {
   scrollComp = 0
   var slide = setInterval(function () {
     if (direction == 'left') {
-      container.scrollLeft -= 300
+      container.scrollLeft -= container.clientWidth
     } else {
-      container.scrollLeft += 300
+      container.scrollLeft += container.clientWidth
     }
     scrollComp += 10
     if (scrollComp >= 100) {
