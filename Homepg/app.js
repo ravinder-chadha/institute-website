@@ -1,4 +1,3 @@
-var visited = false
 window.onscroll = function () {
   const institute_name = document.getElementsByClassName('institute_name')
   const full_navbar = document.getElementsByTagName('header')
@@ -6,6 +5,8 @@ window.onscroll = function () {
   const topbar = document.getElementById('top_bar')
   const diff_lang = document.getElementsByClassName('mySlides')
   animateValueIntiator()
+  animateValueIntiatorInstitute()
+  // resAutoScroll()
 
   if (window.scrollY > 100) {
     topbar.style.transform = 'translateY(-50px)'
@@ -85,17 +86,14 @@ function isInViewPort(element) {
     bounding.bottom <=
       (window.innerHeight || document.documentElement.clientHeight)
   ) {
-    console.log('In the viewport! :)')
     return true
   } else {
-    console.log('Not in the viewport. :(')
     return false
   }
 }
 
-function animateValue(obj, start, end, duration) {
+function animateValue(obj, start, end, duration, visitor) {
   if (isInViewPort(obj)) {
-    visited = true
     let startTimestamp = null
     const step = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp
@@ -112,8 +110,14 @@ function animateValue(obj, start, end, duration) {
 
 function animateValueIntiator() {
   const rolling_nums = document.querySelectorAll('.number h1 span')
-  if (visited) return
-  for (let i = 0; i < rolling_nums.length; i++) {
+  rolling_nums.forEach((num) => {
+    animateValue(num, 0, Number(num.innerHTML), 3000)
+  })
+}
+
+function animateValueIntiatorInstitute() {
+  const rolling_nums = document.querySelectorAll('.number-in h1 span')
+  for (let i = 0; i < 4; i++) {
     obj = rolling_nums[i]
     animateValue(obj, 0, Number(obj.innerText), 3000)
   }
@@ -188,6 +192,27 @@ function slideResearch(direction) {
     }
   }, 2)
 }
+// var resCards = document.getElementById('slides')
+// var stopResCards = false
+// resCards.addEventListener('mouseover', () => {
+//   stopResCards = true
+// })
+// resCards.addEventListener('mouseleave', () => {
+//   stopResCards = false
+// })
+// function resAutoScroll() {
+//   let currScroll = 0
+//   if (isInViewPort(resCards) && stopResCards) {
+//     setInterval(() => {
+//       currScroll = resCards.scrollLeft
+
+//       if (currScroll === resCards.scrollLeft + 15) {
+//         return
+//       }
+//       resCards.scrollLeft += 15
+//     }, 300)
+//   }
+// }
 
 // ///////////////////////////
 // Admission Section Tabs
