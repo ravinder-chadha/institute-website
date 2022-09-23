@@ -1,4 +1,3 @@
-var visited = false
 window.onscroll = function () {
   const institute_name = document.getElementsByClassName('institute_name')
   const full_navbar = document.getElementsByTagName('header')
@@ -6,6 +5,8 @@ window.onscroll = function () {
   const topbar = document.getElementById('top_bar')
   const diff_lang = document.getElementsByClassName('mySlides')
   animateValueIntiator()
+  animateValueIntiatorInstitute()
+  // resAutoScroll()
 
   if (window.scrollY > 100) {
     topbar.style.transform = 'translateY(-50px)'
@@ -88,49 +89,7 @@ function showSearchPage(event) {
   }
 }
 
-function isInViewPort(element) {
-  var bounding = element.getBoundingClientRect()
-  if (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth) &&
-    bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight)
-  ) {
-    console.log('In the viewport! :)')
-    return true
-  } else {
-    console.log('Not in the viewport. :(')
-    return false
-  }
-}
-
-function animateValue(obj, start, end, duration) {
-  if (isInViewPort(obj)) {
-    visited = true
-    let startTimestamp = null
-    const step = (timestamp) => {
-      if (!startTimestamp) startTimestamp = timestamp
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1)
-      obj.innerText = Math.floor(progress * (end - start) + start)
-
-      if (progress < 1) {
-        window.requestAnimationFrame(step)
-      }
-    }
-    window.requestAnimationFrame(step)
-  }
-}
-
-function animateValueIntiator() {
-  const rolling_nums = document.querySelectorAll('.number h1 span')
-  if (visited) return
-  for (let i = 0; i < rolling_nums.length; i++) {
-    obj = rolling_nums[i]
-    animateValue(obj, 0, Number(obj.innerText), 3000)
-  }
-}
+// Check if element is in viewport
 
 // Parallex Effect
 
@@ -175,9 +134,9 @@ function slideCards(direction) {
   scrollCompleted = 0
   var slideVar = setInterval(function () {
     if (direction == 'left') {
-      container.scrollLeft -= 300
+      container.scrollLeft -= container.clientWidth
     } else {
-      container.scrollLeft += 300
+      container.scrollLeft += container.clientWidth
     }
     scrollCompleted += 100
     if (scrollCompleted >= 1000) {
@@ -191,9 +150,9 @@ function slideResearch(direction) {
   scrollComp = 0
   var slide = setInterval(function () {
     if (direction == 'left') {
-      container.scrollLeft -= 300
+      container.scrollLeft -= container.clientWidth
     } else {
-      container.scrollLeft += 300
+      container.scrollLeft += container.clientWidth
     }
     scrollComp += 10
     if (scrollComp >= 100) {
@@ -201,6 +160,27 @@ function slideResearch(direction) {
     }
   }, 2)
 }
+// var resCards = document.getElementById('slides')
+// var stopResCards = false
+// resCards.addEventListener('mouseover', () => {
+//   stopResCards = true
+// })
+// resCards.addEventListener('mouseleave', () => {
+//   stopResCards = false
+// })
+// function resAutoScroll() {
+//   let currScroll = 0
+//   if (isInViewPort(resCards) && stopResCards) {
+//     setInterval(() => {
+//       currScroll = resCards.scrollLeft
+
+//       if (currScroll === resCards.scrollLeft + 15) {
+//         return
+//       }
+//       resCards.scrollLeft += 15
+//     }, 300)
+//   }
+// }
 
 // ///////////////////////////
 // Admission Section Tabs
@@ -239,3 +219,81 @@ setInterval(() => {
   mainImg.style.backgroundImage = `url('${slider[i % slider.length][1]}')`
   i++
 }, 2000)
+
+// Animate the numbers on the stats section
+const stats = document.getElementById('placement-stats')
+const campusStats = document.getElementById('institute-numbers')
+
+let placeStatsVisited = false
+let campusStatsVisited = false
+window.addEventListener('scroll', () => {
+  if (isInViewPort(stats) && !placeStatsVisited) {
+    animateValueIntiator()
+    placeStatsVisited = true
+  }
+  if (isInViewPort(campusStats) && !campusStatsVisited) {
+    animateValueIntiatorInstitute()
+    campusStatsVisited = true
+  }
+})
+
+function isInViewPort(el) {
+  const rect = el.getBoundingClientRect()
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+}
+
+// assumes integer values for start and end
+
+// function animateValue(obj, start, end, duration) {
+//   let startTimestamp = null
+//   const step = (timestamp) => {
+//     if (!startTimestamp) startTimestamp = timestamp
+//     const progress = Math.min((timestamp - startTimestamp) / duration, 1)
+//     obj.innerText = Math.floor(progress * (end - start) + start)
+
+//     if (progress < 1) {
+//       window.requestAnimationFrame(step)
+//     }
+//   }
+//   window.requestAnimationFrame(step)
+// }
+
+function animateValueIntiator() {
+  const rolling_nums = document.querySelectorAll('.number h1 span')
+  rolling_nums.forEach((num) => {
+    animateValue(num, 0, Number(num.innerHTML), 3000)
+  })
+}
+
+function animateValueIntiatorInstitute() {
+  const rolling_nums = document.querySelectorAll('.number-in h1 span')
+  rolling_nums.forEach((num) => {
+    animateValue(num, 0, Number(num.innerHTML), 3000)
+  })
+}
+
+function animateValue(obj, start, end, duration) {
+  let range = end - start
+  let stepTime = Math.abs(Math.floor(duration / range))
+  let startTime = new Date().getTime()
+  let endTime = startTime + duration
+  let timer
+  function run() {
+    let now = new Date().getTime()
+    let remaining = Math.max((endTime - now) / duration, 0)
+    let value = Math.round(end - remaining * range)
+    obj.innerHTML = value
+    console.log(value)
+    if (value == end) {
+      clearInterval(timer)
+    }
+  }
+  timer = setInterval(run, stepTime)
+  run()
+}

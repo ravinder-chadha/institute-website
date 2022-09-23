@@ -181,9 +181,9 @@
         <div class="basis-1/2 pl-8">
           <div class="flex flex-row gap-4 justify-between">
             <div class="flex basis-1/6 gap-4 flex-row items-center">
-              <i class="fa-brands fa-facebook text-lg"></i></a>
-              <i class="fa-brands fa-instagram text-lg"></i></a>
-              <i class="fa-brands fa-twitter text-lg"></i></a>
+              <a href='https://www.facebook.com/NITJofficial'><i class="fa-brands fa-facebook text-lg"></i></a>
+              <a href='https://www.instagram.com/nitjofficial/'><i class="fa-brands fa-instagram text-lg"></i></a>
+              <a href='https://twitter.com/NITJofficial'><i class="fa-brands fa-twitter text-lg"></i></a>
             </div>
             <div class="flex basis-1/3 items-center">
               <span class="material-symbols-outlined"
@@ -261,7 +261,8 @@
                   <div id="col"
                     class="flex flex-col gap-5 hover:rounded-b-xl border-2 border-white hover:bg-orange-500 hover:border-orange-500 ">
                     <div id="block" class="h-full">
-                      <div id="head" class="h-full overflow-clip rounded-b-2xl bg-accent capitalize hover:bg-orange-500">
+                      <div id="head"
+                        class="h-full overflow-clip rounded-b-2xl bg-accent capitalize hover:bg-orange-500">
                         <div class="p-2 text-center"><a href='about.html'>ABOUT US</a></div>
                         <div class="h-full bg-white">
                           <ul class="flex flex-col gap-1 rounded-b-xl px-2 font-normal text-black">
@@ -1180,7 +1181,8 @@
               <div class="flex basis-1/5 flex-row justify-center">
                 <button type="button"
                   class="material-symbols-outlined duration-50 cursor-pointer text-center transition ease-in-out hover:box-border hover:h-10 hover:w-10 hover:rounded-full hover:border-2 hover:border-white"
-                  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search" onclick="showSearchPage(event)">
+                  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search"
+                  onclick="showSearchPage(event)">
                   search
                 </button>
               </div>
@@ -1280,6 +1282,15 @@
         <div id="tiles" class="flex mt-[10vh] gap-5 w-[90%] items-start">
           <div
             class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
+            <a href="#news" class="flex flex-col space-y-4 items-center justify-center">
+              <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
+                style="font-size:48px;"> newspaper</span>
+              <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">News
+              </p>
+            </a>
+          </div>
+          <div
+            class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
             <a href="#admission" class="flex flex-col space-y-4 items-center justify-center ">
               <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
                 style="font-size:48px;"> school
@@ -1291,6 +1302,17 @@
           </div>
           <div
             class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
+            <a href="#placement-stats" class="flex flex-col space-y-4 items-center justify-center">
+              <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
+                style="font-size:48px;"> real_estate_agent </span>
+              <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
+                Placements</p>
+            </a>
+          </div>
+
+
+          <div
+            class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
             <a href="#research" class="flex flex-col space-y-4 items-center justify-center">
               <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
                 style="font-size:48px;"> biotech </span>
@@ -1299,15 +1321,7 @@
               </p>
             </a>
           </div>
-          <div
-            class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-            <a href="#news" class="flex flex-col space-y-4 items-center justify-center">
-              <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-                style="font-size:48px;"> newspaper</span>
-              <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">News
-              </p>
-            </a>
-          </div>
+
           <div
             class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
             <a href="#campus-life" class="flex flex-col space-y-4 items-center justify-center">
@@ -1317,15 +1331,7 @@
                 life</p>
             </a>
           </div>
-          <div
-            class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-            <a href="#placement-stats" class="flex flex-col space-y-4 items-center justify-center">
-              <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-                style="font-size:48px;"> real_estate_agent </span>
-              <p class="group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-                Placements</p>
-            </a>
-          </div>
+
         </div>
 
       </div>
@@ -1334,15 +1340,16 @@
 
   <!-- === Carousel section ends === -->
   <!-- === News Section Starts === -->
-  <div id="news" class="my-20 scroll-mt-32">
+  <div id="news" class="my-20 scroll-mt-36">
     <div class="container flex flex-col justify-start lg:flex-row">
       <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
-        <div class="flex items-center justify-start space-x-6">
+        <div class="flex items-center justify-start space-x-6 group">
           <h1 class="uppercase text-4xl font-semibold text-accent">
-            Latest <span class="text-dark-purple">News</span>
+            Latest <span class="text-dark-purple">Events</span>
           </h1>
-          <span class="material-symbols-outlined hover:animate-bounce" style="font-size: 40px ; color: var(--accent);">
-            feed
+          <span class="material-symbols-outlined group-hover:animate-shake animate-delay"
+            style="font-size: 40px ; color: var(--accent);">
+            festival
           </span>
         </div>
 
@@ -1503,8 +1510,8 @@
 
       <div id="notices" class="container mx-auto flex grow lg:w-1/3 w-full flex-col">
         <div class="flex items-center mb-6 justify-start space-x-6 group">
-          <h1 class="text-4xl font-semibold uppercase text-gray-900">Notices</h1>
-          <span class="material-symbols-outlined text-xl group-hover:animate-vote animate-delay"
+          <h1 class="text-4xl font-semibold uppercase text-gray-900">News</h1>
+          <span class="material-symbols-outlined text-xl group-hover:animate-shake animate-delay"
             style="font-size: 40px; color: var(--accent)">
             newspaper
           </span>
@@ -1581,11 +1588,12 @@
     <div class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
       <img src="./img/DirectorSir 1.png" class="h-32 w-32 rounded-xl shadow-lg" alt="Director's Image" />
       <div id="content" class="flex flex-col space-y-4">
-        <div class="flex space-x-4 items-center justify-start">
+        <div class="flex space-x-4 items-center justify-start group">
           <h1 class="text-4xl font-bold text-accent">
             Director's <span class="text-dark-purple">Message</span>
           </h1>
-          <span class="material-symbols-outlined" style="font-size: 40px ; color: var(--accent);">
+          <span class="material-symbols-outlined group-hover:animate-shake animate-delay"
+            style="font-size: 40px ; color: var(--accent);">
             history_edu
           </span>
         </div>
@@ -1610,11 +1618,12 @@
 
   <!-- === Admission Section Starts === -->
   <div id="admission" class="container mx-auto scroll-mt-32 my-10 pt-10">
-    <div class="mb-10 flex items-start justify-start space-x-6">
+    <div class="mb-10 flex items-start justify-start space-x-6 group">
       <h1 class="uppercase text-4xl font-semibold text-accent">
         Be an <span class="text-dark-purple">Nitjian</span>
       </h1>
-      <span class="material-symbols-outlined self-center" style="font-size:40px; color:var(--accent);">
+      <span class=" group-hover:animate-shake animate-delay material-symbols-outlined self-center"
+        style="font-size:40px; color:var(--accent);">
         add_reaction
       </span>
     </div>
@@ -1909,12 +1918,13 @@
   <div id="research" class="my-20 scroll-mt-32">
     <div class="container grid grid-cols-1 gap-5 md:grid-cols-3 md:grid-rows-3">
       <div id="announcements" class="col-start-1 col-end-3 row-span-2 flex flex-col space-y-6">
-        <div class="flex items-center justify-start space-x-6">
+        <div class="flex items-center justify-start space-x-6 group">
           <h1 class="uppercase text-4xl font-semibold text-accent">
             Research <span class="text-dark-purple">Highlights</span>
           </h1>
-          <span class="material-symbols-outlined" style="font-size: 40px ; color: var(--accent);">
-            biotech
+          <span class="group-hover:animate-shake animate-delay material-symbols-outlined"
+            style="font-size: 40px ; color: var(--accent);">
+            stars
           </span>
         </div>
 
@@ -2050,6 +2060,27 @@
                 </div>
               </div>
             </div>
+            <div id="card">
+              <div
+                class="flex flex-col items-start justify-start overflow-hidden rounded-xl  bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./img/img6.png" />
+                  <div class="flex h-full w-full flex-col items-start justify-start space-y-5 p-4">
+
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      Card 7 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure autem id illum nostrum
+                      veniam
+                      totam officiis nam, dolores quas voluptas qui reprehenderit accusamus quo delectus quis molestiae.
+                      Rerum, nostrum praesentium.
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More
+                        &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <i class="fa-solid fa-angle-right self-center p-4 text-2xl cursor-pointer"
             onclick="slideResearch('right')"></i>
@@ -2068,12 +2099,13 @@
         class="col-start-3 col-end-4 row-span-3 py-3 px-8 h-fit border-accent border-t-4 bg-light-purple border-b-4 rounded-lg ">
         <div class=" flex flex-col gap-3 mb-8">
 
-          <div class="flex items-center justify-start space-x-6">
+          <div class="flex items-center justify-start space-x-6 group">
             <h1 class="uppercase text-4xl font-semibold">
               Publications
             </h1>
-            <span class="material-symbols-outlined" style="font-size: 40px ; color: var(--accent);">
-              feed
+            <span class="material-symbols-outlined group-hover:animate-shake animate-delay"
+              style="font-size: 40px ; color: var(--accent);">
+              local_library
             </span>
           </div>
           <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="#">
@@ -2084,7 +2116,7 @@
         <div class="max-h-[35rem] flex items-center rounded-xl flex-col overflow-scroll">
           <div class="pr-2">
 
-            <div class="flex flex-col divide-y-2">
+            <div class="flex flex-col divide-y-2 divide-slate-300">
               <div id="publication-card" class="flex flex-col gap-4 py-2">
 
                 <p>
@@ -2092,10 +2124,10 @@
                   as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
                   1253–1272
                 </p>
-                <a href="#"
+                <!-- <a href="#"
                   class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
                   More Details
-                </a>
+                </a> -->
               </div>
               <div id="publication-card" class="flex flex-col gap-4 py-2">
 
@@ -2104,10 +2136,10 @@
                   as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
                   1253–1272
                 </p>
-                <a href="#"
+                <!-- <a href="#"
                   class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
                   More Details
-                </a>
+                </a> -->
               </div>
               <div id="publication-card" class="flex flex-col gap-4 py-2">
 
@@ -2116,10 +2148,10 @@
                   as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
                   1253–1272
                 </p>
-                <a href="#"
+                <!-- <a href="#"
                   class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
                   More Details
-                </a>
+                </a> -->
               </div>
               <div id="publication-card" class="flex flex-col gap-4 py-2">
 
@@ -2128,10 +2160,10 @@
                   as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
                   1253–1272
                 </p>
-                <a href="#"
+                <!-- <a href="#"
                   class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
                   More Details
-                </a>
+                </a> -->
               </div>
               <div id="publication-card" class="flex flex-col gap-4 py-2">
 
@@ -2140,10 +2172,10 @@
                   as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
                   1253–1272
                 </p>
-                <a href="#"
+                <!-- <a href="#"
                   class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
                   More Details
-                </a>
+                </a> -->
               </div>
               <div id="publication-card" class="flex flex-col gap-4 py-2">
 
@@ -2152,10 +2184,10 @@
                   as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
                   1253–1272
                 </p>
-                <a href="#"
+                <!-- <a href="#"
                   class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
                   More Details
-                </a>
+                </a> -->
               </div>
               <div id="publication-card" class="flex flex-col gap-4 py-2">
 
@@ -2164,10 +2196,10 @@
                   as reinforcing material in polymer composites-a review. Polymer Engineering and Science, 49(7),
                   1253–1272
                 </p>
-                <a href="#"
+                <!-- <a href="#"
                   class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
                   More Details
-                </a>
+                </a> -->
               </div>
 
 
@@ -2183,7 +2215,7 @@
   </div>
   <!-- === Research Section Ends === -->
   <!-- === Placement Stats starts === -->
-  <section id="institute_numbers"
+  <section id="institute-numbers"
     class=" scroll-mt-32 my-6 bg-[url('./img/numbers_section.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
     <div class="bg-dark-purple/70">
       <div
@@ -2197,20 +2229,20 @@
           NITJ
         </h1>
         <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="stats">
-          <div id="number">
-            <h1 class="text-5xl font-bold uppercase">5000+</h1>
+          <div class="number-in">
+            <h1 class="text-5xl font-bold uppercase"><span>5000</span>+</h1>
             <p class="text-lg uppercase">Students</p>
           </div>
-          <div id="number">
-            <h1 class="text-5xl font-bold uppercase">500+</h1>
+          <div class="number-in">
+            <h1 class="text-5xl font-bold uppercase"><span>500</span>+</h1>
             <p class="text-lg uppercase">Faculty & Staff</p>
           </div>
-          <div id="number">
-            <h1 class="text-5xl font-bold uppercase">18</h1>
+          <div class="number-in">
+            <h1 class="text-5xl font-bold uppercase"><span>18</span></h1>
             <p class="text-lg uppercase">Departments</p>
           </div>
-          <div id="number">
-            <h1 class="text-5xl font-bold uppercase">20+</h1>
+          <div class="number-in">
+            <h1 class="text-5xl font-bold uppercase"><span>20</span>+</h1>
             <p class="text-lg uppercase">Clubs & Cells</p>
           </div>
         </div>
@@ -2222,12 +2254,13 @@
   <div id="campus-life" class="container my-20 scroll-mt-32">
     <div class="flex flex-col gap-10 lg:flex-row">
       <div class="basis-2/5">
-        <div class="mb-10 flex items-center justify-start space-x-6">
+        <div class="mb-10 flex items-center justify-start space-x-6 group">
           <h1 class="uppercase text-4xl font-semibold w-fit text-accent">
             Clubs & <span class="text-dark-purple">Societies</span>
           </h1>
-          <span class="material-symbols-outlined" style="font-size: 40px; color:var(--accent);">
-            atr
+          <span class="material-symbols-outlined group-hover:animate-shake animate-delay"
+            style="font-size: 40px; color:var(--accent);">
+            diversity_2
           </span>
         </div>
         <div class="flex items-center rounded-xl bg-light-purple p-2">
@@ -2339,11 +2372,12 @@
 
       <div class="basis-3/5">
         <div>
-          <div class="mb-10 flex items-center justify-start space-x-6">
+          <div class="mb-10 flex items-center justify-start space-x-6 group">
             <h1 class="uppercase text-4xl font-semibold text-accent">
               Photo <span class="text-dark-purple">Gallery</span>
             </h1>
-            <span class="material-symbols-outlined" style="font-size: 40px; color:var(--accent);">
+            <span class="material-symbols-outlined group-hover:animate-shake animate-delay"
+              style="font-size: 40px; color:var(--accent);">
               imagesmode
             </span>
           </div>
@@ -2440,8 +2474,7 @@
                 <i class="fa-brands fa-facebook text-[21px] hover:text-sky-500"></i></a>
             </div>
             <div class="text-l text-white">
-              <a href="https://twitter.com/NITJofficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                target="_blank">
+              <a href="https://twitter.com/NITJofficial" target="_blank">
                 <i class="fab fa-twitter text-[21px] hover:text-sky-500"></i></a>
             </div>
             <div class="text-l text-white">
@@ -2552,9 +2585,9 @@
     var tooltipTriggerList = [].slice.call(
       document.querySelectorAll('[data-bs-toggle="tooltip"]')
     );
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new Tooltip(tooltipTriggerEl);
-    });
+    // var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    //   return new Tooltip(tooltipTriggerEl);
+    // });
   </script>
 
   <script src="app.js"></script>
