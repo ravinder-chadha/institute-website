@@ -13,18 +13,24 @@ window.onscroll = function () {
       diff_lang[i].classList.remove('mt-7')
     }
     for (let i = 0; i < institute_name.length; i++) {
+      if(window.innerWidth > 620){
       logo.style.width = '90px'
       logo.style.height = '90px'
-      logo.classList.remove('top-8')
-      logo.classList.add('top-0')
-      if (institute_name[i].classList.contains('text-xl')) {
-        institute_name[i].classList.remove('text-xl')
-        institute_name[i].classList.add('text-lg')
+      }
+      logo.classList.remove('sm:top-8')
+      logo.classList.remove('sm:translate-y-0')
+      logo.classList.add('sm:-translate-y-9')
+      logo.classList.add('sm:top-0')
+      logo.classList.remove('top-9')
+      logo.classList.add('top-0','py-4')
+      if (institute_name[i].classList.contains('sm:text-xl')) {
+        institute_name[i].classList.remove('sm:text-xl')
+        institute_name[i].classList.add('sm:text-lg')
         institute_name[i].classList.add('tracking-widest')
         console.log(institute_name)
-      } else if (institute_name[i].classList.contains('text-lg')) {
-        institute_name[i].classList.remove('text-lg')
-        institute_name[i].classList.add('text-sm')
+      } else if (institute_name[i].classList.contains('sm:text-lg')) {
+        institute_name[i].classList.remove('sm:text-lg')
+        institute_name[i].classList.add('sm:text-sm')
         institute_name[i].classList.remove('tracking-widest')
       }
     }
@@ -35,18 +41,25 @@ window.onscroll = function () {
     for (let i = 0; i < diff_lang.length; i++) {
       diff_lang[i].classList.add('mt-7')
     }
-    logo.classList.remove('top-0')
-    logo.classList.add('top-8')
+    logo.classList.add('sm:top-8')
+    logo.classList.add('sm:translate-y-0')
+    logo.classList.remove('sm:-translate-y-9')
+    logo.classList.remove('sm:top-0')
+    logo.classList.add('top-9')
+      logo.classList.remove('top-0','py-4')
     for (var i = 0; i < institute_name.length; i++) {
       // console.log(institute_name[i].classList);
-      if (institute_name[i].classList.contains('text-lg')) {
-        institute_name[i].classList.remove('text-lg')
-        institute_name[i].classList.add('text-xl')
+      if (institute_name[i].classList.contains('sm:text-lg')) {
+        institute_name[i].classList.remove('sm:text-lg')
+        institute_name[i].classList.add('sm:text-xl')
         institute_name[i].classList.remove('tracking-widest')
-      } else if (institute_name[i].classList.contains('text-sm')) {
-        institute_name[i].classList.remove('text-sm')
-        institute_name[i].classList.add('text-lg')
+      } else if (institute_name[i].classList.contains('sm:text-sm')) {
+        institute_name[i].classList.remove('sm:text-sm')
+        institute_name[i].classList.add('sm:text-lg')
         institute_name[i].classList.remove('tracking-widest')
+      }
+      else if (institute_name[i].classList.contains('sm:text-lg')){
+        
       }
     }
   }
