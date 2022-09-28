@@ -4,8 +4,8 @@ window.onscroll = function () {
   const logo = document.getElementById('logo_250')
   const topbar = document.getElementById('top_bar')
   const diff_lang = document.getElementsByClassName('mySlides')
-  animateValueIntiator()
-  animateValueIntiatorInstitute()
+  // animateValueIntiator()
+  // animateValueIntiatorInstitute()
   // resAutoScroll()
 
   if (window.scrollY > 100) {
@@ -14,9 +14,9 @@ window.onscroll = function () {
       diff_lang[i].classList.remove('mt-7')
     }
     for (let i = 0; i < institute_name.length; i++) {
-      if(window.innerWidth > 620){
-      logo.style.width = '90px'
-      logo.style.height = '90px'
+      if (window.innerWidth > 620) {
+        logo.style.width = '90px'
+        logo.style.height = '90px'
       }
       logo.classList.remove('top-10')
       logo.classList.add('top-2')
@@ -52,9 +52,7 @@ window.onscroll = function () {
         institute_name[i].classList.remove('sm:text-sm')
         institute_name[i].classList.add('sm:text-lg')
         institute_name[i].classList.remove('tracking-widest')
-      }
-      else if (institute_name[i].classList.contains('sm:text-lg')){
-        
+      } else if (institute_name[i].classList.contains('sm:text-lg')) {
       }
     }
   }
@@ -215,21 +213,21 @@ setInterval(() => {
 }, 2000)
 
 // Animate the numbers on the stats section
-const stats = document.getElementById('placement-stats')
-const campusStats = document.getElementById('institute-numbers')
+// const stats = document.getElementById('placement-stats')
+// const campusStats = document.getElementById('institute-numbers')
 
-let placeStatsVisited = false
-let campusStatsVisited = false
-window.addEventListener('scroll', () => {
-  if (isInViewPort(stats) && !placeStatsVisited) {
-    animateValueIntiator()
-    placeStatsVisited = true
-  }
-  if (isInViewPort(campusStats) && !campusStatsVisited) {
-    animateValueIntiatorInstitute()
-    campusStatsVisited = true
-  }
-})
+// let placeStatsVisited = false
+// let campusStatsVisited = false
+// window.addEventListener('scroll', () => {
+//   if (isInViewPort(stats) && !placeStatsVisited) {
+//     animateValueIntiator()
+//     placeStatsVisited = true
+//   }
+//   if (isInViewPort(campusStats) && !campusStatsVisited) {
+//     animateValueIntiatorInstitute()
+//     campusStatsVisited = true
+//   }
+// })
 
 function isInViewPort(el) {
   const rect = el.getBoundingClientRect()
@@ -258,36 +256,36 @@ function isInViewPort(el) {
 //   window.requestAnimationFrame(step)
 // }
 
-function animateValueIntiator() {
-  const rolling_nums = document.querySelectorAll('.number h1 span')
-  rolling_nums.forEach((num) => {
-    animateValue(num, 0, Number(num.innerHTML), 3000)
-  })
-}
+// function animateValueIntiator() {
+//   const rolling_nums = document.querySelectorAll('.number h1 span')
+//   rolling_nums.forEach((num) => {
+//     animateValue(num, 0, Number(num.innerHTML), 3000)
+//   })
+// }
 
-function animateValueIntiatorInstitute() {
-  const rolling_nums = document.querySelectorAll('.number-in h1 span')
-  rolling_nums.forEach((num) => {
-    animateValue(num, 0, Number(num.innerHTML), 3000)
-  })
-}
+// function animateValueIntiatorInstitute() {
+//   const rolling_nums = document.querySelectorAll('.number-in h1 span')
+//   rolling_nums.forEach((num) => {
+//     animateValue(num, 0, Number(num.innerHTML), 3000)
+//   })
+// }
 
-function animateValue(obj, start, end, duration) {
-  let range = end - start
-  let stepTime = Math.abs(Math.floor(duration / range))
-  let startTime = new Date().getTime()
-  let endTime = startTime + duration
-  let timer
-  function run() {
-    let now = new Date().getTime()
-    let remaining = Math.max((endTime - now) / duration, 0)
-    let value = Math.round(end - remaining * range)
-    obj.innerHTML = value
-    console.log(value)
-    if (value == end) {
-      clearInterval(timer)
-    }
-  }
-  timer = setInterval(run, stepTime)
-  run()
-}
+// function animateValue(obj, start, end, duration) {
+//   let range = end - start
+//   let stepTime = Math.abs(Math.floor(duration / range))
+//   let startTime = new Date().getTime()
+//   let endTime = startTime + duration
+//   let timer
+//   function run() {
+//     let now = new Date().getTime()
+//     let remaining = Math.max((endTime - now) / duration, 0)
+//     let value = Math.round(end - remaining * range)
+//     obj.innerHTML = value
+//     console.log(value)
+//     if (value == end) {
+//       clearInterval(timer)
+//     }
+//   }
+//   timer = setInterval(run, stepTime)
+//   run()
+// }
