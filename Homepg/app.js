@@ -18,12 +18,9 @@ window.onscroll = function () {
       logo.style.width = '90px'
       logo.style.height = '90px'
       }
-      logo.classList.remove('sm:top-8')
+      logo.classList.remove('top-10')
+      logo.classList.add('top-2')
       logo.classList.remove('sm:translate-y-0')
-      logo.classList.add('sm:-translate-y-9')
-      logo.classList.add('sm:top-0')
-      logo.classList.remove('top-9')
-      logo.classList.add('top-0','py-4')
       if (institute_name[i].classList.contains('sm:text-xl')) {
         institute_name[i].classList.remove('sm:text-xl')
         institute_name[i].classList.add('sm:text-lg')
@@ -42,12 +39,9 @@ window.onscroll = function () {
     for (let i = 0; i < diff_lang.length; i++) {
       diff_lang[i].classList.add('mt-7')
     }
-    logo.classList.add('sm:top-8')
     logo.classList.add('sm:translate-y-0')
-    logo.classList.remove('sm:-translate-y-9')
-    logo.classList.remove('sm:top-0')
-    logo.classList.add('top-9')
-      logo.classList.remove('top-0','py-4')
+    logo.classList.add('top-10')
+    logo.classList.remove('top-2')
     for (var i = 0; i < institute_name.length; i++) {
       // console.log(institute_name[i].classList);
       if (institute_name[i].classList.contains('sm:text-lg')) {
