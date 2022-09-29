@@ -18,8 +18,8 @@ window.onscroll = function () {
         logo.style.width = '90px'
         logo.style.height = '90px'
       }
-      logo.classList.remove('top-10')
-      logo.classList.add('top-2')
+      logo.classList.remove('top-9')
+      logo.classList.add('top-0','py-4')
       logo.classList.remove('sm:translate-y-0')
       if (institute_name[i].classList.contains('sm:text-xl')) {
         institute_name[i].classList.remove('sm:text-xl')
@@ -40,8 +40,8 @@ window.onscroll = function () {
       diff_lang[i].classList.add('mt-7')
     }
     logo.classList.add('sm:translate-y-0')
-    logo.classList.add('top-10')
-    logo.classList.remove('top-2')
+    logo.classList.add('top-9')
+    logo.classList.remove('top-0','py-4')
     for (var i = 0; i < institute_name.length; i++) {
       // console.log(institute_name[i].classList);
       if (institute_name[i].classList.contains('sm:text-lg')) {
@@ -310,3 +310,26 @@ function isInViewPort(el) {
 //   timer = setInterval(run, stepTime)
 //   run()
 // }
+
+var sideMenu = document.querySelector("#nav-menu");
+var crossBtn = document.querySelector("#nav-menu .menu-btn");
+// var y = 0;
+var z = 0;
+function open_menu() {
+  // console.log("open")
+    if (sideMenu.style.display == "none") {
+      sideMenu.setAttribute("style", "display:block;");
+    }
+}
+function keep_menu_open(){
+  if (sideMenu.style.display == "block") {
+    sideMenu.setAttribute("style", "display:block;");
+  }
+}
+function close_menu() {
+  // console.log("close")
+  // console.log(z)
+    if (sideMenu.style.display == "block" && z==0){
+      sideMenu.setAttribute("style", "display:none;");
+    }
+}

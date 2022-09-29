@@ -144,6 +144,55 @@
 </head>
 
 <body class="font-body text-dark-purple scroll-smooth">
+  <!-- Menu for mobile starts-->
+  <div class="form-backdrop" id="nav-menu" style="display: none">
+    <div id="menu" onclick="z=0;close_menu();">
+      <div class="menu-content w3-animate-left" onclick="keep_menu_open();z=1;">
+        <div class="top-bar">
+          <div class="menu-btn" onclick="z=0;close_menu();">
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <ul class="w3-animate-left">
+          <li class="menu-link selected"><a href="/">Home</a></li>
+          <li class="menu-link"><a href="/contact">Contact Us</a></li>
+          <li class="menu-link"><a href="/about">About Us</a></li>
+        </ul>
+
+        <div class="extra-links w3-animate-left">
+          <!-- google sign in -->
+          <!-- <div class="google_signin">
+            <div id="my-signin2"></div>
+            <script>
+              function onSuccess(googleUser) {
+                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+              }
+              function onFailure(error) {
+                console.log(error);
+              }
+              function renderButton() {
+                gapi.signin2.render('my-signin2', {
+                  'scope': 'profile email',
+                  'width': 240,
+                  'height': 50,
+                  'longtitle': true,
+                  'theme': 'dark',
+                  'onsuccess': onSuccess,
+                  'onfailure': onFailure
+                });
+              }
+            </script>
+          </div> -->
+          <!-- end of google sign in -->
+          <a href="/privacy">Privacy Policy</a>
+
+          <a href="/terms">Terms & conditions</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  <!-- Menu for mobile ends-->
   <header class="fixed bg-white top-0 right-0 left-0 z-50">
     <!-- TOP NAV BAR stats -->
     <div id="top_bar"
@@ -201,7 +250,7 @@
     </div>
     <!-- top nav bar ends -->
     <!-- INSTITUTE LOGO & NAME starts -->
-    <div class="relative w-3/5 sm:w-full container p-0 left-[10px] sm:left-0">
+    <div class="relative w-3/5 sm:w-full container p-0 left-[10px] sm:left-0 h-14 max-h-14 sm:h-max sm:max-h-max">
       <div class="mySlides mt-7 z-50">
         <div class="align-center flex flex-row justify-end sm:justify-between bg-white py-2.5">
           <div
@@ -209,7 +258,7 @@
             <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
           </div>
           <div
-            class="institute_name flex sm:max-w-lg sm:basis-1/2 justify-end sm:px-16 text-end sm:text-center text-sm sm:text-xl font-bold uppercase">
+            class="institute_name flex sm:max-w-lg sm:basis-1/2 justify-end sm:px-16 text-center text-sm sm:text-xl font-bold uppercase">
             <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
           </div>
         </div>
@@ -221,7 +270,7 @@
             <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
           </div>
           <div
-            class="institute_name flex sm:max-w-lg sm:basis-1/2 justify-center sm:px-8 text-end sm:text-center text-sm sm:text-xl font-bold uppercase">
+            class="institute_name flex sm:max-w-lg sm:basis-1/2 justify-center sm:px-8 text-center text-sm sm:text-xl font-bold uppercase">
             <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
           </div>
         </div>
@@ -233,7 +282,7 @@
             <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
           </div>
           <div
-            class="institute_name flex sm:max-w-lg sm:basis-1/2 justify-center text-end sm:text-center text-xs sm:text-lg font-semibold uppercase">
+            class="institute_name flex sm:max-w-lg sm:basis-1/2 justify-center text-center text-xs sm:text-lg font-semibold uppercase">
             <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
           </div>
         </div>
@@ -242,12 +291,12 @@
     <!-- INSTITUTE LOGO & NAME ends -->
     <!-- Logo CONTAINER starts -->
     <div
-      class="absolute left-[50px] z-50 mx-auto -translate-x-1/2 -translate-y-1/3 sm:translate-y-0 scale-75 sm:scale-100 sm:left-1/2"
+      class="absolute hidden sm:block left-[50px] z-50 mx-auto -translate-x-1/2 -translate-y-1/3 sm:translate-y-0 scale-75 sm:scale-100 sm:left-1/2"
       style="width: 230px">
       <img src="img/Rectangle 47 (1).png" alt="" />
     </div>
     <div id="logo_250"
-      class="absolute h-[120px] aspect-square left-[50px] sm:left-1/2 scale-[0.60] sm:scale-100 -translate-y-1/4 top-10 sm:top-7 sm:translate-y-0 z-50 -translate-x-1/2">
+      class="absolute h-[120px] aspect-square left-[50px] sm:left-1/2 scale-[0.40] sm:scale-100 -translate-y-1/3 top-9 sm:top-7 sm:translate-y-0 z-50 -translate-x-1/2 sm:py-0">
       <img src="img/logo_250.png" alt="" />
     </div>
     <!-- Logo CONTAINER ends -->
@@ -257,6 +306,18 @@
     <div class="bg-accent drop-shadow-lg">
       <div class="container">
         <div class="z-50 flex h-7 sm:h-10 max-w-full flex-row justify-between bg-accent text-lg text-white">
+          <div class="flex items-center sm:hidden" onclick="open_menu();">
+            <span class="material-symbols-outlined"
+              style='font-variation-settings: "FILL" 0, "wght" 200, "grad" 0, "opzs" 40;'> menu </span>
+          </div>
+          <div class="sm:hidden block">
+          <button type="button"
+                  class="block material-symbols-outlined duration-50 cursor-pointer text-center transition ease-in-out hover:box-border sm:hover:h-10 sm:hover:w-10 hover:rounded-full hover:border-2 hover:border-accent"
+                  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search"
+                  onclick="showSearchPage(event)" >
+                  search
+                </button>
+          </div>
           <div class="basis-2/5 hidden sm:block">
             <div class="flex w-full flex-row justify-between px-10">
               <div class="group cursor-default hover:bg-blue-800">
@@ -1171,7 +1232,7 @@
                 <button type="button"
                   class="material-symbols-outlined duration-50 cursor-pointer text-center transition ease-in-out hover:box-border hover:h-10 hover:w-10 hover:rounded-full hover:border-2 hover:border-accent"
                   data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search"
-                  onclick="showSearchPage(event)">
+                  onclick="showSearchPage(event)" >
                   search
                 </button>
               </div>
