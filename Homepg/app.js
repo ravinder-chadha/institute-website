@@ -66,6 +66,14 @@ function openDropdown() {
     dropdown.classList.add('hidden')
   }
 }
+function openDropdown2() {
+  var dropdown = document.getElementById('dropdown2')
+  if (dropdown.classList.contains('hidden')) {
+    dropdown.classList.remove('hidden')
+  } else {
+    dropdown.classList.add('hidden')
+  }
+}
 
 function showSearchPage(event) {
   if (event.target.id == 'search_form') {
@@ -313,22 +321,23 @@ function isInViewPort(el) {
 
 var sideMenu = document.querySelector("#nav-menu");
 var crossBtn = document.querySelector("#nav-menu .menu-btn");
-// var y = 0;
+var y = 0;
 var z = 0;
 function open_menu() {
-  // console.log("open")
+  console.log("open")
     if (sideMenu.style.display == "none") {
       sideMenu.setAttribute("style", "display:block;");
     }
 }
 function keep_menu_open(){
+  console.log("keeping open")
   if (sideMenu.style.display == "block") {
     sideMenu.setAttribute("style", "display:block;");
   }
 }
 function close_menu() {
-  // console.log("close")
-  // console.log(z)
+  console.log("close")
+  console.log(z)
     if (sideMenu.style.display == "block" && z==0){
       sideMenu.setAttribute("style", "display:none;");
     }
