@@ -1526,7 +1526,7 @@
 
         <!-- Cards -->
         <div class="flex flex-row relative">
-          <i class="absolute top-1/2 -left-10 -translate-y-1/2 fa-solid fa-angle-left self-center pl-4 text-2xl"
+          <i class="absolute top-1/2 -left-10 -translate-y-1/2 fa-solid fa-angle-left self-center pl-4 text-2xl cursor-pointer"
             onclick="slideCards('left')"></i>
           <div id="cards" class="scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 pt-8 scroll-smooth">
             <div id="card">
@@ -1669,7 +1669,7 @@
               </div>
             </div>
           </div>
-          <i class="fa-solid fa-angle-right self-center p-4 text-2xl" onclick="slideCards('right')"></i>
+          <i class="fa-solid fa-angle-right self-center p-4 text-2xl cursor-pointer" onclick="slideCards('right')"></i>
 
         </div>
         <div class="flex items-end w-fit">
@@ -1827,7 +1827,7 @@
       <div class="flex flex-col space-y-6 basis-2/3">
         <div id="title" class="mb-10 flex items-start justify-start space-x-6 group">
           <h1 class="uppercase text-4xl font-semibold text-dark">
-            Notices
+            Annoucements & Notices
           </h1>
           <span class=" group-hover:animate-shake animate-delay material-symbols-outlined self-center"
             style="font-size:40px; color:var(--accent);">
@@ -2593,7 +2593,7 @@
             <h1 class="uppercase text-4xl font-semibold">
               Publications
             </h1>
-            <span class="material-symbols-outlined group-hover:animate-shake animate-delay"
+            <span class="material-symbols-outlined group-hover:animate-shake animate-delay hidden lg:block"
               style="font-size: 40px ; color: var(--accent);">
               local_library
             </span>
